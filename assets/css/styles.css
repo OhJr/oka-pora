@@ -74,9 +74,9 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     color: #ffffff;
-    /*align-items: center;
+    align-items: center;
     justify-content: center;
-    text-align: center; */
+    text-align: center;
 
 }
 
@@ -151,101 +151,56 @@ header {
   }
 }
 
-
-.section_reveillion{
-    padding: 40px 0;
-    font-family: Montserrat;
-    background-color: #ffffff;
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.section_reveillion h3{
-    font-size: 27px;
-    font-weight: 750;
-    margin-bottom: 9px;
+/* Seção dos cards Réveillon */
+.section_reveillion {
+    padding: 50px 20px;
+    background-color: white;
     text-align: center;
 }
 
-#subtitle{
-  font-size: 18px;
-  color: #333;
-  text-align: center;
+.section_reveillion h3 {
+    font-size: 28px;
+    color: #000D46;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
 
-.card{
-  width: 250px;
-  height: 230px;
-  border-radius: 12px;
-  overflow: hidden;
-  display: inline-block;
-  margin: 15px;
-  position: relative;
-  color: #fff;
-
+#subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
 }
 
-.card_content p {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.3;
+/* Container dos cards - jeito simples de centralizar */
+.cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.card_content span {
-  display: block;
-  font-size: 22px;
-  font-weight: 900;
+/* Estilo básico do card */
+.card {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-size: cover;
+    background-position: center;
 }
 
-.card_content small {
-  font-size: 10px;
-  font-weight: 400;
-  padding: 12px 10px;
-}
-
-/* texto da parte inferior */
-.card_text {
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-  text-align: left;
-  font-size: 12px;
-  color: #fff;
-  padding-top: 20px;
-}
-
-/* preço destacado */
-.card_price {
-  display: inline;
-  font-weight: 700;
-  color: #fff;
-}
-
-/* botões de promoção */
-.promo {
-  position: absolute;
-  bottom: 60px;
-  left: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  padding-bottom: 15px;
-  padding-left: 3px;
-}
-
-.promo button {
-  background-color: #0052cc;
-  border: none;
-  color: white;
-  font-size: 10px;
-  font-weight: 700;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.promo button:hover {
-  background-color: #003d99;
-}
 
 #card1 {
   background-image: url('../img/Reveillion-Card-1.jpg');
@@ -275,17 +230,158 @@ header {
   background-size: cover;
 }
 
-.section_partiu{
-      padding: 40px 0;
-    font-family: Montserrat;
+.card_content {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+.card_content p {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+}
+
+.card_content span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.card_content small {
+    font-size: 10px;
+    background: rgba(255,255,255,0.3);
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+/* Parte de baixo do card (descrição e preço) */
+.card_text {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text p {
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+    line-height: 1.3;
+}
+
+.card_price {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Botões de promoção */
+.promo {
+    position: absolute;
+    top: 200px;
+    left: 15px;
+}
+
+.promo button {
+    background-color: #0052cc;
+    border: none;
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+    display: block;
+    width: 100%;
+}
+
+.promo button:first-child {
+    background-color: #0052cc;
+}
+
+/* Seção Partiu */
+.section_partiu {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.section_partiu h3 {
+    font-size: 28px;
+    color: #000D46;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.section_partiu > p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* Responsivo básico */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 300px;
+        height: 320px;
+    }
+    
+    .cards_container {
+        gap: 15px;
+    }
+    
+    .section_reveillion,
+    .section_partiu {
+        padding: 30px 15px;
+    }
+}
+
+/* Seção Partiu */
+.section_partiu {
+    padding: 50px 20px;
     background-color: #ffffff;
     text-align: center;
 }
 
-.section_partiu h3{
-    font-size: 27px;
-    font-weight: 750;
-    margin-bottom: 9px;
-    text-align: center;
+.section_partiu h3 {
+    font-size: 28px;
+    color: #000D46;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
 
+.section_partiu > p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+#card5 {
+    background-image: url('../img/card5.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#card6 {
+    background-image: url('../img/card6.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#card7 {
+    background-image: url('../img/Reveillion-Card-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#card8 {
+    background-image: url('../img/card8.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+}
