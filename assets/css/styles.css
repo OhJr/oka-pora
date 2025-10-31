@@ -74,9 +74,9 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     color: #ffffff;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    /* align-items: center; */
+    /* justify-content: center;
+    text-align: center; */
 
 }
 
@@ -151,7 +151,7 @@ header {
   }
 }
 
-/* Reset básico */
+
 * {
     margin: 0;
     padding: 0;
