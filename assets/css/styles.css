@@ -74,9 +74,9 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     color: #ffffff;
-    /*align-items: center;
+    align-items: center;
     justify-content: center;
-    text-align: center; */
+    text-align: center;
 
 }
 
@@ -151,43 +151,185 @@ header {
   }
 }
 
-
+/* 
 .section_reveillion{
     padding: 40px 0;
     font-family: Montserrat;
     background-color: #ffffff;
+} */
+.section_reveillion {
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    
+    /* CENTRALIZAÇÃO COM FLEX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-
 .section_reveillion h3{
     font-size: 27px;
     font-weight: 750;
     margin-bottom: 9px;
-    text-align: center;
+    justify-content: space-around;
+    padding-left: 25px;
 }
 
 #subtitle{
   font-size: 18px;
   color: #333;
-  text-align: center;
+  padding-left: 25px;
+  
 }
 
-.card{
-  width: 250px;
-  height: 230px;
-  border-radius: 12px;
-  overflow: hidden;
-  display: inline-block;
-  margin: 15px;
-  position: relative;
-  color: #fff;
-
+/* .card {
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* REMOVA display: inline-block e margin */
+    /* display: inline-block; ← REMOVE */
+    /* margin: 15px; ← REMOVE */
+}
+🎯 MÉTODO 2: Grid (Mais Moderno)
+css
+.section_reveillion {
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    
+    /* CENTRALIZAÇÃO COM GRID */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.card_content p {
+.card {
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+🎯 MÉTODO 3: Text-align + Display (Mais Simples)
+css
+.section_reveillion {
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.card {
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    vertical-align: top; /* Alinha no topo */
+}
+🎯 MÉTODO 4: Com Container Centralizador
+css
+.section_reveillion {
+    padding: 60px 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.cards_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: 280px;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+E no HTML:
+
+html
+<section class="section_reveillion">
+    <h3>RÉVEILLON 2025/2026</h3>
+    <p id="subtitle">Reserve agora a sua viagem e tenha um final de ano incrível junto à natureza!</p>
+    
+    <div class="cards_container"> <!-- Container adicional -->
+        <div class="card" id="card1">...</div>
+        <div class="card" id="card2">...</div>
+        <div class="card" id="card3">...</div>
+        <div class="card" id="card4">...</div>
+    </div>
+</section>
+🎯 RESPONSIVIDADE
+css
+/* Para todos os métodos, adicione: */
+@media (max-width: 768px) {
+    .section_reveillion {
+        padding: 40px 15px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards_container {
+        gap: 15px;
+    }
+    
+    .card {
+        height: 300px;
+    }
+}
+💡 Recomendação:
+Use o Método 1 (Flexbox) ou Método 4 (com container) - são os mais flexíveis e fáceis de controlar.
+
+Qual método você prefere usar?
+
+
+
+.card_content {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* .card_content p {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.3;
-}
+} */
 
 .card_content span {
   display: block;
@@ -202,7 +344,15 @@ header {
 }
 
 /* texto da parte inferior */
+
 .card_text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    text-align: left;
+}
+/* .card_text {
   position: absolute;
   bottom: 15px;
   left: 15px;
@@ -210,17 +360,33 @@ header {
   font-size: 12px;
   color: #fff;
   padding-top: 20px;
-}
+} */
 
 /* preço destacado */
+
+
 .card_price {
+    font-weight: 700;
+    color: #fff;
+    font-size: 18px;
+}
+/* .card_price {
   display: inline;
   font-weight: 700;
   color: #fff;
+} */
+
+.promo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 /* botões de promoção */
-.promo {
+/* .promo {
   position: absolute;
   bottom: 60px;
   left: 15px;
@@ -245,7 +411,7 @@ header {
 
 .promo button:hover {
   background-color: #003d99;
-}
+} */
 
 #card1 {
   background-image: url('../img/Reveillion-Card-1.jpg');
