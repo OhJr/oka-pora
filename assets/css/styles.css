@@ -282,7 +282,7 @@ header {
 /* Botões de promoção */
 .promo {
     position: absolute;
-    top: 15px;
+    top: 200px;
     left: 15px;
 }
 
@@ -300,7 +300,7 @@ header {
 }
 
 .promo button:first-child {
-    background-color: #FF6B35;
+    background-color: #0052cc;
 }
 
 /* Seção Partiu */
@@ -342,17 +342,46 @@ header {
     }
 }
 
-.section_partiu{
-      padding: 40px 0;
-    font-family: Montserrat;
+/* Seção Partiu */
+.section_partiu {
+    padding: 50px 20px;
     background-color: #ffffff;
     text-align: center;
 }
 
-.section_partiu h3{
-    font-size: 27px;
-    font-weight: 750;
-    margin-bottom: 9px;
-    text-align: center;
+.section_partiu h3 {
+    font-size: 28px;
+    color: #000D46;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
 }
 
+.section_partiu > p {
+    font-size: 16px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: Arial, sans-serif;
+}
+#card5 {
+    background-image: url('../img/card5.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#card6 {
+    background-image: url('../img/card6.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#card7 {
+    background-image: url('../img/Reveillion-Card-2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#card8 {
+    background-image: url('../img/card8.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+}
