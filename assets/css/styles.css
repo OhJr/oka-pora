@@ -189,6 +189,11 @@ header {
     margin: 0 auto;
 }
 
+.cards_container :hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
 /* Estilo  do card */
 .card {
     width: 250px;
