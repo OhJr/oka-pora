@@ -5,9 +5,11 @@
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #001a4d;
   color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .sobre-nos {
@@ -54,7 +56,7 @@ body {
   border: none;
   border-radius: 12px;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   cursor: default;
 }
 
@@ -62,6 +64,7 @@ body {
   margin-bottom: 64px;
   line-height: 1.8;
   font-size: 1.1rem;
+  text-align: justify;
 }
 
 img {
