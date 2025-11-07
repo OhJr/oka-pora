@@ -27,6 +27,10 @@ header {
     color: #ffffff;
 }
 
+body {
+    background-color: #D3D3D3;
+}
+
 .navbar_container {
     max-width: 1400px;
     display: flex;
@@ -39,7 +43,7 @@ header {
 .navbar_links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
     color: #ffffff;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -47,8 +51,16 @@ header {
 .navbar_links a {
     color: var(--white);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 26px;
     transition: 0.3s;
+}
+
+.navbar_links a:hover {
+    color: #4169E1;
+}
+
+.navbar_links li {
+    font-size: 26px;
 }
 
 .profile_section{
@@ -108,7 +120,7 @@ header {
 }
 
 .search_field {
-  background-color: #ffffff;
+  background-color: #D3D3D3;
   padding: 40px 0;
   text-align: center;
   font-family: Montserrat, sans-serif;
@@ -174,7 +186,7 @@ header {
 /* cards Réveillon */
 .section_reveillion {
     padding: 50px 20px;
-    background-color: white;
+    background-color: #D3D3D3;
     text-align: center;
 }
 
@@ -251,6 +263,7 @@ header {
 .card_content {
     padding: 20px 15px;
     text-align: left;
+    color: #000;
 }
 
 .card_content p {
@@ -276,7 +289,63 @@ header {
 }
 
 /* Parte de baixo do card  */
-.card_text {
+.card_text1 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text2 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text3 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text4 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text5 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text6 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text7 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    text-align: left;
+}
+
+.card_text8 {
     position: absolute;
     bottom: 15px;
     left: 15px;
@@ -295,6 +364,11 @@ header {
     font-size: 16px;
     font-weight: bold;
     color: white;
+}
+
+.card_price3 {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 /* Botões de promoção */
@@ -324,7 +398,7 @@ header {
 /* Seção Partiu */
 .section_partiu {
     padding: 50px 20px;
-    background-color: #f5f5f5;
+    background-color: #D3D3D3;
     text-align: center;
 }
 
@@ -363,7 +437,7 @@ header {
 /* Seção Partiu */
 .section_partiu {
     padding: 50px 20px;
-    background-color: #ffffff;
+    background-color: #D3D3D3;
     text-align: center;
 }
 
@@ -376,7 +450,7 @@ header {
 
 .section_partiu > p {
     font-size: 16px;
-    color: #ffffff;
+    color: #666;
     margin-bottom: 30px;
     font-family: Arial, sans-serif;
 }
@@ -393,7 +467,7 @@ header {
 }
 
 #card7 {
-    background-image: url('../img/Reveillion-Card-2.jpg');
+    background-image: url('../img/Reveillion-Card-1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -407,7 +481,7 @@ header {
 /*  SEÇÃO BLOG  */
 .section_blog {
     padding: 50px 20px;
-    background-color: white;
+    background-color: #D3D3D3;
     font-family: Arial, sans-serif;
     max-width: 1200px;
     margin: 0 auto;
@@ -451,7 +525,7 @@ header {
     background-color: #1A47B8;
     color: white;
     padding: 6px 12px;
-    font-size: 14px;
+    font-size: 24px;
     font-weight: bold;
     display: inline-flex;
     margin-bottom: 15px;
@@ -463,7 +537,7 @@ header {
 
 /* art principal */
 article {
-    background: #f8f8f8;
+    background: #D3D3D3;
     padding: 0;
 }
 
@@ -500,23 +574,23 @@ aside {
     display: flex;
     gap: 15px;
     align-items: flex-start;
-    background-color: f8f8f8;
+    background-color: #D3D3D3;
     border: none;
     padding: 0;
     margin-bottom: 25px;
 }
 
 .blog_post img {
-    width: 100px;
-    height: 80px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 0; 
+    border-radius: 2.5%; 
 }
 
 .blog_post_content {
     flex: 1;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #D3D3D3;
 }
 
 .blog_post_title {
@@ -561,7 +635,7 @@ aside {
 
 /* divisão */
 .blog_post:not(:last-child) {
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 2px solid #D3D3D3;
     padding-bottom: 20px;
 }
 
@@ -624,7 +698,8 @@ footer {
 .footer_links li {
     cursor: pointer;
     transition: color 0.3s;
-    font-size: 14px;
+    font-size: 24px;
+    font-weight: bold;
     padding: 5px 0;
 }
 
@@ -648,7 +723,7 @@ footer {
 
 .footer_contact ion-icon {
     vertical-align: middle;
-    margin-right: 8px;
+    margin-right: 5%;
     color: #ffffff;
     font-size: 18px;
 }
@@ -658,6 +733,7 @@ footer {
     color: #cccccc;
     font-size: 14px;
     margin: 0 0 15px 0;
+    margin-right: 2%;
 }
 
 .footer_contact img {
@@ -671,6 +747,12 @@ footer {
     flex: 1;
     min-width: 250px;
     text-align: left;
+}
+
+.bandeiras {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 
@@ -720,8 +802,8 @@ footer {
 
 .footer_final ion-icon {
     font-size: 32px !important;
-    margin-right: 20px !important;
-    margin-bottom: 20px !important;
+    margin-right: 4px !important;
+    gap: 8px;
 }
 
 
@@ -734,6 +816,7 @@ ion-icon[name="logo-instagram"],
 ion-icon[name="logo-youtube"] {
     font-size: 36px !important;
     padding-left: 0;
+    color: black;
 }
 
 
