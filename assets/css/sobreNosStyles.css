@@ -22,6 +22,7 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .sobre-nos::before { /*cria efeitos visuais, adicionar ícones, fundos, sombras, camadas de cor*/
@@ -72,4 +73,3 @@ img {
   height: auto;
   border-radius: 10px;
 }
-
