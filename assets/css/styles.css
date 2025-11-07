@@ -59,6 +59,19 @@ header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.profile_section a{
+    margin-right: auto;
+    color: #4169E1;
+    font-weight: 600;
+    font-size: 25px;
+    transition: 0.3s;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.profile_section img{
+    margin-left: 15px;
+}
+
 .navbar_logo img {
     display: inline-block;
     margin-left: -130px;
@@ -636,7 +649,7 @@ footer {
 .footer_contact ion-icon {
     vertical-align: middle;
     margin-right: 8px;
-    color: #1A47B8;
+    color: #ffffff;
     font-size: 18px;
 }
 
