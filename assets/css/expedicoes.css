@@ -22,6 +22,11 @@ body {
   /* background-color: #000b3f; /* mesma cor de fundo da seção */
   margin: 0; 
   padding: 0;
+  background-image: url('../img/Background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
 
 a {
@@ -30,13 +35,29 @@ a {
 
 header {
     height: 100px;
-    background-color: #000D46;
-    color: #ffffff;
+    background: transparent;
+    /* color: #ffffff; */
+    margin-bottom: 90px;
 }
 
-body {
-    background-color: #D3D3D3;
+
+
+
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/Background.png');
+  background-size: cover;
+  background-position: center;
+   background: rgba(0, 0, 0, 0.2); /* um fundo semi-transparente */
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  
 }
+
+
 
 .navbar_container {
     max-width: 1400px;
@@ -45,6 +66,7 @@ body {
     justify-content: space-between;
     margin: auto;
     height: 120px;
+    
 }
 
 .navbar_links {
@@ -112,8 +134,8 @@ body {
 .expedicoes {
   position: relative;
   overflow: hidden;
-      background-image: url('../img/Background.png');
-      padding-block: 180px;
+      /* background-image: url('../img/Background.png');
+      padding-block: 180px; */
 
     background-size: cover;
     background-position: center center;
@@ -121,19 +143,19 @@ body {
     z-index: 0;
 }
 
-.expedicoes::before {
+/* .expedicoes::before {
   content: "";
   position: absolute;
   inset: 0;
   background-image: url('../img/Background.png');
   background-size: cover;
   background-position: center;
-   background: rgba(0, 0, 0, 0.2); /* um fundo semi-transparente */
+   background: rgba(0, 0, 0, 0.2); /* um fundo semi-transparente 
   backdrop-filter: blur(10px);
   z-index: -1;
   
 }
-
+ */
 
 .cards_container {
     display: flex;
@@ -145,6 +167,7 @@ body {
     padding-bottom: 90px;
     position: relative;
     top: -100;
+    /* margin-top: 40px; */
 }
 
 .cards_container :hover {
