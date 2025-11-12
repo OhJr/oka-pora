@@ -116,7 +116,7 @@ body {
 /* ===== FLEXBOX ===== */
 .cards-equipe {
     display: flex;
-    position: absolute;
+    position: relative;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
@@ -216,7 +216,7 @@ body {
 }
 
 .card p {
-    color: var(--text-dark);
+    color: #323234;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
