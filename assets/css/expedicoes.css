@@ -4,6 +4,7 @@
 :root {
     --primary-color: #1A47B8;
     --secondary-color: #DBDBDB;
+    --text-dark: #000;
     --gradient: linear-gradient(to right bottom, #0C2052, #1A47B8); 
 --gradient-horizontal: linear-gradient(to right, #0C2052, #1A47B8);
     --white: #ffffff;
@@ -97,6 +98,9 @@ header::before {
     font-weight: 600;
     font-size: 25px;
     transition: 0.3s;
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -112,6 +116,55 @@ header::before {
 .profile_section img{
     margin-left: 15px;
 }
+
+/* ===== CAIXA DE SELEÇÃO ===== */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 3px 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .language-selector:hover {
+    background: var(--secondary-color);
+  }
+  
+  .lang-icon {
+    font-size: 1.3rem;
+    align-items: center;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+  }
+  
+  .language-selector:hover .lang-icon {
+    color: var(--primary-color);
+  }
+  
+  .lang-select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1.3rem;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 6px;
+    width: 60px;
+  }
+
+  .lang-select option {
+    color: var(--text-dark);
+  }
+  
+  .language-selector:hover .lang-select {
+    color: var(--primary-color);
+  }
 
 .navbar_logo img {
     display: inline-block;

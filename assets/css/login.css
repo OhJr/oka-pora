@@ -83,7 +83,7 @@ body {
 .login-icon {
     color: var(--white);
     font-size: 300px;
-    border: 1px solid var(--white);
+    /*border: 1px solid var(--white);*/
     width: 15%;
     aspect-ratio: 1 / 1; /* mantém quadrado */
     border-radius: 15%;
@@ -94,12 +94,13 @@ body {
     justify-content: center;
 }
 
+/*Gropo do Email e Login*/
 .input-group {
     display: flex;
     align-items: center;
     background-color: #ffffff33;
     border-radius: 5px;
-    padding: 8px 12px;
+    padding: 10px 12px;
     width: 250px;
 }
 

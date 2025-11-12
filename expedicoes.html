@@ -13,27 +13,33 @@
     <nav>
       <div class="navbar_container">
         <!-- Logo -->
-        <a href="#" class="navbar_logo">
+        <a href="./index.html" class="navbar_logo">
           <img src="assets/img/Logo.png" alt="logo" />
         </a>
 
         <!-- Links de navegação -->
         <ul class="navbar_links">
           <li><a href="./index.html">Início</a></li>
-          <li><a href="./expedicoes.html" style="color: #4169e1">Expedições</a></li>
+          <li><a href="./expedicoes.html" style="color: #4169E1;">Expedições</a></li>
           <li><a href="./sobrenos.html">A Oka Porã</a></li>
           <li><a href="#">Para organizações</a></li>
           <li><a href="./blog.html">Blog</a></li>
-          <li><a href="#">Contatos</a></li>
-          <li><a href="#">Central de ajuda</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Contatos</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Central de ajuda</a></li>
           <li>|</li>
         </ul>
 
         <div class="profile_section">
           <a href="login.html">Profile</a>
-          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">-->
-          <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px" />
-          <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px" />
+          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+          <select class="lang-select" onchange="location = this.value;">
+            <option value="expedicoes.html" selected>BR</option>
+            <option value="index-en.html">EN</option>
+          </select>
+
+          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
+                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
+                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
         </div>
       </div>
     </nav>
@@ -159,6 +165,10 @@
 
 
   </section>
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
