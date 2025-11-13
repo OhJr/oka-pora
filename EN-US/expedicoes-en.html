@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expeditions - Oka Porã</title>
+  <link rel="stylesheet" href="./assets/css/expedicoes.css" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navbar_container">
+        <!-- Logo -->
+        <a href="./index.html" class="navbar_logo">
+          <img src="assets/img/Logo.png" alt="logo" />
+        </a>
+
+        <!-- Navigation links -->
+        <ul class="navbar_links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./expedicoes.html" style="color: #4169E1;">Expeditions</a></li>
+          <li><a href="./sobrenos.html">About Oka Porã</a></li>
+          <li><a href="./organizacao.html">Organization</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Contacts</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Help Center</a></li>
+          <li>|</li>
+        </ul>
+
+        <div class="profile_section">
+          <a href="login.html">Profile</a>
+          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+          <select class="lang-select" onchange="location = this.value;">
+            <option value="expedicoes-en.html" selected>EN</option>
+            <option value="expedicoes.html">BR</option>
+          </select>
+
+          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
+                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
+                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="expedicoes">
+    <div class="cards_container">
+      <div class="card" id="card1">
+        <div class="card_content">
+          <p>AMAZON</p>
+          <span>RIO NEGRO <small>AM</small></span>
+        </div>
+
+        <div class="card_text">
+          <p>A unique journey of connection with the forest and its stories</p>
+          <p>From <span class="card_price">R$ 3.220,50</span></p>
+        </div>
+      </div>
+
+      <!-- Card 2 - Amazon Alter do Chão -->
+      <div class="card" id="card2">
+        <div class="card_content">
+          <p>AMAZON ALTER DO</p>
+          <span>CHÃO <small>PA</small></span>
+        </div>
+
+        <div class="card_text">
+          <p>Sun, paradisiacal beaches and adventures in the Amazon</p>
+          <p>From <span class="card_price">R$ 3.940,00</span></p>
+        </div>
+      </div>
+
+      <!-- Card 3 - Belém & Ilha de Marajó -->
+      <div class="card" id="card3">
+        <div class="card_content">
+          <p>BELÉM & ILHA DE</p>
+          <span>MARAJÓ <small>PA</small></span>
+        </div>
+
+        <div class="card_text">
+          <p>
+            Beaches, streams and culture: discover the charm of Pará on Marajó Island
+          </p>
+          <p>From <span class="card_price">R$ 4.830,00</span></p>
+        </div>
+      </div>
+
+      <!-- Card 4 - Amazon Shanenawa (WITH PROMOTION) -->
+      <div class="card" id="card4">
+        <div class="card_content">
+          <p>AMAZON</p>
+          <span>SHANENAWA <small>AC</small></span>
+        </div>
+
+        <div class="card_text">
+          <p>
+            Ancestral wisdom in an indigenous village in the heart of the forest
+          </p>
+          <p>From <span class="card_price">R$ 6.290,00</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards_container">
+      <!-- Card 5 -->
+      <div class="card" id="card5">
+        <div class="card_content">
+          <p>
+            PICO DA <span>NEBLINA <small>AM</small></span>
+          </p>
+        </div>
+
+        <div class="card_text">
+          <p>Brazil's greatest adventure alongside the Yanomami people</p>
+          <p>From <span class="card_price">R$ 24.150,00</span></p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card" id="card6">
+        <div class="card_content">
+          <p>
+            LENÇÓIS <span>MARANHENSES <small>MA</small></span>
+          </p>
+        </div>
+
+        <div class="card_text">
+          <p>An unforgettable crossing through Brazil's largest dune field</p>
+          <p>From <span class="card_price">R$ 4.900,00</span></p>
+        </div>
+      </div>
+
+      <!-- Card 7 - CORRECT THE ID (it was card1) -->
+      <div class="card" id="card7">
+        <div class="card_content">
+          <p>
+            AMAZON <span>RIO NEGRO <small>AM</small></span>
+          </p>
+        </div>
+
+        <div class="card_text">
+          <p>A unique journey of connection with the forest and its stories</p>
+          <p>From <span class="card_price">R$ 3.220,50</span></p>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card" id="card8">
+        <div class="card_content">
+          <p>
+            CHAPADA DO <span>VEADEIROS <small>DF</small></span>
+          </p>
+        </div>
+
+        <div class="card_text">
+          <p>
+            Trails, waterfalls and a dive into the culture of the Cerrado peoples
+          </p>
+          <p>From <span class="card_price">R$ 3.505,00</span></p>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
