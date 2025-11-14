@@ -1,99 +1,157 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós</title>
-    <link rel="stylesheet" href="./assets/css/sobreNosStyles.css">
-    
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oka Porã - Home</title>
+    <link rel="stylesheet" href="./assets/css/sobreNosStyles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <header>
       <nav>
-          <div class="navbar_container">
-              <!-- Logo -->
-              <a href="./index.html" class="navbar_logo">
-                  <img src="assets/img/Logo.png" alt="logo" />
-              </a>
+        <div class="navbar_container">
+          <!-- Logo -->
+          <a href="./index.html" class="navbar_logo">
+            <img src="assets/img/Logo.png" alt="logo" />
+          </a>
 
-              <!-- Links de navegação -->
-              <ul class="navbar_links">
-                  <li><a href="./index.html">Início</a></li>
-                  <li><a href="./expedicoes.html">Expedições</a></li>
-                  <li><a href="./sobrenos.html" style="color: #4169E1;">A Oka Porã</a></li>
-                  <li><a href="./organizacao.html">Para organizações</a></li>
-                  <li><a href="./blog.html">Blog</a></li>
-                  <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Contatos</a></li>
-                  <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Central de
-                          ajuda</a></li>
-                  <li>|</li>
-              </ul>
+          <!-- Links de navegação -->
+          <ul class="navbar_links">
+            <li><a href="./index.html">Início</a></li>
+            <li><a href="./expedicoes.html">Expedições</a></li>
+            <li>
+              <a href="./sobrenos.html" style="color: #4169e1">A Oka Porã</a>
+            </li>
+            <li><a href="./organizacao.html">Organização</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+                target="_blank"
+                >Contatos</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+                target="_blank"
+                >Central de ajuda</a
+              >
+            </li>
+            <li>|</li>
+          </ul>
 
-              <div class="profile_section">
-                  <a href="login.html">Profile</a>
-                  <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-                  <select class="lang-select" onchange="location = this.value;">
-                      <option value="index.html" selected>BR</option>
-                      <option value="EN-US/sobrenos-en.html">EN</option>
-                  </select>
-                  <!-- as antigas flagzinhas, agora desativadas.
-                  <img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
-                  <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                  <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
-              </div>
+          <div class="profile_section">
+            <a href="login.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="index.html" selected>BR</option>
+              <option value="./EN-US/sobrenos-en.html">EN</option>
+            </select>
           </div>
+        </div>
       </nav>
-  </header>
+    </header>
 
+    <main>
+      <!-- Div do titulo -->
+      <section class="titulo hero">
+        <h1 class="titulo">Quem somo - Oka-Porã</h1>
+        <p>
+          Somos um projeto/organização que
+          <strong>cria conteúdo, organiza expedições e conecta pessoas</strong>
+          interessadas em cultura, natureza e tecnologia.
+        </p>
+      </section>
 
-    <div class="overlay">  <!-- Camada com texto -->
-      <button class="titulo">Sobre Nós</button>
+      <!-- Div do objetivo -->
+      <section class="objetivo historia">
+        <h2 class="subtitulo">Nossa história</h2>
+        <p>
+          Fundada em 2025, a Oka-Porã nasceu do desejo de explorar lugares com tema indigienas e divulgar
+          as belezas naturais e culturais do Brasil. Desde então, realizamos
+          diversas expedições, publicamos inúmeros artigos e estabelecemos
+          parcerias valiosas.
+        </p>
+      </section>
 
-      <div class="texto">
-            <h2>Propósito do Site</h2>
+      <!-- Div do membros -->
+       <section class="membros equipe">
+        <h2 class="subtitulo">Nossa equipe</h2>
+        <ul>
+          <li>
+            <strong>João Camargo</strong> — Fundador e Diretor Executivo.
+            <em>Explorador apaixonado por culturas indígenas e conservação
+            ambiental.</em>
+          </li>
+          <li>
+            <strong>Ananda Nardi</strong> — Coordenadora de Conteúdo.
+            <em>Jornalista especializada em temas ambientais e culturais.</em>
+          </li>
+          <li>
+            <strong>Bruno Camargo</strong> — Líder de Expedições.
+            <em>Guia experiente com vasta experiência em trilhas e aventuras
+            na natureza.</em>
+          </li>
+          <li>
+            <strong>Ana Maia</strong> — Gerente de Parcerias.
+            <em>Especialista em desenvolvimento de parcerias estratégicas e
+            colaborações.</em>
+          </li>
+          <li>
+            <strong>Osvaldo Costa</strong> — Designer Gráfico.
+            <em>Responsável pela identidade visual e materiais gráficos do
+            projeto.</em>
+        </ul>
+      </section>
 
-            <p>O Caminhos da Ancestralidade foi criado para aproximar pessoas das culturas indígenas brasileiras, valorizando suas tradições, espiritualidade e relação harmoniosa com a natureza. O site serve como uma ponte entre visitantes interessados em vivências transformadoras e as comunidades que desejam compartilhar sua sabedoria de forma respeitosa e sustentável.</p>
-            
-            <ol>
-              <li>O que o site oferece</li>
-                  <ul>  
-                    <li>Roteiros de Viagem Culturais</li>
-                  
-                    <li>Viagens organizadas em parceria direta com aldeias indígenas.</li>
-                  
-                    <li>Experiências que incluem trilhas, rodas de conversa, rituais tradicionais, culinária típica e atividades comunitárias.</li>
-                  
-                    <li>Cada roteiro é pensado para garantir autenticidade e respeito cultural.</li>
-                  
-                    <li>Conteúdo Educativo e Cultural</li>
-                  
-                    <li>Textos, vídeos e depoimentos sobre as culturas indígenas do Brasil.</li>
-                  
-                    <li>Explicações sobre tradições, línguas, arte, espiritualidade e história dos povos visitados.</li>
-                  
-                    <li>Espaço para reflexão e aprendizado sobre a ancestralidade e o meio ambiente.</li>
-                  
-                    <li>Sustentabilidade e Ética</li>
-                  
-                    <li>O site destaca o compromisso com o turismo responsável.</li>
-                  
-                    <li>Parte dos recursos das viagens é destinada às comunidades participantes.</li>
-                  
-                    <li>Todas as práticas são desenvolvidas com o consentimento e protagonismo das aldeias.</li>
-                </ul>
-            
-              <li>Experiência para o visitante</li>
-              
-              Ao navegar no site, o visitante é convidado a explorar roteiros, conhecer histórias e preparar-se para uma viagem transformadora — não apenas física, mas também espiritual e emocional.
-              A ideia é que cada pessoa aprenda a ver o mundo com novos olhos, entendendo a força e a importância da ancestralidade indígena na formação do Brasil.
-              
-              <li>🌎 Missão do projeto</li>
-              
-              Promover respeito, preservação cultural e reconexão com a natureza, mostrando que o turismo pode ser um ato de aprendizado e valorização das raízes — um verdadeiro caminho de ancestralidade.
-            </ol>
-      </div>
-    </div>
-  </section>
-</body>
+      <!-- Div do "oq fazemos" -->
+      <section class="o-que-fazemos servicos">
+        <h2 class="subtitulo">O que fazemos</h2>
+        <p>
+          Oferecemos uma variedade de serviços e projetos, incluindo um blog
+          com artigos informativos, expedições guiadas, guias detalhados,
+          workshops interativos e parcerias estratégicas.
+        </p>
+        <ul>
+          <li><a href="blog.html">Artigos e notícias</a></li>
+          <li><a href="expedicoes.html">Expedições</a></li>
+          <li><a href="organizacao.html">Organização de todos os membros</a></li>
+        </ul>
+      </section>
+
+      <!-- Div do futuro -->
+      <section class="plano-futuro">
+        <h2 class="subtitulo">Planos para o futuro</h2>
+        <p>
+          Estamos constantemente buscando expandir nossos horizontes. Nossos
+          planos incluem lançar guias em inglês e outos idiomas, aumentar o número de
+          expedições e criar newsletters informativas.
+        </p>
+      </section>
+
+      <!-- Div do contato -->
+      <section class="contato">
+        <h2 class="subtitulo">Contato</h2>
+        <p>
+          Quer colaborar ou saber mais? Manda mensagem pra
+          <a href="whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+            >nosso whatsapp</a> ou nos siga nas redes.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        
+      <nav class="rodape">
+        <a href="index.html">Início</a> |
+        <a href="./EN-US/sobrenos-en.html">English</a>
+      </nav>
+  </body>
 </html>
