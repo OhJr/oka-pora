@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oka Porã - Login</title>
-    <link rel="stylesheet" href="assets/css/login.css">
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <section class="login">
         <div class="login-box">
-            <!--ICONE DE LOGIN-->
+            <!--LOGIN ICON-->
             <div class="login-icon">
                 <ion-icon name="person-outline"></ion-icon>
             </div>
@@ -23,20 +23,21 @@
                 <input type="email" placeholder="Email" />
             </div>
 
-            <!--SENHA-->
+            <!--PASSWORD-->
             <div class="input-group">
                 <ion-icon name="lock-closed-outline" class="icon-lock"></ion-icon>
-                <input type="password" placeholder="Senha" />
+                <input type="password" id="pwd" placeholder="Password" />
+                <input type="checkbox" onclick="pwd. type = this.checked ? 'text' : 'password'">
             </div>
 
-            <!-- OPÇÕAO LOGIN -->
+            <!-- LOGIN OPTION -->
             <div class="options">
-                <label><input type="checkbox" /> Lembre de mim</label>
-                <a href="#">Esqueceu sua senha?</a>
+                <label><input type="checkbox" /> Remember me</label>
+                <a href="#">Forgot your password?</a>
             </div>
 
-            <!-- BOTÃO -->
-            <a href="index.html"><button class="btn-login">LOGIN</button></a>
+            <!-- BUTTON -->
+            <a href="index-en.html"><button class="btn-login">LOGIN</button></a>
         </div>
     </section>
 

@@ -61,10 +61,6 @@ header {
     
 }
 
-
-
-
-
 header::before {
   content: "";
   position: absolute;
@@ -303,7 +299,7 @@ header::before {
 }
 
 #card7 {
-    background-image: url('../img/Reveillion-Card-2.jpg');
+    background-image: url('../img/Reveillion-Card-1.jpg');
     background-size: cover;
     background-position: center;
 }
