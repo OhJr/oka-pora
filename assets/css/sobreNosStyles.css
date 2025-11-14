@@ -265,6 +265,10 @@ section p {
     margin-bottom: 15px;
 }
 
+.sem_bullets {
+    list-style-type: none;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 4px;
