@@ -235,3 +235,53 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ESSA PARTE PARA CIMA FOI COPIADA DO OUTRO ARQUIVO CSS DA INDEX PRINCIPAL*/
+
+
+/* ESSA PARTE PARA BAIXO É ESPECÍFICA DESTA PÁGINA FEITO POR MIM 
+se tiver alguma coisa errada culpe os outros membro lkksksksks */
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+section {
+    margin-bottom: 40px;
+}
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1A47B8;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4px;
+    color:#1A47B8;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #000D46;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.rodape a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
