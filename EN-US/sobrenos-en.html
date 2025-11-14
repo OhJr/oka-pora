@@ -1,31 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="../assets/css/sobreNosStyles.css">
-    
-</head>
-<body>
-    <section class="sobre-nos"> <!-- Background -->
-        <img src="../assets/img/Background.png" alt="Colorful indigenous pattern background">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oka Porã - A Oka Porã</title>
+    <link rel="stylesheet" href="../assets/css/sobreNosStyles.css" />
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  </head>
 
+  <body>
+    <header>
+      <nav>
+        <div class="navbar_container">
+          <!-- Logo -->
+          <a href="index-en.html" class="navbar_logo">
+            <img src="../assets/img/Logo.png" alt="logo" />
+          </a>
 
-    <div class="overlay">  <!-- Layer with text -->
-      <a href="index-en.html"><button class="titulo">About Us</button></a>
+          <!-- Links de navegação -->
+          <ul class="navbar_links">
+            <li><a href="index-en.html">Home</a></li>
+            <li><a href="expedicoes-en.html">Expeditions</a></li>
+            <li>
+              <a href="sobrenos-en.html" style="color: #4169e1">About Oka Porã</a>
+            </li>
+            <li><a href="organizacao-en.html">Organization</a></li>
+            <li><a href="blog-en.html">Blog</a></li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+                target="_blank"
+                >Contacts</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+                target="_blank"
+                >Help Center</a
+              >
+            </li>
+          </ul>
 
-      <div class="texto">
-        <strong>
-          <p>The Paths of Ancestry was born from the desire to connect people to the cultural and spiritual roots of Brazil's indigenous peoples. Our purpose is to promote travel experiences that go beyond tourism. They are genuine encounters with nature, ancestral wisdom, and traditional ways of life that are part of our history.</p>
+          <div class="profile_section">
+            <a href="login-en.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="index.html" selected>BR</option>
+              <option value="./EN-US/sobrenos-en.html">EN</option>
+            </select>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-        <p>We work in partnership with indigenous communities, respecting their customs, territories, and forms of organization. Each itinerary is created with care, ensuring that the experience is authentic, sustainable, and beneficial to the visited villages.</p>
+    <main>
+      <!-- Div do titulo -->
+      <section class="titulo hero">
+        <h1 class="titulo">Who We Are - Oka-Porã</h1>
+        <p>
+          We are a project/organization that
+          <strong>creates content, organizes expeditions, and connects people</strong>
+          interested in culture, nature, and technology.
+        </p>
+      </section>
 
-        <p>More than knowing places, we want our visitors to learn, listen, and feel the strength of the cultures that have shaped Brazil for centuries. Each trip is a dive into ancestral wisdom, living stories, and respect for nature.</p>
+      <!-- Div do objetivo -->
+      <section class="objetivo historia">
+        <h2 class="subtitulo">Our History</h2>
+        <p>
+          Founded in 2025, Oka-Porã was born from the desire to explore places with indigenous themes and showcase
+          the natural and cultural beauty of Brazil. Since then, we have carried out
+          several expeditions, published countless articles, and established
+          valuable partnerships.
+        </p>
+      </section>
 
-        <p>Come with us to tread this path of respect, exchange, and learning—a journey that transforms the view of the world and of ourselves.</p></strong>
-      </div>
-    </div>
-  </section>
-</body>
+      <!-- Div do membros -->
+
+      <section class="membros equipe">
+        <h2 class="subtitulo">Our Team</h2>
+        <ul>
+          <li>
+            <strong>João Camargo</strong> — Founder and Executive Director.
+            <em>Explorer passionate about Indigenous cultures and environmental conservation.</em>
+          </li>
+          <li>
+            <strong>Ananda Nardi</strong> — Content Coordinator.
+            <em>Journalist specialized in environmental and cultural topics.</em>
+          </li>
+          <li>
+            <strong>Bruno Camargo</strong> — Expedition Leader.
+            <em>Experienced guide with extensive background in trails and outdoor adventures.</em>
+          </li>
+          <li>
+            <strong>Ana Maia</strong> — Partnerships Manager.
+            <em>Specialist in developing strategic partnerships and collaborations.</em>
+          </li>
+          <li>
+            <strong>Osvaldo Costa</strong> — Graphic Designer.
+            <em>Responsible for the visual identity and graphic materials of the project.</em>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Div do "oq fazemos" -->
+      <section class="servicos">
+        <h2 class="subtitulo">What We Do</h2>
+        <p>
+          We offer a variety of services and projects, including a blog
+          with informative articles, guided expeditions, detailed guides,
+          interactive workshops, and strategic partnerships.
+        </p>
+        <ul>
+          <li><a href="blog-en.html" style="color: black;">Articles and News</a></li>
+          <li><a href="expedicoes-en.html" style="color: black;">Expeditions</a></li>
+          <li><a href="organizacao-en.html" style="color: black;">Organization of All Members</a></li>
+        </ul>
+      </section>
+
+      <!-- Div do futuro -->
+      <section class="plano-futuro">
+        <h2 class="subtitulo">Future Plans</h2>
+        <p>
+          We are constantly looking to expand our horizons. Our
+          plans include launching guides in English and other languages, increasing the number of
+          expeditions, and creating informative newsletters.
+        </p>
+      </section>
+
+      <!-- Div do contato -->
+      <section class="contato">
+        <h2 class="subtitulo">Contact</h2>
+        <p>
+          Want to collaborate or learn more? Send a message to
+          <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank"
+            >our WhatsApp</a> or follow us on social media.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        
+      <nav class="rodape">
+        <a href="index-en.html">Home</a> |
+        <a href="../sobrenos.html">Português</a>
+      </nav>
+  </body>
 </html>
