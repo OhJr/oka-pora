@@ -29,7 +29,7 @@ body {
 /* ===== HEADER ===== */
 header {
     height: auto;
-    min-height: 100px;
+    min-height: 70px;
     background-color: #000D46;
     color: #ffffff;
     position: relative;
@@ -41,9 +41,9 @@ header {
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    padding: 20px;
+    padding: 8px 20px;
     height: auto;
-    min-height: 100px;
+    min-height: 70px;
 }
 
 .navbar_links {
@@ -57,7 +57,7 @@ header {
 .navbar_links a {
     color: var(--white);
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -66,13 +66,13 @@ header {
 }
 
 .navbar_links li {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .profile_section {
     color: var(--white);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
     display: flex;
     gap: 0.7rem;
@@ -84,7 +84,7 @@ header {
     margin-right: auto;
     color: #4169E1;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
     font-family: 'Open Sans', sans-serif;
 }
@@ -145,15 +145,15 @@ header {
 .navbar_logo img {
     display: inline-block;
     margin-left: -130px;
-    margin-top: 10px;
+    margin-top: 3px;
     width: auto;
-    height: 200px;
+    height: 90px;
 }
 
 /* ===== HERO SECTION ===== */
 .hero_section {
     background-image: url('../img/Background.png');
-    padding-block: 250px;
+    padding-block: 280px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -169,8 +169,8 @@ header {
 .hero_section h3 {
     font-family: 'Montserrat';
     color: #ffffff;
-    font-size: 55px;
-    padding-top: 60px;
+    font-size: 50px;
+    padding-top: 50px;
     padding-left: 60px;
 }
 
@@ -277,6 +277,9 @@ header {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #card1 {
@@ -334,7 +337,9 @@ header {
 .card_content {
     padding: 20px 15px;
     text-align: left;
-    color: #000;
+    color: #fff;
+    background: transparent;
+    border-radius: 10px 10px 0 0;
 }
 
 .card_content p {
@@ -342,6 +347,7 @@ header {
     font-weight: bold;
     margin-bottom: 5px;
     font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card_content span {
@@ -349,14 +355,17 @@ header {
     font-size: 18px;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card_content small {
     font-size: 10px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
     padding: 2px 5px;
     border-radius: 3px;
     margin-left: 5px;
+    text-shadow: none;
 }
 
 /* Parte de baixo do card */
@@ -368,11 +377,14 @@ header {
 .card_text6,
 .card_text7,
 .card_text8 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
     text-align: left;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 0 10px 10px;
 }
 
 .card_text1 p,
@@ -387,6 +399,7 @@ header {
     margin-bottom: 8px;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.3;
+    color: white;
 }
 
 .card_price,
@@ -399,8 +412,14 @@ header {
 /* Botões de promoção */
 .promo {
     position: absolute;
-    top: 200px;
-    left: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .promo button {
@@ -410,10 +429,10 @@ header {
     font-size: 9px;
     font-weight: bold;
     border-radius: 5px;
-    padding: 4px 8px;
-    margin-bottom: 5px;
-    display: block;
-    width: 100%;
+    padding: 5px 10px;
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
 }
 
 /* ===== SEÇÃO BLOG ===== */
@@ -950,6 +969,13 @@ footer > span {
     .navbar_container {
         min-height: 80px;
         padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .navbar_logo {
+        flex: 0 0 auto;
     }
     
     .navbar_logo img {
@@ -958,15 +984,23 @@ footer > span {
     
     .navbar_toggle {
         display: block;
-        top: 20px;
-        right: 20px;
+        position: relative;
+        top: auto;
+        right: auto;
         font-size: 30px;
+        order: 3;
+    }
+    
+    .profile_section {
+        order: 2;
+        font-size: 18px;
+        gap: 0.5rem;
     }
     
     .navbar_links {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 80px;
         left: 0;
         width: 100%;
         background-color: #000D46;
@@ -979,11 +1013,6 @@ footer > span {
     
     .navbar_links.active {
         display: flex !important;
-    }
-    
-    .profile_section {
-        font-size: 18px;
-        gap: 0.5rem;
     }
     
     .profile_section a {
@@ -1002,22 +1031,22 @@ footer > span {
 
 @media (max-width: 768px) {
     header {
-        min-height: 70px;
+        min-height: 60px;
     }
     
     .navbar_container {
-        min-height: 70px;
-        padding: 10px 15px;
+        min-height: 60px;
+        padding: 8px 15px;
     }
     
     .navbar_logo img {
-        height: 60px;
+        height: 50px;
     }
     
     .navbar_toggle {
-        top: 15px;
+        top: 12px;
         right: 15px;
-        font-size: 28px;
+        font-size: 26px;
     }
     
     .profile_section {
@@ -1041,22 +1070,27 @@ footer > span {
 
 /* MOBILE (até 600px) */
 @media (max-width: 600px) {
+    header {
+        min-height: 60px;
+    }
+    
     .navbar_container {
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        padding: 10px 15px;
+        padding: 8px 15px;
+        min-height: 60px;
     }
 
     .navbar_logo {
         order: 1;
         width: 100%;
         text-align: center;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .navbar_logo img {
-        height: 60px;
+        height: 50px;
         margin: 0 auto;
     }
 
@@ -1093,21 +1127,21 @@ footer > span {
     }
 
     .hero_section {
-        padding-block: 100px;
+        padding-block: 120px;
         text-align: center;
     }
 
     .hero_section h1 {
-        font-size: 40px;
+        font-size: 45px;
         padding-left: 20px;
         padding-right: 20px;
     }
 
     .hero_section h3 {
-        font-size: 28px;
+        font-size: 26px;
         padding-left: 20px;
         padding-right: 20px;
-        padding-top: 30px;
+        padding-top: 25px;
     }
 
     .search_field {
