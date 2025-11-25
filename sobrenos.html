@@ -6,6 +6,8 @@
     <title>Oka Porã - A Oka Porã </title>
     <link rel="stylesheet" href="./assets/css/sobreNosStyles.css" />
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+      <!--JS-->
+    <script src="assets/js/script.js"></script>
   </head>
 
   <body>
@@ -45,13 +47,18 @@
             </li>
           </ul>
 
-          <div class="profile_section">
-            <a href="login.html">Profile</a>
-            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-            <select class="lang-select" onchange="location = this.value;">
-              <option value="index.html" selected>BR</option>
-              <option value="./EN-US/sobrenos-en.html">EN</option>
-            </select>
+          <div class="navbar_right">
+            <div class="profile_section">
+              <a href="login.html">Profile</a>
+              <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+              <select class="lang-select" onchange="location = this.value;">
+                <option value="index.html" selected>BR</option>
+                <option value="./EN-US/sobrenos-en.html">EN</option>
+              </select>
+            </div>
+            <button class="navbar_toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                  </button>
           </div>
         </div>
       </nav>

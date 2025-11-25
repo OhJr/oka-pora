@@ -619,7 +619,7 @@ footer {
     flex: 1;
     min-width: 220px;
     text-align: left;
-    padding-right: 20px;
+    padding-left: 125px;
 }
 
 .footer_title {
