@@ -46,6 +46,12 @@ header {
     min-height: 70px;
 }
 
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .navbar_links {
     list-style: none;
     display: flex;
@@ -150,6 +156,17 @@ header {
     height: 90px;
 }
 
+/* Menu Hamburguer */
+.navbar_toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 /* ===== HERO SECTION ===== */
 .hero_section {
     background-image: url('../img/Background.png');
@@ -186,13 +203,16 @@ header {
     font-size: 32px;
     font-weight: 600;
     margin-bottom: 25px;
+    color: #000;
 }
 
 .button_group {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 20px;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .button_group button {
@@ -200,19 +220,22 @@ header {
     background-color: #fff;
     color: #000;
     font-weight: 600;
-    font-size: 18px;
-    padding: 14px 30px;
-    border-radius: 8px;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
+    min-width: 120px;
 }
 
 #blue-button {
-    background: linear-gradient(to bottom, #0052cc, #003d99);
+    background: var(--primary-color);
     color: #fff;
     border: none;
+}
+
+#blue-button:hover {
+    background: #0C2052;
 }
 
 .button_group button:hover {
@@ -222,10 +245,11 @@ header {
 
 #search_link {
     color: #1A47B8;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    margin-top: 10px;
-    display: inline-block;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
 }
 
 /* ===== CARDS SECTIONS ===== */
@@ -262,9 +286,12 @@ header {
     margin: 0 auto;
 }
 
-.cards_container :hover {
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
     transform: scale(1.05);
-    transition: transform 0.3s;
 }
 
 /* Estilo do card */
@@ -284,62 +311,40 @@ header {
 
 #card1 {
     background-image: url('../img/Reveillion-Card-1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 #card2 {
     background-image: url('../img/Reveillion-Card-2.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 #card3 {
     background-image: url('../img/Reveillion-Card-3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 #card4 {
     background-image: url('../img/Reveillion-Card-4.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 
 #card5 {
     background-image: url('../img/card5.jpg.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 #card6 {
     background-image: url('../img/card6.jpg.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 #card7 {
     background-image: url('../img/Reveillion-Card-1.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 #card8 {
     background-image: url('../img/card8.jpg.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 .card_content {
     padding: 20px 15px;
     text-align: left;
     color: #fff;
-    background: transparent;
-    border-radius: 10px 10px 0 0;
 }
 
 .card_content p {
@@ -377,11 +382,6 @@ header {
 .card_text6,
 .card_text7,
 .card_text8 {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    right: auto;
-    text-align: left;
     padding: 15px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 0 0 10px 10px;
@@ -412,7 +412,7 @@ header {
 /* Botões de promoção */
 .promo {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: auto;
@@ -430,8 +430,6 @@ header {
     font-weight: bold;
     border-radius: 5px;
     padding: 5px 10px;
-    display: inline-block;
-    width: auto;
     white-space: nowrap;
 }
 
@@ -522,8 +520,6 @@ aside {
     gap: 15px;
     align-items: flex-start;
     background-color: #D3D3D3;
-    border: none;
-    padding: 0;
     margin-bottom: 25px;
 }
 
@@ -538,7 +534,6 @@ aside {
 .blog_post_content {
     flex: 1;
     padding: 0;
-    background-color: #D3D3D3;
 }
 
 .blog_post_title {
@@ -719,207 +714,176 @@ footer > span {
 /* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
 /* ================================================ */
 
-/* NOTEBOOKS GRANDES (1200px - 1400px) */
-@media (max-width: 1400px) {
+/* TABLETS E NOTEBOOKS (768px - 1024px) */
+@media (max-width: 1024px) {
     .navbar_container {
-        max-width: 1200px;
-    }
-
-    .navbar_links {
-        gap: 1.2rem;
-    }
-
-    .navbar_links a,
-    .navbar_links li {
-        font-size: 22px;
-    }
-
-    .hero_section h1 {
-        font-size: 65px;
-        padding-left: 300px;
-    }
-
-    .hero_section h3 {
-        font-size: 48px;
-    }
-}
-
-/* NOTEBOOKS MÉDIOS (1024px - 1200px) */
-@media (max-width: 1200px) {
-    .navbar_container {
-        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .navbar_logo img {
         margin-left: 0;
-        height: 160px;
+        height: 70px;
     }
 
-    .navbar_links {
+    .navbar_right {
+        display: flex;
+        align-items: center;
         gap: 1rem;
     }
 
-    .navbar_links a,
-    .navbar_links li {
-        font-size: 20px;
+    .profile_section {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
     }
 
-    .profile_section,
-    .profile_section a {
-        font-size: 20px;
-    }
-
-    .hero_section {
-        padding-block: 180px;
-    }
-
-    .hero_section h1 {
-        font-size: 60px;
-        padding-left: 200px;
-    }
-
-    .hero_section h3 {
-        font-size: 45px;
-        padding-left: 50px;
-    }
-
-    .search_container p {
-        font-size: 28px;
-    }
-
-    .cards_container {
-        max-width: 1000px;
-    }
-}
-
-/* TABLETS GRANDES E NOTEBOOKS PEQUENOS (768px - 1024px) */
-@media (max-width: 1024px) {
-    .navbar_logo img {
-        margin-left: 0;
-        height: 140px;
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
     }
 
     .navbar_links {
-        gap: 0.8rem;
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #000D46;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
     }
 
-    .navbar_links a,
-    .navbar_links li {
-        font-size: 18px;
+    .navbar_links.active {
+        display: flex !important;
     }
 
-    .profile_section,
-    .profile_section a {
+    .navbar_links a {
         font-size: 18px;
     }
 
     .hero_section {
         padding-block: 150px;
+        text-align: center;
     }
 
     .hero_section h1 {
         font-size: 55px;
-        padding-left: 100px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .hero_section h3 {
-        font-size: 40px;
-        padding-left: 40px;
-    }
-
-    .search_container p {
-        font-size: 26px;
+        font-size: 35px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .button_group {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 12px;
     }
 
     .button_group button {
         width: auto;
-        min-width: 140px;
+        min-width: 110px;
+        font-size: 15px;
+        padding: 10px 20px;
     }
 
     .blog_container {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    /* Footer Tablet */
-    footer {
-        padding: 40px 30px 25px;
-        gap: 35px;
-    }
-
-    .footer_logo,
-    .footer_contact,
-    .footer_final {
-        min-width: 45%;
-        padding-right: 15px;
-    }
-
-    .footer_links {
-        min-width: 45%;
-        gap: 12px 25px;
-    }
-
-    .footer_links li {
-        font-size: 20px;
-    }
-
-    .footer_title {
-        margin-bottom: 20px;
-    }
-
-    .footer_text {
-        margin-bottom: 18px;
-    }
-
-    footer > span {
-        margin-top: 25px;
-        padding-top: 18px;
     }
 }
 
-/* TABLETS PEQUENOS (600px - 768px) */
+/* MOBILE (até 768px) */
 @media (max-width: 768px) {
+    .navbar_container {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar_logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .profile_section {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        font-size: 22px;
+    }
+
+    .lang-select {
+        font-size: 1rem;
+        width: 50px;
+    }
+
+    .hero_section {
+        padding-block: 100px;
+    }
+
+    .hero_section h1 {
+        font-size: 40px;
+    }
+
+    .hero_section h3 {
+        font-size: 24px;
+        padding-top: 20px;
+    }
+
+    .search_container p {
+        font-size: 22px;
+    }
+
     .button_group {
         flex-direction: row;
-        justify-content: center;
-        gap: 15px;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .button_group button {
         width: auto;
-        min-width: 120px;
+        min-width: 100px;
+        font-size: 14px;
+        padding: 10px 18px;
     }
 
     .card {
         width: 100%;
-        max-width: 300px;
+        max-width: 350px;
         height: 320px;
-    }
-
-    .cards_container {
-        gap: 15px;
-        padding: 0 15px;
-    }
-
-    .section_reveillion,
-    .section_partiu {
-        padding: 30px 15px;
-    }
-
-    .section_blog {
-        padding: 30px 15px;
-    }
-
-    #blue_box_2 {
-        margin-right: 0;
-        margin-left: 0;
     }
 
     .blog_post {
@@ -932,397 +896,51 @@ footer > span {
     }
 
     footer {
-        flex-direction: column;
-        gap: 30px;
+        gap: 25px;
+        padding: 35px 20px 20px;
     }
 
     .footer_links {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .footer_links li {
-        font-size: 18px;
-    }
-}
-
-/* Menu Hamburguer Mobile e Tablet */
-.navbar_toggle {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-    z-index: 1001;
-}
-
-/* TABLETS E MOBILE (até 1024px) - MENU HAMBURGUER */
-@media (max-width: 1024px) {
-    header {
-        min-height: 80px;
-    }
-    
-    .navbar_container {
-        min-height: 80px;
-        padding: 15px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-    
-    .navbar_logo {
-        flex: 0 0 auto;
-    }
-    
-    .navbar_logo img {
-        height: 70px;
-    }
-    
-    .navbar_toggle {
-        display: block;
-        position: relative;
-        top: auto;
-        right: auto;
-        font-size: 30px;
-        order: 3;
-    }
-    
-    .profile_section {
-        order: 2;
-        font-size: 18px;
-        gap: 0.5rem;
-    }
-    
-    .navbar_links {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background-color: #000D46;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-        flex-direction: column;
-        gap: 15px;
-        z-index: 1000;
-    }
-    
-    .navbar_links.active {
-        display: flex !important;
-    }
-    
-    .profile_section a {
-        font-size: 18px;
-    }
-    
-    .lang-select {
-        font-size: 1rem;
-        width: 50px;
-    }
-    
-    .lang-icon {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    header {
-        min-height: 60px;
-    }
-    
-    .navbar_container {
-        min-height: 60px;
-        padding: 8px 15px;
-    }
-    
-    .navbar_logo img {
-        height: 50px;
-    }
-    
-    .navbar_toggle {
-        top: 12px;
-        right: 15px;
-        font-size: 26px;
-    }
-    
-    .profile_section {
-        font-size: 16px;
-        gap: 0.5rem;
-    }
-    
-    .profile_section a {
-        font-size: 16px;
-    }
-    
-    .lang-select {
-        font-size: 0.9rem;
-        width: 45px;
-    }
-    
-    .lang-icon {
-        font-size: 1.1rem;
-    }
-}
-
-/* MOBILE (até 600px) */
-@media (max-width: 600px) {
-    header {
-        min-height: 60px;
-    }
-    
-    .navbar_container {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        padding: 8px 15px;
-        min-height: 60px;
-    }
-
-    .navbar_logo {
-        order: 1;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 8px;
-    }
-
-    .navbar_logo img {
-        height: 50px;
-        margin: 0 auto;
-    }
-
-    .navbar_links {
-        order: 3;
-        width: 100%;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    .navbar_links li {
-        font-size: 18px;
-    }
-
-    .navbar_links a {
-        font-size: 18px;
-    }
-
-    .profile_section {
-        order: 2;
-        font-size: 18px;
-        justify-content: center;
-    }
-
-    .profile_section a {
-        font-size: 18px;
-    }
-
-    .lang-select {
-        font-size: 1rem;
-        width: 50px;
-    }
-
-    .hero_section {
-        padding-block: 120px;
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
+    .footer_logo,
+    .footer_contact,
+    .footer_final {
+        text-align: center;
+        min-width: 100%;
+    }
+}
+
+/* MOBILE PEQUENO (até 480px) */
+@media (max-width: 480px) {
     .hero_section h1 {
-        font-size: 45px;
-        padding-left: 20px;
-        padding-right: 20px;
+        font-size: 32px;
     }
 
     .hero_section h3 {
-        font-size: 26px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 25px;
-    }
-
-    .search_field {
-        padding: 30px 15px;
+        font-size: 20px;
     }
 
     .search_container p {
-        font-size: 22px;
-    }
-
-    .button_group {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .button_group button {
-        width: 100%;
-        max-width: 100%;
-        font-size: 16px;
-        padding: 12px 20px;
-    }
-
-    #search_link {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .section_reveillion h3,
     .section_partiu h3 {
-        font-size: 24px;
-    }
-
-    #subtitle,
-    .section_partiu > p {
-        font-size: 14px;
-        padding: 0 10px;
+        font-size: 22px;
     }
 
     .card {
-        width: 100%;
-        max-width: 100%;
         height: 300px;
-    }
-
-    .cards_container {
-        gap: 20px;
-        padding: 0 10px;
-    }
-
-    #blue_box_1 {
-        padding: 10px 20px;
-        margin-top: 30px;
-        margin-bottom: 20px;
     }
 
     #blue_box_1 h3 {
         font-size: 20px;
     }
 
-    #blue_box_2 {
-        font-size: 18px;
-        padding: 5px 10px;
-    }
-
-    #blog_title {
-        font-size: 18px;
-    }
-
-    #blog_topic {
-        font-size: 13px;
-    }
-
-    .blog_post_title {
-        font-size: 14px;
-    }
-
-    .blog_post_text {
-        font-size: 12px;
-    }
-
-    footer {
-        padding: 30px 15px 15px;
-    }
-
-    .footer_logo,
-    .footer_links,
-    .footer_contact,
-    .footer_final {
-        min-width: 100%;
-        text-align: center;
-    }
-
-    .footer_logo img {
-        margin: 0 auto 15px;
-        width: 200px;
-    }
-
-    .footer_links {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 8px;
-    }
-
     .footer_links li {
-        font-size: 16px;
-    }
-
-    .footer_contact {
-        text-align: center;
-    }
-
-    .footer_contact ion-icon,
-    .footer_text {
-        display: inline-block;
-    }
-
-    .footer_contact img {
-        margin: 10px auto;
-    }
-
-    .footer_final {
-        text-align: center;
-    }
-
-    .footer_final ion-icon {
-        font-size: 32px;
-    }
-
-    .footer_final input {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .footer_final button {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .footer_title {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    footer > span {
-        font-size: 12px;
-        margin-top: 15px;
-    }
-}
-
-/* MOBILE EXTRA PEQUENO (até 400px) */
-@media (max-width: 400px) {
-    .hero_section h1 {
-        font-size: 32px;
-    }
-
-    .hero_section h3 {
-        font-size: 22px;
-    }
-
-    .search_container p {
         font-size: 18px;
-    }
-
-    .section_reveillion h3,
-    .section_partiu h3 {
-        font-size: 20px;
-    }
-
-    .card {
-        height: 280px;
-    }
-
-    .card_content p {
-        font-size: 11px;
-    }
-
-    .card_content span {
-        font-size: 16px;
-    }
-
-    .promo button {
-        font-size: 8px;
-        padding: 3px 6px;
     }
 }

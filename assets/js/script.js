@@ -6,16 +6,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Verifica se os elementos existem antes de adicionar o evento
   if (toggleBtn && mobileMenu) {
-    // Ao clicar, adiciona/remove a classe "active"
+    const icon = toggleBtn.querySelector('ion-icon');
+    
+    // Ao clicar no botão, adiciona/remove a classe "active"
     toggleBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('active');
 
       // Troca o ícone do botão
-      const icon = toggleBtn.querySelector('ion-icon');
       if (mobileMenu.classList.contains('active')) {
-        icon.setAttribute('name', 'close-outline'); // ícone de fechar
+        icon.setAttribute('name', 'close-outline');
+        toggleBtn.setAttribute('aria-expanded', 'true');
       } else {
-        icon.setAttribute('name', 'menu-outline'); // ícone de abrir
+        icon.setAttribute('name', 'menu-outline');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Fecha o menu ao clicar em qualquer link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        icon.setAttribute('name', 'menu-outline');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Fecha o menu ao clicar fora dele
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        icon.setAttribute('name', 'menu-outline');
+        toggleBtn.setAttribute('aria-expanded', 'false');
       }
     });
   }
