@@ -6,7 +6,7 @@
     <title>Oka Porã - A Oka Porã </title>
     <link rel="stylesheet" href="./assets/css/sobreNosStyles.css" />
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-      <!--JS-->
+    <!--JS-->
     <script src="assets/js/script.js"></script>
   </head>
 
@@ -20,7 +20,7 @@
           </a>
 
           <!-- Links de navegação -->
-          <ul class="navbar_links">
+          <ul class="navbar_links" id="mobileMenu">
             <li><a href="./index.html">Início</a></li>
             <li><a href="./expedicoes.html">Expedições</a></li>
             <li>
@@ -56,9 +56,10 @@
                 <option value="./EN-US/sobrenos-en.html">EN</option>
               </select>
             </div>
+
             <button class="navbar_toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                  </button>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
           </div>
         </div>
       </nav>
@@ -67,7 +68,7 @@
     <main>
       <!-- Div do titulo -->
       <section class="titulo hero">
-        <h1 class="titulo">Quem somo - Oka-Porã</h1>
+        <h1 class="titulo">Quem somos - Oka-Porã</h1>
         <p>
           Somos um projeto/organização que
           <strong>cria conteúdo, organiza expedições e conecta pessoas</strong>
@@ -79,7 +80,7 @@
       <section class="objetivo historia">
         <h2 class="subtitulo">Nossa história</h2>
         <p>
-          Fundada em 2025, a Oka-Porã nasceu do desejo de explorar lugares com tema indigienas e divulgar
+          Fundada em 2025, a Oka-Porã nasceu do desejo de explorar lugares com tema indígenas e divulgar
           as belezas naturais e culturais do Brasil. Desde então, realizamos
           diversas expedições, publicamos inúmeros artigos e estabelecemos
           parcerias valiosas.
@@ -87,9 +88,6 @@
       </section>
 
       <!-- Div do membros -->
-
-      <!-- Não consegui tirar a bolinha dos nomes -->
-      <!-- Relaxa lenda, cobri tu aqui. -->
        <section class="membros equipe">
         <h2 class="subtitulo">Nossa equipe</h2>
         <ul class="sem_bullets">
@@ -116,6 +114,7 @@
             <strong>Osvaldo Costa</strong> — Designer Gráfico.
             <em>Responsável pela identidade visual e materiais gráficos do
             projeto.</em>
+          </li>
         </ul>
       </section>
 
@@ -139,7 +138,7 @@
         <h2 class="subtitulo">Planos para o futuro</h2>
         <p>
           Estamos constantemente buscando expandir nossos horizontes. Nossos
-          planos incluem lançar guias em inglês e outos idiomas, aumentar o número de
+          planos incluem lançar guias em inglês e outros idiomas, aumentar o número de
           expedições e criar newsletters informativas.
         </p>
       </section>
@@ -154,6 +153,7 @@
         </p>
       </section>
     </main>
+
     <footer>
       <!-- Logo -->
       <div class="footer_logo">
@@ -207,33 +207,21 @@
         <p class="footer_text">falecom@okapora.com.br</p>
         <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
       </div>
-      <!-- Seçao com o icone do insta youtube as flag e o atente-se as novidaes -->
-      <!-- Real nao sei um nome melhor. É muito random -->
 
       <div class="footer_final">
-        <!-- Parte do icones e imagem -->
         <ion-icon name="logo-instagram"></ion-icon>
         <ion-icon name="logo-youtube"></ion-icon>
 
-        <!--<img src="./assets/img/brFlag.png" alt="bandeira do brasilFlag" width="30px">
-                <div class="bandeiras">
-                <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">
-            </div>-->
-
-        <!-- O de inscrever email -->
         <h3 class="footer_title">Atente-se as Novidades</h3>
         <input placeholder="Digite seu e-mail" />
         <button>Enviar</button>
       </div>
 
-      <!-- A parada q fica em baixo. O copyright. -->
-
       <span>© 2025 OkaPorã</span>
     </footer>
 
     <!-- ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
