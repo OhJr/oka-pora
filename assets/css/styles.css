@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
     --primary-color: #1A47B8;
@@ -7,29 +8,31 @@
     --gradient-vertical: linear-gradient(to bottom, #1A47B8, #0C2052);
     --gradient-horizontal: linear-gradient(to right, #0C2052, #1A47B8);
     --white: #ffffff;
-
     --ff: 'Raleway', serif;
 }
 
 * {
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-    box-sizing: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
 }
 
-header {
-    height: 100px;
-    background-color: #000D46;
-    color: #ffffff;
-}
-
 body {
     background-color: #D3D3D3;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    height: auto;
+    min-height: 70px;
+    background-color: #000D46;
+    color: #ffffff;
+    position: relative;
 }
 
 .navbar_container {
@@ -38,7 +41,15 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    height: 120px;
+    padding: 8px 20px;
+    height: auto;
+    min-height: 70px;
+}
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .navbar_links {
@@ -46,13 +57,13 @@ body {
     display: flex;
     gap: 1.6rem;
     color: #ffffff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .navbar_links a {
     color: var(--white);
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -61,30 +72,30 @@ body {
 }
 
 .navbar_links li {
-    font-size: 26px;
+    font-size: 20px;
 }
 
-.profile_section{
+.profile_section {
     color: var(--white);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
     display: flex;
     gap: 0.7rem;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.profile_section a{
+.profile_section a {
     margin-right: auto;
     color: #4169E1;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.profile_section img{
+.profile_section img {
     margin-left: 15px;
 }
 
@@ -99,24 +110,24 @@ body {
     padding: 3px 6px;
     cursor: pointer;
     transition: 0.3s;
-  }
-  
-  .language-selector:hover {
+}
+
+.language-selector:hover {
     background: var(--secondary-color);
-  }
-  
-  .lang-icon {
+}
+
+.lang-icon {
     font-size: 1.3rem;
     align-items: center;
     color: var(--secondary-color);
     transition: color 0.3s;
-  }
-  
-  .language-selector:hover .lang-icon {
+}
+
+.language-selector:hover .lang-icon {
     color: var(--primary-color);
-  }
-  
-  .lang-select {
+}
+
+.lang-select {
     border: none;
     outline: none;
     background: transparent;
@@ -127,35 +138,43 @@ body {
     padding: 2px;
     border-radius: 6px;
     width: 60px;
-  }
+}
 
-  .lang-select option {
+.lang-select option {
     color: var(--text-dark);
-  }
-  
-  .language-selector:hover .lang-select {
+}
+
+.language-selector:hover .lang-select {
     color: var(--primary-color);
-  }
+}
 
 .navbar_logo img {
     display: inline-block;
     margin-left: -130px;
-    margin-top: 10px;
+    margin-top: 3px;
     width: auto;
-    height: 200px;
+    height: 90px;
 }
 
+/* Menu Hamburguer */
+.navbar_toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* ===== HERO SECTION ===== */
 .hero_section {
     background-image: url('../img/Background.png');
-    padding-block: 250px;
+    padding-block: 280px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     color: #ffffff;
-    /* align-items: center; */
-    /* justify-content: center;
-    text-align: center; */
-
 }
 
 .hero_section h1 {
@@ -165,96 +184,96 @@ body {
 }
 
 .hero_section h3 {
-    font-family: Montserrat;
+    font-family: 'Montserrat';
     color: #ffffff;
-    font-size: 55px;
-    padding-top: 60px;
+    font-size: 50px;
+    padding-top: 50px;
     padding-left: 60px;
 }
 
+/* ===== SEARCH FIELD ===== */
 .search_field {
-  background-color: #D3D3D3;
-  padding: 40px 0;
-  text-align: center;
-  font-family: Montserrat, sans-serif;
+    background-color: #D3D3D3;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
-
 
 .search_container p {
-  font-size: 32px;       
-  font-weight: 600;
-  margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #000;
 }
-
 
 .button_group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
-
 
 .button_group button {
-  border: 1px solid #ccc;
-  background-color: #fff;
-  color: #000;
-  font-weight: 600;
-  font-size: 18px;       
-  padding: 14px 30px;    
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
 }
-
 
 #blue-button {
-  background: linear-gradient(to bottom, #0052cc, #003d99);
-  color: #fff;
-  border: none;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
 }
 
+#blue-button:hover {
+    background: #0C2052;
+}
 
 .button_group button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
-
-@media (min-width: 600px) {
-  .button_group {
-    flex-direction: row;
-    justify-content: center;
-    gap: 25px;
-  }
+#search_link {
+    color: #1A47B8;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
 }
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* cards Réveillon */
-.section_reveillion {
+/* ===== CARDS SECTIONS ===== */
+.section_reveillion,
+.section_partiu {
     padding: 50px 20px;
     background-color: #D3D3D3;
     text-align: center;
 }
 
-.section_reveillion h3 {
+.section_reveillion h3,
+.section_partiu h3 {
     font-size: 28px;
     color: #000D46;
     margin-bottom: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
-#subtitle {
+#subtitle,
+.section_partiu > p {
     font-size: 16px;
     color: #666;
     margin-bottom: 30px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Container cards */
@@ -267,12 +286,15 @@ body {
     margin: 0 auto;
 }
 
-.cards_container :hover {
-    transform: scale(1.05);
-    transition: transform 0.3s;
+.card {
+    transition: transform 0.3s ease;
 }
 
-/* Estilo  do card */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo do card */
 .card {
     width: 250px;
     height: 350px;
@@ -282,153 +304,122 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
 #card1 {
-  background-image: url('../img/Reveillion-Card-1.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: url('../img/Reveillion-Card-1.jpg');
 }
 
 #card2 {
-  background-image: url('../img/Reveillion-Card-2.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: url('../img/Reveillion-Card-2.jpg');
 }
 
 #card3 {
-  background-image: url('../img/Reveillion-Card-3.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: url('../img/Reveillion-Card-3.jpg');
 }
 
 #card4 {
-  background-image: url('../img/Reveillion-Card-4.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    background-image: url('../img/Reveillion-Card-4.jpg');
+}
+
+#card5 {
+    background-image: url('../img/card5.jpg.jpg');
+}
+
+#card6 {
+    background-image: url('../img/card6.jpg.jpg');
+}
+
+#card7 {
+    background-image: url('../img/Reveillion-Card-1.jpg');
+}
+
+#card8 {
+    background-image: url('../img/card8.jpg.jpg');
 }
 
 .card_content {
     padding: 20px 15px;
     text-align: left;
-    color: #000;
+    color: #fff;
 }
 
 .card_content p {
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card_content span {
     display: block;
     font-size: 18px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card_content small {
     font-size: 10px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
     padding: 2px 5px;
     border-radius: 3px;
     margin-left: 5px;
+    text-shadow: none;
 }
 
-/* Parte de baixo do card  */
-.card_text1 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.card_text2 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.card_text3 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.card_text4 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.card_text5 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.card_text6 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
-.card_text7 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
-}
-
+/* Parte de baixo do card */
+.card_text1,
+.card_text2,
+.card_text3,
+.card_text4,
+.card_text5,
+.card_text6,
+.card_text7,
 .card_text8 {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 0 10px 10px;
 }
 
-.card_text p {
+.card_text1 p,
+.card_text2 p,
+.card_text3 p,
+.card_text4 p,
+.card_text5 p,
+.card_text6 p,
+.card_text7 p,
+.card_text8 p {
     font-size: 12px;
     margin-bottom: 8px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.3;
+    color: white;
 }
 
-.card_price {
+.card_price,
+.card_price3 {
     font-size: 16px;
     font-weight: bold;
     color: white;
 }
 
-.card_price3 {
-    font-size: 16px;
-    font-weight: bold;
-}
-
 /* Botões de promoção */
 .promo {
     position: absolute;
-    top: 200px;
-    left: 15px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    max-width: calc(100% - 30px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .promo button {
@@ -438,109 +429,19 @@ body {
     font-size: 9px;
     font-weight: bold;
     border-radius: 5px;
-    padding: 4px 8px;
-    margin-bottom: 5px;
-    display: block;
-    width: 100%;
+    padding: 5px 10px;
+    white-space: nowrap;
 }
 
-.promo button:first-child {
-    background-color: #0052cc;
-}
-
-/* Seção Partiu */
-.section_partiu {
-    padding: 50px 20px;
-    background-color: #D3D3D3;
-    text-align: center;
-}
-
-.section_partiu h3 {
-    font-size: 28px;
-    color: #000D46;
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
-}
-
-.section_partiu > p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 30px;
-    font-family: Arial, sans-serif;
-}
-
-/* Responsivo  */
-@media (max-width: 768px) {
-    .card {
-        width: 100%;
-        max-width: 300px;
-        height: 320px;
-    }
-    
-    .cards_container {
-        gap: 15px;
-    }
-    
-    .section_reveillion,
-    .section_partiu {
-        padding: 30px 15px;
-    }
-}
-
-/* Seção Partiu */
-.section_partiu {
-    padding: 50px 20px;
-    background-color: #D3D3D3;
-    text-align: center;
-}
-
-.section_partiu h3 {
-    font-size: 28px;
-    color: #000D46;
-    margin-bottom: 10px;
-    font-family: Arial, sans-serif;
-}
-
-.section_partiu > p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 30px;
-    font-family: Arial, sans-serif;
-}
-#card5 {
-    background-image: url('../img/card5.jpg.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#card6 {
-    background-image: url('../img/card6.jpg.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#card7 {
-    background-image: url('../img/Reveillion-Card-1.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-#card8 {
-    background-image: url('../img/card8.jpg.jpg');
-    background-size: cover;
-    background-position: center;
-}
-
-/*  SEÇÃO BLOG  */
+/* ===== SEÇÃO BLOG ===== */
 .section_blog {
     padding: 50px 20px;
     background-color: #D3D3D3;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* PRIMEIRA CAIXA AZUL */
 #blue_box_1 {
     background-color: #1A47B8;
     color: white;
@@ -558,7 +459,6 @@ body {
     font-weight: bold;
 }
 
-/* CONTAINER BLOG */
 .blog_container {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -566,11 +466,9 @@ body {
     align-items: start;
 }
 
-/* CONTEÚDO  ESQUERDA */
-.blog_container > img {
+.mainBlog_content img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    border-radius: 2.5%;
     margin-bottom: 15px;
 }
 
@@ -582,13 +480,9 @@ body {
     font-weight: bold;
     display: inline-flex;
     margin-bottom: 15px;
-    margin-right: 600px;
-    margin-left: 20px;
     border-radius: 5px;
-    
 }
 
-/* art principal */
 article {
     background: #D3D3D3;
     padding: 0;
@@ -615,21 +509,17 @@ article a {
     font-size: 14px;
 }
 
-/* POSTS LATERAIS À DIREITA */
 aside {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* POSTS LATERAIS */
 .blog_post {
     display: flex;
     gap: 15px;
     align-items: flex-start;
     background-color: #D3D3D3;
-    border: none;
-    padding: 0;
     margin-bottom: 25px;
 }
 
@@ -637,13 +527,13 @@ aside {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 2.5%; 
+    border-radius: 2.5%;
+    flex-shrink: 0;
 }
 
 .blog_post_content {
     flex: 1;
     padding: 0;
-    background-color: #D3D3D3;
 }
 
 .blog_post_title {
@@ -668,84 +558,49 @@ aside {
     font-weight: bold;
 }
 
-
-.blog_post:not(:last-child) {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-
-.blog_post:not(:last-child) {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-
-.blog_post:not(:last-child) {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-/* divisão */
-.blog_post:not(:last-child) {
-    border-bottom: 2px solid #D3D3D3;
-    padding-bottom: 20px;
-}
-
-
-@media (max-width: 768px) {
-    .blog_container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .section_blog {
-        padding: 30px 15px;
-    }
-}
-
-
-/* footer */
+/* ===== FOOTER ===== */
 footer {
     background: var(--gradient-vertical);
     color: white;
-    padding: 40px 20px 20px;
+    padding: 50px 40px 30px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
+    gap: 40px;
 }
-
 
 .footer_logo {
     flex: 1;
     min-width: 250px;
     text-align: left;
+    padding-right: 20px;
 }
 
 .footer_logo img {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 #footer_logo_text {
     font-size: 16px;
     color: #cccccc;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* Links  */
 .footer_links {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
+    gap: 15px 30px;
 }
 
 .footer_links li {
@@ -760,41 +615,41 @@ footer {
     color: #1A47B8;
 }
 
-/* contato */
 .footer_contact {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     text-align: left;
+    padding-left: 125px;
 }
 
 .footer_title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: white;
 }
 
 .footer_contact ion-icon {
     vertical-align: middle;
-    margin-right: 5%;
+    margin-right: 10px;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .footer_text {
     display: inline-block;
     color: #cccccc;
     font-size: 14px;
-    margin: 0 0 15px 0;
-    margin-right: 2%;
+    margin: 0 0 20px 0;
 }
 
 .footer_contact img {
-    margin-top: 10px;
+    margin-top: 15px;
     border-radius: 4px;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
-
 
 .footer_final {
     flex: 1;
@@ -802,30 +657,27 @@ footer {
     text-align: left;
 }
 
-.bandeiras {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+.footer_final ion-icon {
+    font-size: 36px;
+    margin-right: 15px;
+    color: white;
+    margin-bottom: 15px;
 }
 
-
 .footer_final .footer_title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-align: left;
+    margin-top: 20px;
 }
 
 .footer_final input {
-    padding: 10px 12px;
+    padding: 12px 15px;
     border: none;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.9);
     color: #333;
     font-size: 14px;
-    width: 200px;
-    margin-right: 8px;
-    display: block;
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 12px;
 }
 
 .footer_final input::placeholder {
@@ -833,113 +685,262 @@ footer {
 }
 
 .footer_final button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #1A47B8;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: 600;
     transition: background-color 0.3s;
-    display: block;
 }
 
 .footer_final button:hover {
     background-color: #0C2052;
 }
 
-.footer_contact ion-icon {
-    font-size: 26px !important;
-    margin-right: 12px !important;
-}
-
-.footer_final ion-icon {
-    font-size: 32px !important;
-    margin-right: 4px !important;
-    gap: 8px;
-}
-
-
-ion-icon[name="logo-whatsapp"],
-ion-icon[name="mail-outline"] {
-    font-size: 24px !important;
-}
-
-ion-icon[name="logo-instagram"],
-ion-icon[name="logo-youtube"] {
-    font-size: 36px !important;
-    padding-left: 0;
-    color: black;
-}
-
-
 footer > span {
     flex-basis: 100%;
     text-align: center;
     color: #cccccc;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* respomsividade */
-@media (max-width: 768px) {
-    footer {
+/* ================================================ */
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+/* ================================================ */
+
+/* TABLETS E NOTEBOOKS (768px - 1024px) */
+@media (max-width: 1024px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar_logo img {
+        margin-left: 0;
+        height: 70px;
+    }
+
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile_section {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .navbar_links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #000D46;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    .navbar_links.active {
+        display: flex !important;
+    }
+
+    .navbar_links a {
+        font-size: 18px;
+    }
+
+    .hero_section {
+        padding-block: 150px;
         text-align: center;
-        gap: 20px;
     }
-    
-    .footer_logo {
-        text-align: center;
+
+    .hero_section h1 {
+        font-size: 55px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    
-    .footer_logo img {
-        margin-left: auto;
-        margin-right: auto;
+
+    .hero_section h3 {
+        font-size: 35px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
-    
+
+    .button_group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .button_group button {
+        width: auto;
+        min-width: 110px;
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+
+    .blog_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE (até 768px) */
+@media (max-width: 768px) {
+    .navbar_container {
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar_logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+    }
+
+    .profile_section {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        font-size: 22px;
+    }
+
+    .lang-select {
+        font-size: 1rem;
+        width: 50px;
+    }
+
+    .hero_section {
+        padding-block: 100px;
+    }
+
+    .hero_section h1 {
+        font-size: 40px;
+    }
+
+    .hero_section h3 {
+        font-size: 24px;
+        padding-top: 20px;
+    }
+
+    .search_container p {
+        font-size: 22px;
+    }
+
+    .button_group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .button_group button {
+        width: auto;
+        min-width: 100px;
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        height: 320px;
+    }
+
+    .blog_post {
+        flex-direction: column;
+    }
+
+    .blog_post img {
+        width: 100%;
+        height: 200px;
+    }
+
+    footer {
+        gap: 25px;
+        padding: 35px 20px 20px;
+    }
+
     .footer_links {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
-    .footer_contact {
-        text-align: center;
-    }
-    
-    .footer_contact img {
-        margin: 10px auto 0;
-    }
-    
+
+    .footer_logo,
+    .footer_contact,
     .footer_final {
         text-align: center;
-    }
-    
-    .footer_final input {
-        width: 100%;
-        margin: 0 0 10px 0;
-    }
-    
-    .footer_final button {
-        width: 100%;
-        margin: 0 auto;
+        min-width: 100%;
     }
 }
 
-
+/* MOBILE PEQUENO (até 480px) */
 @media (max-width: 480px) {
-    footer {
-        padding: 30px 15px 15px;
+    .hero_section h1 {
+        font-size: 32px;
     }
-    
-    .footer_logo,
-    .footer_links,
-    .footer_contact,
-    .footer_final {
-        min-width: 100%;
+
+    .hero_section h3 {
+        font-size: 20px;
     }
-    
-    .footer_final input {
-        width: 100%;
+
+    .search_container p {
+        font-size: 20px;
+    }
+
+    .section_reveillion h3,
+    .section_partiu h3 {
+        font-size: 22px;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    #blue_box_1 h3 {
+        font-size: 20px;
+    }
+
+    .footer_links li {
+        font-size: 18px;
     }
 }

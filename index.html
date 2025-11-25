@@ -1,268 +1,361 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oka Porã - Home</title>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.png"
-      type="image/x-icon"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="navbar_container">
-          <!-- Logo -->
-          <a href="./index.html" class="navbar_logo">
-            <img src="assets/img/Logo.png" alt="logo" />
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oka Porã - Home</title>
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon" />
+  <!--JS-->
+  <script src="assets/js/script.js"></script>
+</head>
 
-          <!-- Links de navegação -->
-          <ul class="navbar_links">
-            <li><a href="./index.html" style="color: #4169e1">Início</a></li>
-            <li><a href="./expedicoes.html">Expedições</a></li>
-            <li><a href="./sobrenos.html">A Oka Porã</a></li>
-            <li><a href="./organizacao.html">Organização</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li>
-              <a
-                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
-                target="_blank"
-                >Contatos</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
-                target="_blank"
-                >Central de ajuda</a
-              >
-            </li>
-            <li>|</li>
-          </ul>
+<body>
+  <header>
+    <nav>
 
-          <div class="profile_section">
-            <a href="login.html">Profile</a>
-            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-            <select class="lang-select" onchange="location = this.value;">
-              <option value="index.html" selected>BR</option>
-              <option value="./EN-US/index-en.html">EN</option>
-            </select>
-            <!-- as antigas flagzinhas, agora desativadas.
+      
+
+      <div class="navbar_container">
+        <!-- Logo -->
+        <a href="./index.html" class="navbar_logo">
+          <img src="assets/img/Logo.png" alt="logo" />
+        </a>
+
+        <!-- Links de navegação -->
+        <ul class="navbar_links" id="mobileMenu">
+          <li><a href="./index.html" style="color: #4169e1">Início</a></li>
+          <li><a href="./expedicoes.html">Expedições</a></li>
+          <li><a href="./sobrenos.html">A Oka Porã</a></li>
+          <li><a href="./organizacao.html">Organização</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li>
+            <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+              target="_blank">Contatos</a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+              target="_blank">Central de ajuda</a>
+          </li>
+          <li>|</li>
+        </ul>
+
+        <div class="profile_section">
+          <a href="login.html">Profile</a>
+          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+          <select class="lang-select" onchange="location = this.value;">
+            <option value="index.html" selected>BR</option>
+            <option value="./EN-US/index-en.html">EN</option>
+          </select>
+
+          <button class="navbar_toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+          <!-- as antigas flagzinhas, agora desativadas.
                     <img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
                     <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
                     <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Hero Section -->
-    <section class="hero_section">
-      <div class="section_container">
-        <h1>OKA PORÃ</h1>
-        <br />
-        <h3>
-          TRADIÇÕES QUE ENCANTAM,<br />
-          EXPERIÊNCIAS QUE TRANSFORMAM
-        </h3>
-      </div>
-    </section>
-
-    <section class="search_field">
-      <div class="search_container">
-        <p>Busque o melhor para você</p>
-        <div class="button_group">
-          <button>DESTINO</button>
-          <button>DATA</button>
-          <button>PREFERÊNCIAS</button>
-          <a href="./expedicoes.html"
-            ><button id="blue-button">BUSCAR</button></a
-          >
-          <a href="./expedicoes.html" id="search_link"
-            >Ou veja todas as expedições ></a
-          >
         </div>
       </div>
-    </section>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero_section">
+    <div class="section_container">
+      <h1>OKA PORÃ</h1>
+      <br />
+      <h3>
+        TRADIÇÕES QUE ENCANTAM,<br />
+        EXPERIÊNCIAS QUE TRANSFORMAM
+      </h3>
+    </div>
+  </section>
 
-    <!-- Cards Section Réveillon -->
-    <section class="section_reveillion">
-      <h3>RÉVEILLON 2025/2026</h3>
-      <p id="subtitle">
-        <strong
-          >Reserve agora a sua viagem e tenha um final de ano incrível junto à
-          natureza!</strong
-        >
-      </p>
+  <section class="search_field">
+    <div class="search_container">
+      <p>Busque o melhor para você</p>
+      <div class="button_group">
+        <button>DESTINO</button>
+        <button>DATA</button>
+        <button>PREFERÊNCIAS</button>
+        <a href="./expedicoes.html"><button id="blue-button">BUSCAR</button></a>
+        <a href="./expedicoes.html" id="search_link">Ou veja todas as expedições ></a>
+      </div>
+    </div>
+  </section>
 
-      <div class="cards_container">
-        <!-- Card 1 - Amazônia Rio Negro -->
-        <div class="card" id="card1">
-          <div class="card_content">
-            <p>AMAZÔNIA</p>
-            <span>RIO NEGRO <small>AM</small></span>
-          </div>
+  <!-- Cards Section Réveillon -->
+  <section class="section_reveillion">
+    <h3>RÉVEILLON 2025/2026</h3>
+    <p id="subtitle">
+      <strong>Reserve agora a sua viagem e tenha um final de ano incrível junto à
+        natureza!</strong>
+    </p>
 
-          <div class="card_text1">
-            <p>Uma jornada única de conexão com a floresta e suas histórias</p>
-            <p>A partir de <span class="card_price">R$ 3.220,50</span></p>
-          </div>
+    <div class="cards_container">
+      <!-- Card 1 - Amazônia Rio Negro -->
+      <div class="card" id="card1">
+        <div class="card_content">
+          <p>AMAZÔNIA</p>
+          <span>RIO NEGRO <small>AM</small></span>
         </div>
 
-        <!-- Card 2 - Amazônia Alter do Chão -->
-        <div class="card" id="card2">
-          <div class="card_content">
-            <p>AMAZÔNIA ALTER DO</p>
-            <span>CHÃO <small>PA</small></span>
-          </div>
-
-          <div class="card_text2">
-            <p>Sol, praias paradisíacas e aventuras na Amazônia</p>
-            <p>A partir de <span class="card_price">R$ 3.940,00</span></p>
-          </div>
-        </div>
-
-        <!-- Card 3 - Belém & Ilha de Marajó -->
-        <div class="card" id="card3">
-          <div class="card_content">
-            <p>BELÉM & ILHA DE</p>
-            <span>MARAJÓ <small>PA</small></span>
-          </div>
-
-          <div class="card_text3">
-            <p>
-              Praias, igarapés e cultura: descubra o encanto do Pará na Ilha de
-              Marajó
-            </p>
-            <p>A partir de <span class="card_price3">R$ 4.830,00</span></p>
-          </div>
-        </div>
-
-        <!-- Card 4 - Amazônia Shanenawa (COM PROMOÇÃO) -->
-        <div class="card" id="card4">
-          <!-- Botões de promoção no topo -->
-          <div class="promo">
-            <button>OUTUBRO EM PROMOÇÃO!</button>
-            <button>CUPOM: PROMOOUTUBRO</button>
-          </div>
-
-          <div class="card_content">
-            <p>AMAZÔNIA</p>
-            <span>SHANENAWA <small>AC</small></span>
-          </div>
-
-          <div class="card_text4">
-            <p>
-              Sabedoria ancestral em uma aldeia indígena no coração da floresta
-            </p>
-            <p>A partir de <span class="card_price">R$ 6.290,00</span></p>
-          </div>
+        <div class="card_text1">
+          <p>Uma jornada única de conexão com a floresta e suas histórias</p>
+          <p>A partir de <span class="card_price">R$ 3.220,50</span></p>
         </div>
       </div>
-    </section>
-    <!-- Card Section Partiu - COM CONTAINER -->
-    <section class="section_partiu">
-      <h3>PARTIU 2026</h3>
-      <p>
-        <strong
-          >Confira as Expedições com calendário 2026 já disponível para
-          reservas!</strong
-        >
-      </p>
 
-      <!-- ADICIONE ESTE CONTAINER -->
-      <div class="cards_container">
-        <!-- Card 5 -->
-        <div class="card" id="card5">
-          <div class="card_content">
-            <p>
-              PICO DA <span>NEBLINA <small>AM</small></span>
-            </p>
-          </div>
-          <div class="promo">
-            <button>OUTUBRO EM PROMOÇÃO!</button>
-            <button>CUPOM: PROMOOUTUBRO</button>
-          </div>
-
-          <div class="card_text5">
-            <p>A maior aventura do Brasil junto ao povo yanomami</p>
-            <p>A partir de <span class="card_price">R$ 24.150,00</span></p>
-          </div>
+      <!-- Card 2 - Amazônia Alter do Chão -->
+      <div class="card" id="card2">
+        <div class="card_content">
+          <p>AMAZÔNIA ALTER DO</p>
+          <span>CHÃO <small>PA</small></span>
         </div>
 
-        <!-- Card 6 -->
-        <div class="card" id="card6">
-          <div class="card_content">
-            <p>
-              LENÇÓIS <span>MARANHENSES <small>MA</small></span>
-            </p>
-          </div>
-
-          <div class="card_text6">
-            <p>Uma travessia inesquecível pelo maior campo dunas do Brasil</p>
-            <p>A partir de <span class="card_price">R$ 4.900,00</span></p>
-          </div>
-        </div>
-
-        <!-- Card 7 - CORRIGIR O ID (estava card1) -->
-        <div class="card" id="card7">
-          <div class="card_content">
-            <p>
-              AMAZÔNIA <span>RIO NEGRO <small>AM</small></span>
-            </p>
-          </div>
-
-          <div class="card_text7">
-            <p>Uma jornada única de conexão com a floresta e suas histórias</p>
-            <p>A partir de <span class="card_price">R$ 3.220,50</span></p>
-          </div>
-        </div>
-
-        <!-- Card 8 -->
-        <div class="card" id="card8">
-          <div class="card_content">
-            <p>
-              CHAPADA DO <span>VEADEIROS <small>DF</small></span>
-            </p>
-          </div>
-          <div class="promo">
-            <button>OUTUBRO EM PROMOÇÃO!</button>
-            <button>CUPOM: PROMOOUTUBRO</button>
-          </div>
-
-          <div class="card_text8">
-            <p>
-              Trilhas, cachoeiras e um mergulho na cultura dos povos do Cerrado
-            </p>
-            <p>A partir de <span class="card_price">R$ 3.505,00</span></p>
-          </div>
+        <div class="card_text2">
+          <p>Sol, praias paradisíacas e aventuras na Amazônia</p>
+          <p>A partir de <span class="card_price">R$ 3.940,00</span></p>
         </div>
       </div>
-      <!-- FIM DO CONTAINER -->
-    </section>
 
-    <section class="section_blog">
-      <!-- TÍTULO PRINCIPAL -->
-      <div id="blue_box_1">
-        <h3>BLOG OKAPORÁ</h3>
+      <!-- Card 3 - Belém & Ilha de Marajó -->
+      <div class="card" id="card3">
+        <div class="card_content">
+          <p>BELÉM & ILHA DE</p>
+          <span>MARAJÓ <small>PA</small></span>
+        </div>
+
+        <div class="card_text3">
+          <p>
+            Praias, igarapés e cultura: descubra o encanto do Pará na Ilha de
+            Marajó
+          </p>
+          <p>A partir de <span class="card_price3">R$ 4.830,00</span></p>
+        </div>
       </div>
 
-      <!-- CONTAINER DO BLOG -->
-      <div class="blog_container">
-        <!-- CONTEÚDO PRINCIPAL (ESQUERDA) -->
-        <div class="mainBlog_content">
-          <img
-            src="./assets/img/blog-banner.jpg"
-            alt="Banner do blog"
-            width="90%"
-            style="border-radius: 2.5%"
-          />
-          <span id="blue_box_2">Sustentabilidade</span>
+      <!-- Card 4 - Amazônia Shanenawa (COM PROMOÇÃO) -->
+      <div class="card" id="card4">
+        <!-- Botões de promoção no topo -->
+        <div class="promo">
+          <button>OUTUBRO EM PROMOÇÃO!</button>
+          <button>CUPOM: PROMOOUTUBRO</button>
+        </div>
 
+        <div class="card_content">
+          <p>AMAZÔNIA</p>
+          <span>SHANENAWA <small>AC</small></span>
+        </div>
+
+        <div class="card_text4">
+          <p>
+            Sabedoria ancestral em uma aldeia indígena no coração da floresta
+          </p>
+          <p>A partir de <span class="card_price">R$ 6.290,00</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Card Section Partiu - COM CONTAINER -->
+  <section class="section_partiu">
+    <h3>PARTIU 2026</h3>
+    <p>
+      <strong>Confira as Expedições com calendário 2026 já disponível para
+        reservas!</strong>
+    </p>
+
+    <!-- ADICIONE ESTE CONTAINER -->
+    <div class="cards_container">
+      <!-- Card 5 -->
+      <div class="card" id="card5">
+        <div class="card_content">
+          <p>
+            PICO DA <span>NEBLINA <small>AM</small></span>
+          </p>
+        </div>
+        <div class="promo">
+          <button>OUTUBRO EM PROMOÇÃO!</button>
+          <button>CUPOM: PROMOOUTUBRO</button>
+        </div>
+
+        <div class="card_text5">
+          <p>A maior aventura do Brasil junto ao povo yanomami</p>
+          <p>A partir de <span class="card_price">R$ 24.150,00</span></p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card" id="card6">
+        <div class="card_content">
+          <p>
+            LENÇÓIS <span>MARANHENSES <small>MA</small></span>
+          </p>
+        </div>
+
+        <div class="card_text6">
+          <p>Uma travessia inesquecível pelo maior campo dunas do Brasil</p>
+          <p>A partir de <span class="card_price">R$ 4.900,00</span></p>
+        </div>
+      </div>
+
+      <!-- Card 7 - CORRIGIR O ID (estava card1) -->
+      <div class="card" id="card7">
+        <div class="card_content">
+          <p>
+            AMAZÔNIA <span>RIO NEGRO <small>AM</small></span>
+          </p>
+        </div>
+
+        <div class="card_text7">
+          <p>Uma jornada única de conexão com a floresta e suas histórias</p>
+          <p>A partir de <span class="card_price">R$ 3.220,50</span></p>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card" id="card8">
+        <div class="card_content">
+          <p>
+            CHAPADA DO <span>VEADEIROS <small>DF</small></span>
+          </p>
+        </div>
+        <div class="promo">
+          <button>OUTUBRO EM PROMOÇÃO!</button>
+          <button>CUPOM: PROMOOUTUBRO</button>
+        </div>
+
+        <div class="card_text8">
+          <p>
+            Trilhas, cachoeiras e um mergulho na cultura dos povos do Cerrado
+          </p>
+          <p>A partir de <span class="card_price">R$ 3.505,00</span></p>
+        </div>
+      </div>
+    </div>
+    <!-- FIM DO CONTAINER -->
+  </section>
+
+  <section class="section_blog">
+    <!-- TÍTULO PRINCIPAL -->
+    <div id="blue_box_1">
+      <h3>BLOG OKAPORÁ</h3>
+    </div>
+
+    <!-- CONTAINER DO BLOG -->
+    <div class="blog_container">
+      <!-- CONTEÚDO PRINCIPAL (ESQUERDA) -->
+      <div class="mainBlog_content">
+        <img src="./assets/img/blog-banner.jpg" alt="Banner do blog" width="90%" style="border-radius: 2.5%" />
+        <span id="blue_box_2">Sustentabilidade</span>
+
+        <article>
+          <p id="blog_title">Turismo de base comunitária</p>
+          <p id="blog_topic">
+            A comunidade Shanenawa está desenvolvendo iniciativas de turismo
+            sustentável, recebendo visitantes interessados em imersões
+            culturais, espiritualidade, natureza e saberes indígenas. Isso
+            inclui vivências na aldeia...
+          </p>
+          <a href="./blog.html">Leia Mais ></a>
+        </article>
+      </div>
+
+      <!-- POSTS LATERAIS (DIREITA) -->
+      <aside>
+        <div class="blog_post">
+          <img src="./assets/img/post-1.jpg" alt="Artesanato Indígena" />
+          <div class="blog_post_content">
+            <p class="blog_post_title">Como fazer Artesanato Indígena:</p>
+            <p class="blog_post_text">
+              Técnicas e saberes dos próprios ancestrais
+            </p>
+            <a href="./blog2.html" class="blog_post_readmore">Leia mais ></a>
+          </div>
+        </div>
+
+        <div class="blog_post">
+          <img src="./assets/img/post-2.jpg" alt="Máscaras Indígenas" />
+          <div class="blog_post_content">
+            <p class="blog_post_title">Cultura das Máscaras Indígenas</p>
+            <p class="blog_post_text">
+              Cada máscara indígena conta uma história, venha conhecer cada
+              uma delas
+            </p>
+            <a href="./blog3.html" class="blog_post_readmore">Leia mais ></a>
+          </div>
+        </div>
+
+        <div class="blog_post">
+          <img src="./assets/img/post-3.jpg" alt="Cotidiano das Tribos" />
+          <div class="blog_post_content">
+            <p class="blog_post_title">Cotidiano das Tribos</p>
+            <p class="blog_post_text">
+              Venha conhecer o cotidiano das tribos indígenas, suas culturas,
+              alimentações e costumes
+            </p>
+            <a href="./blog4.html" class="blog_post_readmore">Leia mais ></a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <!-- Logo -->
+    <div class="footer_logo">
+      <img src="./assets/img/Logo.png" alt="logo" width="250px" />
+      <p id="footer_logo_text">OkaPorã Turismo e Serviços de Viagem</p>
+    </div>
+
+    <!-- links do footer -->
+    <ul class="footer_links">
+      <li style="color: #4169e1">Início</li>
+      <a href="expedicoes.html" style="color: #fff">
+        <li>Expedições</li>
+      </a>
+      <a href="sobrenos.html" style="color: #fff">
+        <li>Oka Porã</li>
+      </a>
+      <a href="organizacao.html" style="color: #fff">
+        <li>Organizações</li>
+      </a>
+      <a href="blog.html" style="color: #fff">
+        <li>Blog</li>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank" style="color: #fff">
+        <li>Contato</li>
+      </a>
+      <a href="expedicoes.html" style="color: #fff">
+        <li>Preferências</li>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank" style="color: #fff">
+        <li>Central de ajuda</li>
+      </a>
+      <a href="login.html" style="color: #4169e1">
+        <li>Perfil</li>
+      </a>
+    </ul>
+
+    <!-- Fale conosco -->
+    <div class="footer_contact">
+      <h3 class="footer_title">Fale conosco</h3>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <p class="footer_text">(12)98829-1813</p>
+      <ion-icon name="mail-outline"></ion-icon>
+      <p class="footer_text">falecom@okapora.com.br</p>
+      <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
+    </div>
+    <!-- Seçao com o icone do insta youtube as flag e o atente-se as novidaes -->
+    <!-- Real nao sei um nome melhor. É muito random -->
+
+    <div class="footer_final">
+      <!-- Parte do icones e imagem -->
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-youtube"></ion-icon>
+
+<<<<<<< HEAD
           <article>
             <p id="blog_title">Turismo de base comunitária</p>
             <p id="blog_topic">
@@ -377,30 +470,29 @@
         <ion-icon name="logo-youtube"></ion-icon>
 
         <!--<img src="./assets/img/brFlag.png" alt="bandeira do brasilFlag" width="30px">
+=======
+      <!--<img src="./assets/img/brFlag.png" alt="bandeira do brasilFlag" width="30px">
+>>>>>>> 981644d2868262d9ff17df9dbd8a20e707581776
                 <div class="bandeiras">
                 <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
                 <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">
             </div>-->
 
-        <!-- O de inscrever email -->
-        <h3 class="footer_title">Atente-se as Novidades</h3>
-        <input placeholder="Digite seu e-mail" />
-        <button>Enviar</button>
-      </div>
+      <!-- O de inscrever email -->
+      <h3 class="footer_title">Atente-se as Novidades</h3>
+      <input placeholder="Digite seu e-mail" />
+      <button>Enviar</button>
+    </div>
 
-      <!-- A parada q fica em baixo. O copyright. -->
+    <!-- A parada q fica em baixo. O copyright. -->
 
-      <span>© 2025 OkaPorã</span>
-    </footer>
+    <span>© 2025 OkaPorã</span>
+  </footer>
 
-    <!-- ionicons -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>

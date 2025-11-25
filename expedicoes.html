@@ -7,6 +7,8 @@
   <title>Oka Porã - Expedições</title>
   <link rel="stylesheet" href="./assets/css/expedicoes.css" />
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <!--JS-->
+  <script src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -19,25 +21,34 @@
         </a>
 
         <!-- Links de navegação -->
-        <ul class="navbar_links">
+        <ul class="navbar_links" id="mobileMenu">
           <li><a href="./index.html">Início</a></li>
           <li><a href="./expedicoes.html" style="color: #4169E1;">Expedições</a></li>
           <li><a href="./sobrenos.html">A Oka Porã</a></li>
           <li><a href="./organizacao.html">Organização</a></li>
           <li><a href="./blog.html">Blog</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Contatos</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Central de ajuda</a></li>
+          <li><a
+              href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+              target="_blank">Contatos</a></li>
+          <li><a
+              href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
+              target="_blank">Central de ajuda</a></li>
           <li>|</li>
         </ul>
 
-        <div class="profile_section">
-          <a href="login.html">Profile</a>
-          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-          <select class="lang-select" onchange="location = this.value;">
-            <option value="expedicoes.html" selected>BR</option>
-            <option value="EN-US/expedicoes-en.html">EN</option>
-          </select>
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="login.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="expedicoes.html" selected>BR</option>
+              <option value="EN-US/expedicoes-en.html">EN</option>
+            </select>
+          </div>
 
+          <button class="navbar_toggle">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
           <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
                     <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
                     <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
@@ -176,8 +187,13 @@
 
     <!-- links do footer -->
     <ul class="footer_links">
+<<<<<<< HEAD
       <a href="index.html" style="color: #fff">
       <li>Início</li>
+=======
+      <a href="index.html">
+        <li style="color: #fff">Início</li>
+>>>>>>> 981644d2868262d9ff17df9dbd8a20e707581776
       </a>
       <a href="expedicoes.html" style="color: #4169e1">
         <li>Expedições</li>
@@ -191,24 +207,20 @@
       <a href="blog.html" style="color: #fff">
         <li>Blog</li>
       </a>
-      <a
-        href="https://api.whatsapp.com/send/?phone=5512988291813"
-        target="_blank"
-        style="color: #fff"
-      >
+      <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank" style="color: #fff">
         <li>Contato</li>
       </a>
-      <a href="expedicoes.html" style="color: #fff">
+      <a href="expedicoes.html" style="color: #4169e1">
         <li>Preferências</li>
       </a>
-      <a
-        href="https://api.whatsapp.com/send/?phone=5512988291813"
-        target="_blank"
-        style="color: #fff"
-      >
+      <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank" style="color: #fff">
         <li>Central de ajuda</li>
       </a>
+<<<<<<< HEAD
       <a href="login.html" style="color: #fff">
+=======
+      <a href="login.html" style="color: #4169e1;">
+>>>>>>> 981644d2868262d9ff17df9dbd8a20e707581776
         <li>Perfil</li>
       </a>
     </ul>

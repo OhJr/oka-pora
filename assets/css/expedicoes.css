@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
     --primary-color: #1A47B8;
@@ -6,9 +7,7 @@
     --text-dark: #000;
     --gradient-vertical: linear-gradient(to bottom, #1A47B8, #0C2052);
     --gradient-horizontal: linear-gradient(to right, #0C2052, #1A47B8);
-
     --white: #ffffff;
-
     --ff: 'Raleway', serif;
 }
 
@@ -39,42 +38,32 @@ body::before {
   z-index: -1;
 }
 
-/* body {
-  margin: 0; 
-  padding: 0;
-  background-image: url('../img/Background.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-} */
-
 a {
     text-decoration: none;
 }
 
+/* ===== HEADER ===== */
 header {
-    height: 100px;
+    height: auto;
+    min-height: 70px;
     background: transparent;
-    /* color: #ffffff; */
-    margin-bottom: 90px;
-    
+    margin-bottom: 50px;
 }
 
 header::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
   background-image: url('../img/Background.png');
   background-size: cover;
   background-position: center;
-   background: rgba(0, 0, 0, 0.2); /* um fundo semi-transparente */
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   z-index: -1;
-  
 }
-
-
 
 .navbar_container {
     max-width: 1400px;
@@ -82,8 +71,15 @@ header::before {
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    height: 120px;
-    
+    padding: 8px 20px;
+    height: auto;
+    min-height: 70px;
+}
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .navbar_links {
@@ -91,13 +87,13 @@ header::before {
     display: flex;
     gap: 1.6rem;
     color: #ffffff;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .navbar_links a {
     color: var(--white);
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -106,27 +102,27 @@ header::before {
 }
 
 .navbar_links li {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .profile_section{
     color: var(--white);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
     display: flex;
     gap: 0.7rem;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .profile_section a{
     margin-right: auto;
     color: #4169E1;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .profile_section img{
@@ -185,46 +181,48 @@ header::before {
 .navbar_logo img {
     display: inline-block;
     margin-left: -130px;
-    margin-top: 10px;
+    margin-top: 3px;
     width: auto;
-    height: 200px;
+    height: 90px;
 }
 
+/* Menu Hamburguer */
+.navbar_toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
+}
 
-/* .expedicoes{
-    background-image: url('../img/Background.png');
-    padding-block: 400px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+.navbar_toggle ion-icon {
+    font-size: 28px;
+    color: white;
+    display: block;
+}
 
-} */
+/* Mostrar o botão em telas menores */
+@media (max-width: 1024px) {
+    .navbar_toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
 
+/* ===== EXPEDIÇÕES ===== */
 .expedicoes {
   position: relative;
   overflow: hidden;
-      /* background-image: url('../img/Background.png');
-      padding-block: 180px; */
-
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 0;
-}
-
-/* .expedicoes::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('../img/Background.png');
   background-size: cover;
-  background-position: center;
-   background: rgba(0, 0, 0, 0.2); /* um fundo semi-transparente 
-  backdrop-filter: blur(10px);
-  z-index: -1;
-  
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;
+  padding-bottom: 50px;
 }
- */
 
 .cards_container {
     display: flex;
@@ -233,18 +231,19 @@ header::before {
     gap: 60px;
     max-width: 1400px;
     margin: 0 auto;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
     position: relative;
-    top: -100;
-    /* margin-top: 40px; */
 }
 
-.cards_container :hover {
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
     transform: scale(1.05);
-    transition: transform 0.3s;
 }
 
-/* Estilo  do card */
+/* Estilo do card */
 .card {
     width: 250px;
     height: 350px;
@@ -254,9 +253,10 @@ header::before {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-size: cover;
     background-position: center;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 
 #card1 {
   background-image: url('../img/Reveillion-Card-1.jpg');
@@ -310,48 +310,51 @@ header::before {
     background-position: center;
 }
 
-
 .card_content {
     padding: 20px 15px;
     text-align: left;
+    color: #fff;
 }
 
 .card_content p {
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card_content span {
     display: block;
     font-size: 18px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .card_content small {
     font-size: 10px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
     padding: 2px 5px;
     border-radius: 3px;
     margin-left: 5px;
+    text-shadow: none;
 }
 
-/* Parte de baixo do card  */
+/* Parte de baixo do card */
 .card_text {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    right: 15px;
-    text-align: left;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 0 0 10px 10px;
 }
 
 .card_text p {
     font-size: 12px;
     margin-bottom: 8px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.3;
+    color: white;
 }
 
 .card_price {
@@ -364,67 +367,69 @@ header::before {
     align-items: center;
     justify-content: center;
     display: flex;
+    margin-top: 40px;
 }
 
 button{
   border: solid var(--gradient-horizontal);
-  background: var(--gradient);
+  background: var(--gradient-horizontal);
   color: var(--white);
   font-weight: 600;
   font-size: 30px;       
   padding: 14px 90px;    
   border-radius: 20px;
   cursor: pointer;
-  
+  transition: transform 0.3s ease;
 }
 
-.btn_container :hover{
- transform: scale(1.05);
-    transition: transform 0.3s;
+.btn_container button:hover{
+  transform: scale(1.05);
 }
 
-/* footer */
+/* ===== FOOTER ===== */
 footer {
   background: var(--gradient-vertical);
   color: white;
-  padding: 40px 20px 20px;
+  padding: 50px 40px 30px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   font-family: Montserrat;
+  gap: 40px;
   z-index: 4;
 }
-
 
 .footer_logo {
   flex: 1;
   min-width: 250px;
   text-align: left;
+  padding-right: 20px;
 }
 
 .footer_logo img {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 #footer_logo_text {
   font-size: 16px;
   color: #cccccc;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* Links  */
 .footer_links {
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px 20px;
+  gap: 15px 30px;
 }
 
 .footer_links li {
@@ -439,41 +444,41 @@ footer {
   color: #1A47B8;
 }
 
-/* contato */
 .footer_contact {
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
   text-align: left;
+  padding-left: 125px;
 }
 
 .footer_title {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: white;
 }
 
 .footer_contact ion-icon {
   vertical-align: middle;
-  margin-right: 5%;
+  margin-right: 10px;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .footer_text {
   display: inline-block;
   color: #cccccc;
   font-size: 14px;
-  margin: 0 0 15px 0;
-  margin-right: 2%;
+  margin: 0 0 20px 0;
 }
 
 .footer_contact img {
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 4px;
   display: block;
+  max-width: 100%;
+  height: auto;
 }
-
 
 .footer_final {
   flex: 1;
@@ -486,7 +491,6 @@ footer {
   gap: 15px;
   margin-bottom: 20px;
 }
-
 
 .footer_final .footer_title {
   margin-top: 0;
@@ -538,7 +542,6 @@ footer {
   gap: 8px;
 }
 
-
 ion-icon[name="logo-whatsapp"],
 ion-icon[name="mail-outline"] {
   font-size: 24px !important;
@@ -551,74 +554,263 @@ ion-icon[name="logo-youtube"] {
   color: black;
 }
 
-
 footer > span {
   flex-basis: 100%;
   text-align: center;
   color: #cccccc;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* respomsividade */
+/* ================================================ */
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+/* ================================================ */
+
+/* TABLETS E NOTEBOOKS (768px - 1024px) */
+@media (max-width: 1024px) {
+    header {
+        margin-bottom: 40px;
+    }
+
+    header::before {
+        height: 80px;
+    }
+
+    .navbar_container {
+        min-height: 70px;
+        padding: 10px 20px;
+    }
+
+    .navbar_logo img {
+        margin-left: 0;
+        height: 70px;
+    }
+
+    .navbar_links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 13, 70, 0.98);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    .navbar_links.active {
+        display: flex !important;
+    }
+
+    .navbar_links a {
+        font-size: 18px;
+    }
+
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile_section {
+        font-size: 18px;
+    }
+
+    .profile_section a {
+        font-size: 18px;
+    }
+
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .cards_container {
+        gap: 40px;
+        padding-bottom: 60px;
+    }
+
+    button {
+        font-size: 26px;
+        padding: 12px 70px;
+    }
+}
+
+/* MOBILE (até 768px) */
 @media (max-width: 768px) {
-  footer {
-      flex-direction: column;
-      text-align: center;
-      gap: 20px;
-  }
-  
-  .footer_logo {
-      text-align: center;
-  }
-  
-  .footer_logo img {
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  .footer_links {
-      grid-template-columns: 1fr;
-      text-align: center;
-  }
-  
-  .footer_contact {
-      text-align: center;
-  }
-  
-  .footer_contact img {
-      margin: 10px auto 0;
-  }
-  
-  .footer_final {
-      text-align: center;
-  }
-  
-  .footer_final input {
-      width: 100%;
-      margin: 0 0 10px 0;
-  }
-  
-  .footer_final button {
-      width: 100%;
-      margin: 0 auto;
-  }
+    header {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    header::before {
+        height: 60px;
+    }
+
+    .navbar_container {
+        padding: 10px 15px;
+        min-height: 60px;
+    }
+
+    .navbar_logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .navbar_links {
+        top: 60px;
+    }
+
+    .navbar_links a {
+        font-size: 18px;
+    }
+
+    .navbar_right {
+        gap: 0.7rem;
+    }
+
+    .profile_section {
+        font-size: 16px;
+    }
+
+    .profile_section a {
+        font-size: 16px;
+    }
+
+    .lang-select {
+        font-size: 1rem;
+        width: 50px;
+    }
+
+    .navbar_toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+
+    .cards_container {
+        gap: 25px;
+        padding: 0 15px 40px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+        height: 320px;
+    }
+
+    .btn_container {
+        margin-top: 30px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 12px 50px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 15px 15px;
+    }
+    
+    .footer_logo {
+        text-align: center;
+    }
+    
+    .footer_logo img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer_links {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer_links li {
+        font-size: 20px;
+    }
+    
+    .footer_contact {
+        text-align: center;
+    }
+    
+    .footer_contact img {
+        margin: 10px auto 0;
+    }
+    
+    .footer_final {
+        text-align: center;
+    }
+    
+    .footer_final input {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    
+    .footer_final button {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
-
+/* MOBILE PEQUENO (até 480px) */
 @media (max-width: 480px) {
-  footer {
-      padding: 30px 15px 15px;
-  }
-  
-  .footer_logo,
-  .footer_links,
-  .footer_contact,
-  .footer_final {
-      min-width: 100%;
-  }
-  
-  .footer_final input {
-      width: 100%;
-  }
+    .navbar_logo img {
+        height: 60px;
+    }
+
+    .profile_section {
+        font-size: 14px;
+    }
+
+    .profile_section a {
+        font-size: 14px;
+    }
+
+    .navbar_toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .card {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 10px 40px;
+    }
+
+    .footer_links li {
+        font-size: 18px;
+    }
+    
+    footer {
+        padding: 20px 10px 10px;
+    }
+    
+    .footer_logo,
+    .footer_links,
+    .footer_contact,
+    .footer_final {
+        min-width: 100%;
+    }
+    
+    .footer_final input {
+        width: 100%;
+    }
 }

@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
     --primary-color: #1A47B8;
     --secondary-color: #DBDBDB;
     --gradient: linear-gradient(to right bottom, #0C2052, #1A47B8); 
---gradient-horizontal: linear-gradient(to right, #0C2052, #1A47B8);
+    --gradient-horizontal: linear-gradient(to right, #0C2052, #1A47B8);
     --white: #ffffff;
 
     --ff: 'Raleway', serif;
