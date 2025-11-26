@@ -757,7 +757,8 @@ footer > span {
     }
     
     .footer_links {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
         text-align: center;
     }
 
@@ -767,6 +768,7 @@ footer > span {
     
     .footer_contact {
         text-align: center;
+        padding-left: 0;
     }
     
     .footer_contact img {
