@@ -1,229 +1,175 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oka Porã - A Oka Porã </title>
-    <link rel="stylesheet" href="./assets/css/sobreNosStyles.css" />
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <!--JS-->
-    <script src="assets/js/script.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oka Porã - A Oka Porã</title>
+  <link rel="stylesheet" href="./assets/css/sobreNosStyles.css" />
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <script src="assets/js/script.js"></script>
+</head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="navbar_container">
-          <!-- Logo -->
-          <a href="./index.html" class="navbar_logo">
-            <img src="assets/img/Logo.png" alt="logo" />
-          </a>
+<body>
+  <header>
+    <nav>
+      <div class="navbar_container">
+        <!-- Logo -->
+        <a href="./index.html" class="navbar_logo">
+          <img src="assets/img/Logo.png" alt="logo" />
+        </a>
 
-          <!-- Links de navegação -->
-          <ul class="navbar_links" id="mobileMenu">
-            <li><a href="./index.html">Início</a></li>
-            <li><a href="./expedicoes.html">Expedições</a></li>
-            <li>
-              <a href="./sobrenos.html" style="color: #4169e1">A Oka Porã</a>
-            </li>
-            <li><a href="./organizacao.html">Organização</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li>
-              <a
-                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
-                target="_blank"
-                >Contatos</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
-                target="_blank"
-                >Central de ajuda</a
-              >
-            </li>
-            <li>
-              |
-            </li>
-          </ul>
+        <!-- Links de navegação -->
+        <ul class="navbar_links" id="mobileMenu">
+          <li><a href="./index.html">Início</a></li>
+          <li><a href="./expedicoes.html">Expedições</a></li>
+          <li><a href="./sobrenos.html" style="color: #4169e1">A Oka Porã</a></li>
+          <li><a href="./organizacao.html">Organização</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Contatos</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Central de ajuda</a></li>
+          <li>|</li>
+        </ul>
 
-          <div class="navbar_right">
-            <div class="profile_section">
-              <a href="login.html">Profile</a>
-              <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-              <select class="lang-select" onchange="location = this.value;">
-                <option value="index.html" selected>BR</option>
-                <option value="./EN-US/sobrenos-en.html">EN</option>
-              </select>
-            </div>
-
-            <button class="navbar_toggle">
-              <ion-icon name="menu-outline"></ion-icon>
-            </button>
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="login.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="sobrenos.html" selected>BR</option>
+              <option value="./EN-US/sobrenos-en.html">EN</option>
+            </select>
           </div>
+
+          <button class="navbar_toggle" aria-label="Toggle menu" aria-expanded="false">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
-      </nav>
-    </header>
-
-    <main>
-      <!-- Div do titulo -->
-      <section class="titulo hero">
-        <h1 class="titulo">Quem somos - Oka-Porã</h1>
-        <p>
-          Somos um projeto/organização que
-          <strong>cria conteúdo, organiza expedições e conecta pessoas</strong>
-          interessadas em cultura, natureza e tecnologia.
-        </p>
-      </section>
-
-      <!-- Div do objetivo -->
-      <section class="objetivo historia">
-        <h2 class="subtitulo">Nossa história</h2>
-        <p>
-          Fundada em 2025, a Oka-Porã nasceu do desejo de explorar lugares com tema indígenas e divulgar
-          as belezas naturais e culturais do Brasil. Desde então, realizamos
-          diversas expedições, publicamos inúmeros artigos e estabelecemos
-          parcerias valiosas.
-        </p>
-      </section>
-
-      <!-- Div do membros -->
-       <section class="membros equipe">
-        <h2 class="subtitulo">Nossa equipe</h2>
-        <ul class="sem_bullets">
-          <li>
-            <strong>João Camargo</strong> — Fundador e Diretor Executivo.
-            <em>Explorador apaixonado por culturas indígenas e conservação
-            ambiental.</em>
-          </li>
-          <li>
-            <strong>Ananda Nardi</strong> — Coordenadora de Conteúdo.
-            <em>Jornalista especializada em temas ambientais e culturais.</em>
-          </li>
-          <li>
-            <strong>Bruno Camargo</strong> — Líder de Expedições.
-            <em>Guia experiente com vasta experiência em trilhas e aventuras
-            na natureza.</em>
-          </li>
-          <li>
-            <strong>Ana Maia</strong> — Gerente de Parcerias.
-            <em>Especialista em desenvolvimento de parcerias estratégicas e
-            colaborações.</em>
-          </li>
-          <li>
-            <strong>Osvaldo Costa</strong> — Designer Gráfico.
-            <em>Responsável pela identidade visual e materiais gráficos do
-            projeto.</em>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Div do "oq fazemos" -->
-      <section class="servicos">
-        <h2 class="subtitulo">O que fazemos</h2>
-        <p>
-          Oferecemos uma variedade de serviços e projetos, incluindo um blog
-          com artigos informativos, expedições guiadas, guias detalhados,
-          workshops interativos e parcerias estratégicas.
-        </p>
-        <ul>
-          <li><a href="blog.html" style="color: black;">Artigos e notícias</a></li>
-          <li><a href="expedicoes.html" style="color: black;">Expedições</a></li>
-          <li><a href="organizacao.html" style="color: black;">Organização de todos os membros</a></li>
-        </ul>
-      </section>
-
-      <!-- Div do futuro -->
-      <section class="plano-futuro">
-        <h2 class="subtitulo">Planos para o futuro</h2>
-        <p>
-          Estamos constantemente buscando expandir nossos horizontes. Nossos
-          planos incluem lançar guias em inglês e outros idiomas, aumentar o número de
-          expedições e criar newsletters informativas.
-        </p>
-      </section>
-
-      <!-- Div do contato -->
-      <section class="contato">
-        <h2 class="subtitulo">Contato</h2>
-        <p>
-          Quer colaborar ou saber mais? Manda mensagem pra
-          <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank"
-            >nosso whatsapp</a> ou nos siga nas redes.
-        </p>
-      </section>
-    </main>
-
-    <footer>
-      <!-- Logo -->
-      <div class="footer_logo">
-        <img src="./assets/img/Logo.png" alt="logo" width="250px" />
-        <p id="footer_logo_text">OkaPorã Turismo e Serviços de Viagem</p>
       </div>
+    </nav>
+  </header>
 
-      <!-- links do footer -->
-      <ul class="footer_links">
-        <a href="index.html" style="color: #fff">
-          <li>Início</li>
-        </a>
-        <a href="expedicoes.html" style="color: #fff">
-          <li>Expedições</li>
-        </a>
-        <a href="sobrenos.html" style="color: #4169e1">
-          <li>Oka Porã</li>
-        </a>
-        <a href="organizacao.html" style="color: #fff">
-          <li>Organizações</li>
-        </a>
-        <a href="blog.html" style="color: #fff">
-          <li>Blog</li>
-        </a>
-        <a
-          href="https://api.whatsapp.com/send/?phone=5512988291813"
-          target="_blank"
-          style="color: #fff"
-        >
-          <li>Contato</li>
-        </a>
-        <a href="expedicoes.html" style="color: #fff">
-          <li>Preferências</li>
-        </a>
-        <a
-          href="https://api.whatsapp.com/send/?phone=5512988291813"
-          target="_blank"
-          style="color: #fff"
-        >
-          <li>Central de ajuda</li>
-        </a>
-        <a href="login.html" style="color: #fff">
-          <li>Perfil</li>
-        </a>
+  <main>
+    <!-- Div do titulo -->
+    <section class="titulo hero">
+      <h1 class="titulo">Quem somos - Oka-Porã</h1>
+      <p>
+        Somos um projeto/organização que
+        <strong>cria conteúdo, organiza expedições e conecta pessoas</strong>
+        interessadas em cultura, natureza e tecnologia.
+      </p>
+    </section>
+
+    <!-- Div do objetivo -->
+    <section class="objetivo historia">
+      <h2 class="subtitulo">Nossa história</h2>
+      <p>
+        Fundada em 2025, a Oka-Porã nasceu do desejo de explorar lugares com tema indígenas e divulgar
+        as belezas naturais e culturais do Brasil. Desde então, realizamos diversas expedições, 
+        publicamos inúmeros artigos e estabelecemos parcerias valiosas.
+      </p>
+    </section>
+
+    <!-- Div do membros -->
+    <section class="membros equipe">
+      <h2 class="subtitulo">Nossa equipe</h2>
+      <ul class="sem_bullets">
+        <li>
+          <strong>João Camargo</strong> — Fundador e Diretor Executivo.
+          <em>Explorador apaixonado por culturas indígenas e conservação ambiental.</em>
+        </li>
+        <li>
+          <strong>Ananda Nardi</strong> — Coordenadora de Conteúdo.
+          <em>Jornalista especializada em temas ambientais e culturais.</em>
+        </li>
+        <li>
+          <strong>Bruno Camargo</strong> — Líder de Expedições.
+          <em>Guia experiente com vasta experiência em trilhas e aventuras na natureza.</em>
+        </li>
+        <li>
+          <strong>Ana Maia</strong> — Gerente de Parcerias.
+          <em>Especialista em desenvolvimento de parcerias estratégicas e colaborações.</em>
+        </li>
+        <li>
+          <strong>Osvaldo Costa</strong> — Designer Gráfico.
+          <em>Responsável pela identidade visual e materiais gráficos do projeto.</em>
+        </li>
       </ul>
+    </section>
 
-      <!-- Fale conosco -->
-      <div class="footer_contact">
-        <h3 class="footer_title">Fale conosco</h3>
-        <ion-icon name="logo-whatsapp"></ion-icon>
-        <p class="footer_text">(12)98829-1813</p>
-        <ion-icon name="mail-outline"></ion-icon>
-        <p class="footer_text">falecom@okapora.com.br</p>
-        <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
-      </div>
+    <!-- Div do "oq fazemos" -->
+    <section class="servicos">
+      <h2 class="subtitulo">O que fazemos</h2>
+      <p>
+        Oferecemos uma variedade de serviços e projetos, incluindo um blog com artigos informativos, 
+        expedições guiadas, guias detalhados, workshops interativos e parcerias estratégicas.
+      </p>
+      <ul>
+        <li><a href="blog.html" style="color: black;">Artigos e notícias</a></li>
+        <li><a href="expedicoes.html" style="color: black;">Expedições</a></li>
+        <li><a href="organizacao.html" style="color: black;">Organização de todos os membros</a></li>
+      </ul>
+    </section>
 
-      <div class="footer_final">
-        <ion-icon name="logo-instagram"></ion-icon>
-        <ion-icon name="logo-youtube"></ion-icon>
+    <!-- Div do futuro -->
+    <section class="plano-futuro">
+      <h2 class="subtitulo">Planos para o futuro</h2>
+      <p>
+        Estamos constantemente buscando expandir nossos horizontes. Nossos planos incluem lançar guias 
+        em inglês e outros idiomas, aumentar o número de expedições e criar newsletters informativas.
+      </p>
+    </section>
 
-        <h3 class="footer_title">Atente-se as Novidades</h3>
-        <input placeholder="Digite seu e-mail" />
-        <button>Enviar</button>
-      </div>
+    <!-- Div do contato -->
+    <section class="contato">
+      <h2 class="subtitulo">Contato</h2>
+      <p>
+        Quer colaborar ou saber mais? Manda mensagem pra
+        <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">nosso whatsapp</a> 
+        ou nos siga nas redes.
+      </p>
+    </section>
+  </main>
 
-      <span>© 2025 OkaPorã</span>
-    </footer>
+  <footer>
+    <div class="footer_logo">
+      <img src="./assets/img/Logo.png" alt="logo" width="250px" />
+      <p id="footer_logo_text">OkaPorã Turismo e Serviços de Viagem</p>
+    </div>
 
-    <!-- ionicons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  </body>
+    <ul class="footer_links">
+      <a href="index.html" style="color: #fff"><li>Início</li></a>
+      <a href="expedicoes.html" style="color: #fff"><li>Expedições</li></a>
+      <a href="sobrenos.html" style="color: #4169e1"><li>Oka Porã</li></a>
+      <a href="organizacao.html" style="color: #fff"><li>Organizações</li></a>
+      <a href="blog.html" style="color: #fff"><li>Blog</li></a>
+      <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank" style="color: #fff"><li>Contato</li></a>
+      <a href="expedicoes.html" style="color: #fff"><li>Preferências</li></a>
+      <a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank" style="color: #fff"><li>Central de ajuda</li></a>
+      <a href="login.html" style="color: #fff"><li>Perfil</li></a>
+    </ul>
+
+    <div class="footer_contact">
+      <h3 class="footer_title">Fale conosco</h3>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+      <p class="footer_text">(12)98829-1813</p>
+      <ion-icon name="mail-outline"></ion-icon>
+      <p class="footer_text">falecom@okapora.com.br</p>
+      <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
+    </div>
+
+    <div class="footer_final">
+      <ion-icon name="logo-instagram"></ion-icon>
+      <ion-icon name="logo-youtube"></ion-icon>
+
+      <h3 class="footer_title">Atente-se as Novidades</h3>
+      <input placeholder="Digite seu e-mail" />
+      <button>Enviar</button>
+    </div>
+
+    <span>© 2025 OkaPorã</span>
+  </footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
 </html>
