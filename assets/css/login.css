@@ -217,6 +217,10 @@ body {
     box-shadow: 0 4px 12px rgba(26, 71, 184, 0.4);
 }
 
+#register {
+    justify-content: center;
+}
+
 /* ================================================ */
 /* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
 /* ================================================ */
