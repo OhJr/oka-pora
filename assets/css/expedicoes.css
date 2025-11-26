@@ -390,7 +390,7 @@ button{
   transform: scale(1.05);
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER PADRONIZADO ===== */
 footer {
   background: var(--gradient-vertical);
   color: white;
@@ -422,7 +422,7 @@ footer {
   font-size: 16px;
   color: #cccccc;
   margin: 0;
-  line-height: 1.6;
+  /*line-height: 1.6;*/
 }
 
 .footer_links {
@@ -498,17 +498,15 @@ footer {
 }
 
 .footer_final .footer_title {
-  margin-top: 0;
-  margin-bottom: 15px;
-  text-align: left;
+  margin-top: 20px;
 }
 
 /* Container que junta input + botões na mesma linha */
 .footer_newsletter {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer_final input {
@@ -518,10 +516,8 @@ footer {
   background: rgba(255, 255, 255, 0.9);
   color: #333;
   font-size: 14px;
-  width: 300px;
-  margin-right: 8px;
-  display: block;
-  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .footer_final input::placeholder {
@@ -545,8 +541,8 @@ footer {
   font-size: 14px;
   font-weight: 600;
   transition: background-color 0.3s, transform 0.2s;
-  flex: 1;
-  /*min-width: 120px;*/
+  /*flex: 1;*/
+  min-width: 100px;
 }
 
 .footer_final button:hover {
@@ -647,14 +643,8 @@ footer > span {
         font-size: 18px;
     }
 
-    .navbar_toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 5px;
+    .footer_contact {
+        padding-left: 125px;
     }
 
     .cards_container {
@@ -741,21 +731,23 @@ footer > span {
     }
 
     footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 30px 15px 15px;
-    }
-    
-    .footer_logo {
+        gap: 25px;
+        padding: 35px 20px 20px;
         text-align: center;
     }
-    
+
+    .footer_logo,
+    .footer_contact,
+    .footer_final {
+        text-align: center;
+        /*min-width: 100%;*/
+        padding-left: 0;
+    }
+
     .footer_logo img {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 20px;
     }
-    
+
     .footer_links {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
@@ -765,31 +757,26 @@ footer > span {
     .footer_links li {
         font-size: 20px;
     }
-    
-    .footer_contact {
-        text-align: center;
-        padding-left: 0;
-    }
-    
+
     .footer_contact img {
-        margin: 10px auto 0;
+        margin: 15px auto 0;
     }
-    
-    .footer_final {
-        text-align: center;
-    }
-    
+
     .footer_final input {
         width: 100%;
-        margin: 0 0 10px 0;
+        max-width: 100%;
     }
-    
-    .footer_final button {
+
+    .footer_buttons {
         width: 100%;
-        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .footer_buttons button {
+        flex: 1;
+        min-width: 22.4rem;
     }
 }
-
 /* MOBILE PEQUENO (até 480px) */
 @media (max-width: 480px) {
     .navbar_logo img {
@@ -837,5 +824,22 @@ footer > span {
     
     .footer_final input {
         width: 100%;
+    }
+
+    .footer_buttons button {
+        flex: 1;
+        min-width: 26rem;
+    }
+}
+
+@media (max-width: 375px){
+    .footer_buttons button {
+        min-width: 22.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer_buttons button {
+        min-width: 19rem;
     }
 }

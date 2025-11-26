@@ -346,7 +346,7 @@ body {
     animation-delay: 1s;
 }
 
-/* footer */
+/* ===== FOOTER PADRONIZADO ===== */
 footer {
     background: var(--gradient-vertical);
     color: white;
@@ -357,6 +357,7 @@ footer {
     justify-content: space-between;
     font-family: Montserrat;
     gap: 40px;
+    z-index: 4;
 }
 
 .footer_logo {
@@ -377,7 +378,7 @@ footer {
     font-size: 16px;
     color: #cccccc;
     margin: 0;
-    line-height: 1.6;
+    /*line-height: 1.6;*/
 }
 
 .footer_links {
@@ -458,9 +459,9 @@ footer {
 
 .footer_newsletter {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .footer_final input {
@@ -472,11 +473,16 @@ footer {
     font-size: 14px;
     width: 100%;
     max-width: 300px;
-    margin-bottom: 12px;
 }
 
 .footer_final input::placeholder {
     color: #666;
+}
+
+.footer_buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .footer_final button {
@@ -488,11 +494,14 @@ footer {
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    /*flex: 1;*/
+    min-width: 100px;
 }
 
 .footer_final button:hover {
     background-color: #0C2052;
+    transform: translateY(-2px);
 }
 
 footer > span {
@@ -588,7 +597,7 @@ footer > span {
     }
 
     .footer_contact {
-        padding-left: auto;
+        padding-left: 125px;
     }
 }
 
@@ -680,7 +689,7 @@ footer > span {
     .footer_contact,
     .footer_final {
         text-align: center;
-        min-width: 100%;
+        /*min-width: 100%;*/
         padding-left: 0;
     }
 
@@ -707,8 +716,14 @@ footer > span {
         max-width: 100%;
     }
 
-    .footer_final button {
+    .footer_buttons {
         width: 100%;
+        justify-content: center;
+    }
+
+    .footer_buttons button {
+        flex: 1;
+        min-width: 22.4rem;
     }
 }
 
@@ -777,5 +792,33 @@ footer > span {
 
     footer {
         padding: 25px 15px 15px;
+    }
+    
+    .footer_logo,
+    .footer_links,
+    .footer_contact,
+    .footer_final {
+        min-width: 100%;
+    }
+    
+    .footer_final input {
+        width: 100%;
+    }
+
+    .footer_buttons button {
+        flex: 1;
+        min-width: 26rem;
+    }
+}
+
+@media (max-width: 375px){
+    .footer_buttons button {
+        min-width: 22.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer_buttons button {
+        min-width: 19rem;
     }
 }

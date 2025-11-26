@@ -270,163 +270,172 @@ body {
     background-color: #4169E1;
 }
 
-/* footer */
+/* ===== FOOTER PADRONIZADO ===== */
 footer {
-    background: var(--gradient-vertical);
-    color: white;
-    padding: 50px 40px 30px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-family: Montserrat;
-    gap: 40px;
+  background: var(--gradient-vertical);
+  color: white;
+  padding: 50px 40px 30px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Montserrat;
+  gap: 40px;
+  z-index: 4;
 }
 
 .footer_logo {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
-    padding-right: 20px;
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+  padding-right: 20px;
 }
 
 .footer_logo img {
-    margin-bottom: 20px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+  margin-bottom: 20px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 #footer_logo_text {
-    font-size: 16px;
-    color: #cccccc;
-    margin: 0;
-    line-height: 1.6;
+  font-size: 16px;
+  color: #cccccc;
+  margin: 0;
+  /*line-height: 1.6;*/
 }
 
 .footer_links {
-    flex: 1;
-    min-width: 220px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px 30px;
+  flex: 1;
+  min-width: 220px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
 }
 
 .footer_links li {
-    cursor: pointer;
-    transition: color 0.3s;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px 0;
 }
 
 .footer_links li:hover {
-    color: #1A47B8;
+  color: #1A47B8;
 }
 
 .footer_contact {
-    flex: 1;
-    min-width: 220px;
-    text-align: left;
-    padding-left: 125px;
+  flex: 1;
+  min-width: 220px;
+  text-align: left;
+  padding-left: 125px;
 }
 
 .footer_title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: white;
 }
 
 .footer_contact ion-icon {
-    vertical-align: middle;
-    margin-right: 10px;
-    color: #ffffff;
-    font-size: 24px;
+  vertical-align: middle;
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 24px;
 }
 
 .footer_text {
-    display: inline-block;
-    color: #cccccc;
-    font-size: 14px;
-    margin: 0 0 20px 0;
+  display: inline-block;
+  color: #cccccc;
+  font-size: 14px;
+  margin: 0 0 20px 0;
 }
 
 .footer_contact img {
-    margin-top: 15px;
-    border-radius: 4px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+  margin-top: 15px;
+  border-radius: 4px;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .footer_final {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
 }
 
 .footer_final ion-icon {
-    font-size: 36px;
-    margin-right: 15px;
-    color: white;
-    margin-bottom: 15px;
+  font-size: 36px;
+  margin-right: 15px;
+  color: white;
+  margin-bottom: 15px;
 }
 
 .footer_final .footer_title {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .footer_newsletter {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
 
 .footer_final input {
-    padding: 12px 15px;
-    border: none;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #333;
-    font-size: 14px;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 12px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .footer_final input::placeholder {
-    color: #666;
+  color: #666;
+}
+
+.footer_buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .footer_final button {
-    padding: 12px 24px;
-    background-color: #1A47B8;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s;
+  padding: 12px 24px;
+  background-color: #1A47B8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  /*flex: 1;*/
+  min-width: 100px;
 }
 
 .footer_final button:hover {
-    background-color: #0C2052;
+  background-color: #0C2052;
+  transform: translateY(-2px);
 }
 
 footer > span {
-    flex-basis: 100%;
-    text-align: center;
-    color: #cccccc;
-    font-size: 14px;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-basis: 100%;
+  text-align: center;
+  color: #cccccc;
+  font-size: 14px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ================================================ */
@@ -504,7 +513,7 @@ footer > span {
     }
 
     .footer_contact {
-        padding-left: auto;
+        padding-left: 125px;
     }
 }
 
@@ -589,7 +598,7 @@ footer > span {
     .footer_contact,
     .footer_final {
         text-align: center;
-        min-width: 100%;
+        /*min-width: 100%;*/
         padding-left: 0;
     }
 
@@ -616,9 +625,15 @@ footer > span {
         max-width: 100%;
     }
 
-    /*.footer_final button {
+    .footer_buttons {
         width: 100%;
-    }*/
+        justify-content: center;
+    }
+
+    .footer_buttons button {
+        flex: 1;
+        min-width: 22.4rem;
+    }
 }
 
 /* MOBILE PEQUENO (até 480px) */
@@ -673,5 +688,33 @@ footer > span {
 
     footer {
         padding: 25px 15px 15px;
+    }
+    
+    .footer_logo,
+    .footer_links,
+    .footer_contact,
+    .footer_final {
+        min-width: 100%;
+    }
+    
+    .footer_final input {
+        width: 100%;
+    }
+
+    .footer_buttons button {
+        flex: 1;
+        min-width: 26rem;
+    }
+}
+
+@media (max-width: 375px){
+    .footer_buttons button {
+        min-width: 22.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer_buttons button {
+        min-width: 19rem;
     }
 }

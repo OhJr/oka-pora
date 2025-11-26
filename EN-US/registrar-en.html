@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oka Porã - Registro</title>
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/favicon.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <section class="login">
+      <div class="login-box">
+        <!-- ICONE DE LOGIN -->
+        <div class="login-icon">
+          <ion-icon name="person-outline"></ion-icon>
+        </div>
+
+        <!-- NOME -->
+        <div class="input-group">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <input type="text" placeholder="User" />
+        </div>
+
+        <!-- EMAIL -->
+        <div class="input-group">
+          <ion-icon name="mail-outline" class="icon-mail"></ion-icon>
+          <input type="email" placeholder="Email" />
+        </div>
+
+        <!-- SENHA -->
+        <div class="input-group password-group">
+          <ion-icon name="lock-closed-outline" class="icon-lock"></ion-icon>
+          <input type="password" id="pwd1" placeholder="Password" />
+          <label class="toggle-password-label">
+            <input
+              type="checkbox"
+              onclick="pwd1.type = this.checked ? 'text' : 'password'"
+              class="password-checkbox"
+            />
+            <ion-icon name="eye-outline" class="eye-icon show"></ion-icon>
+            <ion-icon name="eye-off-outline" class="eye-icon hide"></ion-icon>
+          </label>
+        </div>
+
+        <div class="input-group password-group">
+          <ion-icon name="lock-closed-outline" class="icon-lock"></ion-icon>
+          <input type="password" id="pwd2" placeholder="Confirm your password" />
+          <label class="toggle-password-label">
+            <input
+              type="checkbox"
+              onclick="pwd2.type = this.checked ? 'text' : 'password'"
+              class="password-checkbox"
+            />
+            <ion-icon name="eye-outline" class="eye-icon show"></ion-icon>
+            <ion-icon name="eye-off-outline" class="eye-icon hide"></ion-icon>
+          </label>
+        </div>
+
+        <!-- OPÇÃO LOGIN -->
+        <div class="options">
+          <label><input type="checkbox" />Remember me</label>
+          <label><a href="./login.html">Do you already have an account?</a></label>
+        </div>
+
+        <!-- BOTÃO -->
+        <a href="./index-en.html"><button class="btn-login">REGISTER</button></a>
+      </div>
+    </section>
+
+    <!-- ionicons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
