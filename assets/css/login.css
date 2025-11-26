@@ -7,7 +7,6 @@
     --gradient: linear-gradient(to right bottom, #0C2052, #1A47B8); 
     --gradient-horizontal: linear-gradient(to right, #0C2052, #1A47B8);
     --white: #ffffff;
-
     --ff: 'Raleway', serif;
 }
 
@@ -19,20 +18,9 @@
 }
 
 body {
-  /* background-color: #000b3f; /* mesma cor de fundo da seção */
-  margin: 0; 
-  padding: 0;
+    margin: 0; 
+    padding: 0;
 }
-
-
-/* .login{
-    background-image: url('../img/Background.png');
-    padding-block: 400px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-
-} */
 
 .login {
     position: relative;
@@ -41,12 +29,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .login::before {
@@ -57,58 +46,51 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background: rgba(0, 0, 0, 0.2); /* Deixa o fundo quase transparente */
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     z-index: -1;
 }
-
-
-/*.login ion-icon {
-    color: white;
-    font-size: 300px;
-    border: 1px solid var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15%;
-
-}*/
 
 .login-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
 }
 
 .login-icon {
     color: var(--white);
-    font-size: 300px;
-    /*border: 1px solid var(--white);*/
-    width: 15%;
-    aspect-ratio: 1 / 1; /* mantém quadrado */
+    font-size: 150px;
+    width: 150px;
+    height: 150px;
     border-radius: 15%;
-    margin-top: -18%;
-    position: absolute;
-    display: flex; /* Centraliza tudo*/
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/*Gropo do Email e Login*/
+.login-icon ion-icon {
+    font-size: 150px;
+}
+
 .input-group {
     display: flex;
     align-items: center;
     background-color: #ffffff33;
     border-radius: 5px;
     padding: 10px 12px;
-    width: 250px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .input-group ion-icon {
     color: var(--white);
     font-size: 22px;
     margin-right: 10px;
+    flex-shrink: 0;
 }
 
 .icon-mail {
@@ -124,28 +106,207 @@ body {
     color: var(--white);
     outline: none;
     flex: 1;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .options {
     display: flex;
     justify-content: space-between;
-    width: 250px;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
     font-size: 14px;
     color: var(--white);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .options a {
     color: #ccc;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.options a:hover {
+    color: var(--white);
 }
 
 .btn-login {
     background: var(--gradient-horizontal);
     color: var(--white);
     border: none;
-    padding: 10px 0;
+    padding: 12px 0;
     border-radius: 5px;
-    width: 250px;
+    width: 150px;
+    max-width: 300px;
     font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 71, 184, 0.4);
+}
+
+/* ================================================ */
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+/* ================================================ */
+
+/* TABLETS (768px - 1024px) */
+@media (max-width: 1024px) {
+    .login-icon {
+        font-size: 140px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .login-icon ion-icon {
+        font-size: 140px;
+    }
+
+    .input-group {
+        max-width: 280px;
+    }
+
+    .options {
+        max-width: 280px;
+    }
+
+    .btn-login {
+        max-width: 280px;
+    }
+}
+
+/* MOBILE (até 768px) */
+@media (max-width: 768px) {
+    .login {
+        padding: 15px;
+    }
+
+    .login-box {
+        gap: 18px;
+    }
+
+    .login-icon {
+        font-size: 120px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .login-icon ion-icon {
+        font-size: 120px;
+    }
+
+    .input-group {
+        max-width: 280px;
+        padding: 10px 12px;
+    }
+
+    .input-group ion-icon {
+        font-size: 20px;
+    }
+
+    .input-group input {
+        font-size: 15px;
+    }
+
+    .options {
+        max-width: 280px;
+        font-size: 13px;
+    }
+
+    .btn-login {
+        max-width: 280px;
+        padding: 11px 0;
+        font-size: 15px;
+    }
+}
+
+/* MOBILE PEQUENO (até 480px) */
+@media (max-width: 480px) {
+    .login {
+        padding: 10px;
+    }
+
+    .login-box {
+        gap: 15px;
+    }
+
+    .login-icon {
+        font-size: 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .login-icon ion-icon {
+        font-size: 100px;
+    }
+
+    .input-group {
+        max-width: 260px;
+        padding: 9px 10px;
+    }
+
+    .input-group ion-icon {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .options {
+        max-width: 260px;
+        font-size: 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .btn-login {
+        max-width: 260px;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+/* MOBILE EXTRA PEQUENO (até 360px) */
+@media (max-width: 360px) {
+    .login-icon {
+        font-size: 80px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .login-icon ion-icon {
+        font-size: 80px;
+    }
+
+    .input-group {
+        max-width: 240px;
+    }
+
+    .options {
+        max-width: 240px;
+    }
+
+    .btn-login {
+        max-width: 240px;
+    }
 }

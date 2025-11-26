@@ -7,6 +7,8 @@
   <title>Oka Porã - Blog</title>
   <link rel="stylesheet" href="assets/css/blog.css" />
   <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <!--JS-->
+  <script src="assets/js/script.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         </a>
 
         <!-- Links de navegação -->
-        <ul class="navbar_links">
+        <ul class="navbar_links" id="mobileMenu">
           <li><a href="./index.html">Início</a></li>
           <li><a href="./expedicoes.html">Expedições</a></li>
           <li><a href="./sobrenos.html">A Oka Porã</a></li>
@@ -30,16 +32,19 @@
           <li>|</li>
         </ul>
 
-        <div class="profile_section">
-          <a href="login.html">Profile</a>
-          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-          <select class="lang-select" onchange="location = this.value;">
-            <option value="expedicoes.html" selected>BR</option>
-            <option value="EN-US/blog2-en.html">EN</option>
-          </select>
-          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
-                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="login.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="blog2.html" selected>BR</option>
+              <option value="EN-US/blog2-en.html">EN</option>
+            </select>
+          </div>
+
+          <button class="navbar_toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
       </div>
     </nav>
@@ -188,28 +193,24 @@
       <p class="footer_text">falecom@okapora.com.br</p>
       <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
     </div>
-    <!-- Seçao com o icone do insta youtube as flag e o atente-se as novidaes -->
-    <!-- Real nao sei um nome melhor. É muito random -->
 
     <div class="footer_final">
       <!-- Parte do icones e imagem -->
       <ion-icon name="logo-instagram"></ion-icon>
       <ion-icon name="logo-youtube"></ion-icon>
 
-      <!--<img src="./assets/img/brFlag.png" alt="bandeira do brasilFlag" width="30px">
-              <div class="bandeiras">
-              <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-              <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">
-          </div>-->
-
       <!-- O de inscrever email -->
       <h3 class="footer_title">Atente-se as Novidades</h3>
-      <input placeholder="Digite seu e-mail" />
-      <button>Enviar</button>
+      <div class="footer_newsletter">
+        <input type="email" placeholder="Digite seu e-mail" />
+        <div class="footer_buttons">
+          <button>Enviar</button>
+          <a href="index.html"><button>Voltar</button></a>
+        </div>
+      </div>
     </div>
 
     <!-- A parada q fica em baixo. O copyright. -->
-
     <span>© 2025 OkaPorã</span>
   </footer>
 
