@@ -932,7 +932,8 @@ footer > span {
     }
 
     .footer_links {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
         text-align: center;
     }
 

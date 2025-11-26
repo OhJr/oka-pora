@@ -598,7 +598,8 @@ footer > span {
     }
 
     .footer_links {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
         text-align: center;
     }
 
@@ -615,9 +616,9 @@ footer > span {
         max-width: 100%;
     }
 
-    .footer_final button {
+    /*.footer_final button {
         width: 100%;
-    }
+    }*/
 }
 
 /* MOBILE PEQUENO (até 480px) */
