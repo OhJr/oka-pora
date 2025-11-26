@@ -44,6 +44,12 @@ body {
     min-height: 70px;
 }
 
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .navbar_links {
     list-style: none;
     display: flex;
@@ -67,17 +73,7 @@ body {
     font-size: 20px;
 }
 
-.navbar_links #sla {
-        display: none;
-    }
-
-.navbar_right {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.profile_section {
+.profile_section{
     color: var(--white);
     font-weight: 600;
     font-size: 20px;
@@ -88,7 +84,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.profile_section a {
+.profile_section a{
     margin-right: auto;
     color: #4169E1;
     font-weight: 600;
@@ -97,17 +93,38 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-.profile_section img {
+.profile_section img{
     margin-left: 15px;
 }
 
+/* ===== CAIXA DE SELEÇÃO ===== */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--white);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 3px 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+.language-selector:hover {
+    background: var(--secondary-color);
+}
+  
 .lang-icon {
     font-size: 1.3rem;
     align-items: center;
     color: var(--secondary-color);
     transition: color 0.3s;
 }
-
+  
+.language-selector:hover .lang-icon {
+    color: var(--primary-color);
+}
+  
 .lang-select {
     border: none;
     outline: none;
@@ -124,6 +141,10 @@ body {
 .lang-select option {
     color: var(--text-dark);
 }
+  
+.language-selector:hover .lang-select {
+    color: var(--primary-color);
+}
 
 .navbar_logo img {
     display: inline-block;
@@ -136,23 +157,13 @@ body {
 /* Menu Hamburguer */
 .navbar_toggle {
     display: none;
-    background: rgba(255, 255, 255, 0.1);
+    background: none;
     border: none;
     color: white;
     font-size: 28px;
     cursor: pointer;
     z-index: 1001;
-    padding: 8px;
-    border-radius: 5px;
-    width: 44px;
-    height: 44px;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s;
-}
-
-.navbar_toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
+    padding: 5px;
 }
 
 .navbar_toggle ion-icon {
@@ -161,80 +172,7 @@ body {
     display: block;
 }
 
-.hero_section {
-    background-image: url('../img/Background.png');
-    padding-block: 250px;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: #ffffff;
-}
-
-.hero_section h1 {
-    font-family: Bungee;
-    font-size: 75px;
-    padding-left: 500px;
-}
-
-.hero_section h3 {
-    font-family: Montserrat;
-    color: #ffffff;
-    font-size: 55px;
-    padding-top: 60px;
-    padding-left: 60px;
-}
-
-.search_field {
-    background-color: #D3D3D3;
-    padding: 40px 0;
-    text-align: center;
-    font-family: Montserrat, sans-serif;
-}
-
-.search_container p {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.button_group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.button_group button {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    color: #000;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 14px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#blue-button {
-    background: linear-gradient(to bottom, #0052cc, #003d99);
-    color: #fff;
-    border: none;
-}
-
-.button_group button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-
-@media (min-width: 600px) {
-    .button_group {
-        flex-direction: row;
-        justify-content: center;
-        gap: 25px;
-    }
-}
-
+/* Conteúdo Principal */
 main {
     max-width: 1200px;
     margin: 40px auto;
@@ -261,14 +199,91 @@ section p {
 
 .sem_bullets {
     list-style-type: none;
+    padding-left: 0;
+}
+
+.sem_bullets li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(26, 71, 184, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.sem_bullets li:hover {
+    transform: translateX(5px);
+    background: rgba(26, 71, 184, 0.1);
+}
+
+.sem_bullets strong {
+    color: #1A47B8;
+    font-size: 20px;
+}
+
+.sem_bullets em {
+    color: #666;
+    display: block;
+    margin-top: 5px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 4px;
+    margin-bottom: 20px;
     color: #1A47B8;
+    font-size: 42px;
 }
 
+.titulo p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 20px;
+    color: #666;
+}
+
+.subtitulo {
+    font-size: 32px;
+    color: #1A47B8;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1A47B8;
+    padding-bottom: 10px;
+}
+
+.servicos ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.servicos ul li {
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    background: rgba(26, 71, 184, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.servicos ul li:hover {
+    background: rgba(26, 71, 184, 0.2);
+    transform: translateX(5px);
+}
+
+.servicos ul li a {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contato a {
+    color: #1A47B8;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.contato a:hover {
+    color: #0C2052;
+}
+
+/* footer */
 footer {
     background: var(--gradient-vertical);
     color: white;
@@ -375,14 +390,9 @@ footer {
 }
 
 .footer_final .footer_title {
-    margin-top: 20px;
-}
-
-.footer_newsletter {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .footer_final input {
@@ -434,7 +444,9 @@ footer > span {
 /* TABLETS E NOTEBOOKS (768px - 1024px) */
 @media (max-width: 1024px) {
     .navbar_container {
-        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .navbar_logo img {
@@ -443,12 +455,16 @@ footer > span {
     }
 
     .navbar_right {
-        gap: 0.7rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
     }
 
     .profile_section {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
         font-size: 18px;
-        gap: 0.5rem;
     }
 
     .profile_section a {
@@ -487,52 +503,24 @@ footer > span {
         font-size: 18px;
     }
 
-    .hero_section {
-        padding-block: 150px;
-        text-align: center;
-    }
-
-    .hero_section h1 {
-        font-size: 55px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .hero_section h3 {
-        font-size: 35px;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 30px;
-    }
-
-    .button_group {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .button_group button {
-        width: auto;
-        min-width: 110px;
-        font-size: 15px;
-        padding: 10px 20px;
-    }
-
     main {
         padding: 0 30px;
     }
 
-    section h2 {
+    h1 {
+        font-size: 36px;
+    }
+
+    .titulo p {
+        font-size: 18px;
+    }
+
+    .subtitulo {
         font-size: 28px;
     }
 
     section p {
-        font-size: 16px;
-    }
-
-    .footer_contact {
-        padding-left: auto;
+        font-size: 17px;
     }
 }
 
@@ -561,58 +549,37 @@ footer > span {
         font-size: 16px;
     }
 
+    .lang-select {
+        font-size: 1rem;
+        width: 50px;
+    }
+
     .navbar_toggle {
         width: 36px;
         height: 36px;
         font-size: 22px;
     }
 
-    .lang-select {
-        font-size: 1rem;
-        width: 50px;
-    }
-
     .navbar_links {
         top: 60px;
     }
 
-    .hero_section {
-        padding-block: 100px;
-    }
-
-    .hero_section h1 {
-        font-size: 40px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .hero_section h3 {
-        font-size: 24px;
-        padding-top: 20px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .search_container p {
-        font-size: 22px;
-    }
-
-    .button_group {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-
-    .button_group button {
-        width: 100%;
-        min-width: auto;
-        font-size: 14px;
-        padding: 10px 18px;
-    }
-
     main {
-        padding: 0 20px;
-        margin: 30px auto;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .titulo p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .subtitulo {
+        font-size: 24px;
     }
 
     section h2 {
@@ -623,14 +590,25 @@ footer > span {
         font-size: 16px;
     }
 
-    h1 {
-        font-size: 28px;
+    .sem_bullets li {
+        padding: 12px;
+    }
+
+    .sem_bullets strong {
+        font-size: 18px;
+    }
+
+    .servicos ul li {
+        padding: 10px 15px;
+    }
+
+    .servicos ul li a {
+        font-size: 16px;
     }
 
     footer {
         gap: 25px;
         padding: 35px 20px 20px;
-        text-align: center;
     }
 
     .footer_logo,
@@ -639,10 +617,6 @@ footer > span {
         text-align: center;
         min-width: 100%;
         padding-left: 0;
-    }
-
-    .footer_logo img {
-        margin: 0 auto 20px;
     }
 
     .footer_links {
@@ -655,7 +629,7 @@ footer > span {
     }
 
     .footer_contact img {
-        margin: 15px auto 0;
+        margin: 10px auto 0;
     }
 
     .footer_final input {
@@ -674,12 +648,6 @@ footer > span {
         height: 45px;
     }
 
-    .navbar_toggle {
-        width: 32px;
-        height: 32px;
-        font-size: 20px;
-    }
-
     .profile_section {
         font-size: 14px;
     }
@@ -688,49 +656,37 @@ footer > span {
         font-size: 14px;
     }
 
-    .hero_section {
-        padding-block: 80px;
-    }
-
-    .hero_section h1 {
-        font-size: 32px;
-    }
-
-    .hero_section h3 {
+    .navbar_toggle {
+        width: 32px;
+        height: 32px;
         font-size: 20px;
-    }
-
-    .search_container p {
-        font-size: 20px;
-    }
-
-    .button_group button {
-        font-size: 13px;
-        padding: 10px 15px;
-    }
-
-    main {
-        padding: 0 15px;
-        margin: 25px auto;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    section p {
-        font-size: 15px;
     }
 
     h1 {
         font-size: 24px;
     }
 
-    .footer_links li {
-        font-size: 18px;
+    .titulo p {
+        font-size: 14px;
     }
 
-    footer {
-        padding: 25px 15px 15px;
+    .subtitulo {
+        font-size: 20px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    section p {
+        font-size: 15px;
+    }
+
+    .sem_bullets strong {
+        font-size: 16px;
+    }
+
+    .footer_links li {
+        font-size: 18px;
     }
 }
