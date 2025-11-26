@@ -372,7 +372,7 @@ header::before {
 
 button{
   border: solid var(--gradient-horizontal);
-  background: var(--gradient-horizontal);
+  /*background: var(--gradient-horizontal);*/
   color: var(--white);
   font-weight: 600;
   font-size: 30px;       
@@ -515,20 +515,30 @@ footer {
   color: #666;
 }
 
+/* Container dos botões lado a lado */
+.footer_buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .footer_final button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   background-color: #1A47B8;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s;
-  display: block;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+  flex: 1;
+  min-width: 120px;
 }
 
 .footer_final button:hover {
   background-color: #0C2052;
+  transform: translateY(-2px);
 }
 
 .footer_contact ion-icon {
@@ -551,7 +561,7 @@ ion-icon[name="logo-instagram"],
 ion-icon[name="logo-youtube"] {
   font-size: 36px !important;
   padding-left: 0;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 footer > span {
