@@ -7,6 +7,8 @@
   <title>Oka Porã - Blog</title>
   <link rel="stylesheet" href="../assets/css/blog.css" />
   <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <!--JS-->
+  <script src="../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -18,28 +20,32 @@
           <img src="../assets/img/Logo.png" alt="logo" />
         </a>
 
-        <!-- Links de navegação -->
-        <ul class="navbar_links">
+        <!-- Navigation links -->
+        <ul class="navbar_links" id="mobileMenu">
           <li><a href="./index-en.html">Home</a></li>
           <li><a href="./expedicoes-en.html">Expeditions</a></li>
           <li><a href="./sobrenos-en.html">About Oka Porã</a></li>
           <li><a href="./organizacao-en.html">Organization</a></li>
-          <li><a href="./blog2-en.html" style="color: #4169E1;">Blog</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Contacts</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Help Center</a></li>
+          <li><a href="./blog-en.html" style="color: #4169E1;">Blog</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Contacts</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Help Center</a></li>
           <li>|</li>
         </ul>
 
-        <div class="profile_section">
-          <a href="./login-en.html">Profile</a>
-          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-          <select class="lang-select" onchange="location = this.value;">
-            <option value="../blog2.html">BR</option>
-            <option value="./blog2-en.html" selected>EN</option>
-          </select>
-          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
-                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
+        <!-- FIXED: Added navbar_right -->
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="./login-en.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="../blog2.html">BR</option>
+              <option value="./blog2-en.html" selected>EN</option>
+            </select>
+          </div>
+
+          <button class="navbar_toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
       </div>
     </nav>
@@ -47,43 +53,35 @@
   <main>
     <section class="blog_2">
 
-      <!--Foto-->
+      <!--Photo-->
       <div class="foto_do_blog">
-        <img src="../assets/img/blog_img_2.jpg" alt="foto do blog 2" />
+        <img src="../assets/img/blog_img_2.jpg" alt="blog photo 2" />
       </div>
 
 
       <div class="texto_do_blog">
 
-        <!--Titulo-->
+        <!--Title-->
         <h2 class="titulo">How to Make Indigenous Handicrafts</h2>
 
-        <!--Texto-->
+        <!--Text-->
         <div class="texto">
 
           <p>
-            Indigenous handicrafts are one of Brazil’s richest cultural expressions. They reflect native peoples’ connection with nature, spirituality, and traditional ways of life. In this article, you’ll learn about the main types of indigenous crafts, the materials used, and how to make simple pieces at home — always respecting the culture and meaning behind each art form. culturais mais ricas do Brasil. Ele reflete a conexão dos povos
-            originários com a natureza, a espiritualidade e o modo de vida tradicional. Neste blog, você vai aprender
-            sobre os principais tipos de artesanato indígena, os materiais usados e como fazer algumas peças simples em
-            casa, respeitando sempre a cultura e os significados por trás de cada arte.<br><br></p>
+            Indigenous handicrafts are one of Brazil's richest cultural expressions. They reflect native peoples' connection with nature, spirituality, and traditional ways of life. In this article, you'll learn about the main types of indigenous crafts, the materials used, and how to make simple pieces at home — always respecting the culture and meaning behind each art form.<br><br></p>
 
-          <p> <strong>Natural Materials</strong> <br>Os povos indígenas utilizam elementos da natureza, coletados de forma
-            sustentável. Alguns dos materiais mais usados são:<br>
-            - Palha e cipó: usados para fazer cestos, bolsas e chapéus.<br>
-            - Sementes e conchas: viram colares, pulseiras e brincos.<br>
-            - Argila: serve para produzir potes, vasos e esculturas.<br>
-            - Penas coloridas: usadas em cocares e enfeites cerimoniais.<br>
-            <strong>Tip</strong> Se for reproduzir, use materiais alternativos (palha sintética, miçangas, penas
-            artificiais) pra não prejudicar o meio ambiente nem desrespeitar tradições sagradas.<br><br>
+          <p> <strong>Natural Materials</strong> <br>Indigenous peoples use elements from nature, collected sustainably. Some of the most commonly used materials are:<br>
+            - Straw and vines: used to make baskets, bags and hats.<br>
+            - Seeds and shells: turned into necklaces, bracelets and earrings.<br>
+            - Clay: used to produce pots, vases and sculptures.<br>
+            - Colorful feathers: used in headdresses and ceremonial ornaments.<br>
+            <strong>Tip:</strong> If you're going to reproduce, use alternative materials (synthetic straw, beads, artificial feathers) so as not to harm the environment or disrespect sacred traditions.<br><br>
           </p>
 
           <p>
             Cultural Importance:<br>
-            Mais do que arte, o artesanato indígena é uma forma de resistência e preservação cultural. Cada peça carrega
-            histórias, crenças e conhecimentos passados de geração em geração. Valorizar e divulgar esse tipo de arte é
-            uma forma de reconhecer a importância dos povos indígenas na formação da nossa cultura. <a
-              href="https://comofazerartesanatos.com.br/artesanato-indigena/" class="ler_mais_blog">Leia
-              mais</a><br><br>
+            More than art, indigenous handicrafts are a form of resistance and cultural preservation. Each piece carries stories, beliefs and knowledge passed down from generation to generation. Valuing and promoting this type of art is a way to recognize the importance of indigenous peoples in shaping our culture. <a
+              href="https://comofazerartesanatos.com.br/artesanato-indigena/" class="ler_mais_blog">Read more</a><br><br>
 
           </p>
 
@@ -91,7 +89,7 @@
     </section>
 
     
-    <!--Parte de baixo-->
+    <!--Bottom section-->
     <section class="mais_blogs">
       <h2 class="titulo_recomendados">Other Blog Articles</h2>
 
@@ -99,32 +97,30 @@
 
         <!--Blog 1-->
         <div class="card_blog">
-          <img src="../assets/img/blog_img_1.jpg" alt="Artesanato Indígena" />
-          <h3>Turismo de base comunitária</h3>
+          <img src="../assets/img/blog_img_1.jpg" alt="Indigenous Handicraft" />
+          <h3>Community-based Tourism</h3>
           <p>
-            O turismo de base comunitária Shanenawa oferece vivências culturais e sustentáveis, conectando visitantes à espiritualidade.
+            Shanenawa community-based tourism offers cultural and sustainable experiences, connecting visitors to spirituality.
           </p>
           <a href="./blog-en.html" class="btn_blog">Read more</a>
         </div>
 
         <!--Blog 3-->
         <div class="card_blog">
-          <img src="../assets/img/blog_img_3.jpg" alt="Máscaras Indígenas" />
-          <h3>Cultura das Máscaras Indígenas</h3>
+          <img src="../assets/img/blog_img_3.jpg" alt="Indigenous Masks" />
+          <h3>The Culture of Indigenous Masks</h3>
           <p>
-            Descubra o simbolismo das máscaras indígenas e entenda como elas fazem parte dos rituais, da arte e da
-            espiritualidade dos povos originários.
+            Discover the symbolism of indigenous masks and understand how they are part of the rituals, art and spirituality of native peoples.
           </p>
           <a href="./blog3-en.html" class="btn_blog">Read more</a>
         </div>
 
         <!--Blog 4-->
         <div class="card_blog">
-          <img src="../assets/img/blog_img_4.jpg" alt="Cotidiano das Tribos" />
-          <h3>Cotidiano das Tribos</h3>
+          <img src="../assets/img/blog_img_4.jpg" alt="Tribal Daily Life" />
+          <h3>Tribal Daily Life</h3>
           <p>
-            Veja como é o dia a dia nas aldeias: alimentação, costumes, moradia e a forte relação das tribos indígenas
-            com a natureza e a coletividade.
+            See what daily life is like in the villages: food, customs, housing and the strong relationship indigenous tribes have with nature and community.
           </p>
           <a href="./blog4-en.html" class="btn_blog">Read more</a>
         </div>
@@ -188,28 +184,24 @@
       <p class="footer_text">falecom@okapora.com.br</p>
       <img src="../assets/img/brasilFooter.png" alt="Placeholder :]" />
     </div>
-    <!-- Section with the instagram youtube icons the flags and the stay tuned to news -->
-    <!-- Really don't know a better name. It's very random -->
 
     <div class="footer_final">
-      <!-- Part of the icons and image -->
+      <!-- Icons part -->
       <ion-icon name="logo-instagram"></ion-icon>
       <ion-icon name="logo-youtube"></ion-icon>
 
-      <!--<img src="./assets/img/brFlag.png" alt="Brazilian flag" width="30px">
-              <div class="flags">
-              <img src="./assets/img/usaFlag.png" alt="USA flag" width="30px">
-              <img src="./assets/img/spainFlag.png" alt="Spain flag" width="30px">
-          </div>-->
-
-      <!-- The email subscription -->
+      <!-- Email subscription -->
       <h3 class="footer_title">Stay Updated on News</h3>
-      <input placeholder="Enter your email" />
-      <button>Send</button>
+      <div class="footer_newsletter">
+        <input type="email" placeholder="Enter your email" />
+        <div class="footer_buttons">
+          <button>Send</button>
+          <a href="index-en.html"><button>Back</button></a>
+        </div>
+      </div>
     </div>
 
-    <!-- The bottom part. The copyright. -->
-
+    <!-- Copyright -->
     <span>© 2025 OkaPorã</span>
   </footer>
 

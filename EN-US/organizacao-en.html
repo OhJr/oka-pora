@@ -7,6 +7,8 @@
   <title>Oka Porã - Organization</title>
   <link rel="stylesheet" href="../assets/css/organizacao.css" />
   <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <!--JS-->
+  <script src="../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -14,35 +16,42 @@
     <nav>
       <div class="navbar_container">
         <!-- Logo -->
-        <a href="index-en.html" class="navbar_logo">
+        <a href="./index-en.html" class="navbar_logo">
           <img src="../assets/img/Logo.png" alt="logo" />
         </a>
 
         <!-- Navigation links -->
-        <ul class="navbar_links">
-          <li><a href="index-en.html">Home</a></li>
-          <li><a href="expedicoes-en.html">Expeditions</a></li>
-          <li><a href="sobrenos-en.html">About Oka Porã</a></li>
+        <ul class="navbar_links" id="mobileMenu">
+          <li><a href="./index-en.html">Home</a></li>
+          <li><a href="./expedicoes-en.html">Expeditions</a></li>
+          <li><a href="./sobrenos-en.html">About Oka Porã</a></li>
           <li>
-            <a href="organizacao-en.html" style="color: #4169e1">Organization</a>
+            <a href="./organizacao-en.html" style="color: #4169e1">Organization</a>
           </li>
-          <li><a href="blog-en.html">Blog</a></li>
+          <li><a href="./blog-en.html">Blog</a></li>
           <li>
-            <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsAap%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Contacts</a>
+            <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Contacts</a>
           </li>
           <li>
-            <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsAap%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Help Center</a>
+            <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Help Center</a>
           </li>
           <li>|</li>
         </ul>
 
-        <div class="profile_section">
-          <a href="login-en.html">Profile</a>
-          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-          <select class="lang-select" onchange="location = this.value;">
-            <option value="../organizacao.html">BR</option>
-            <option value="../organizacao-en.html" selected>EN</option>
-          </select>
+        <!-- FIXED: Added navbar_right -->
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="./login-en.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="../organizacao.html">BR</option>
+              <option value="./organizacao-en.html" selected>EN</option>
+            </select>
+          </div>
+
+          <button class="navbar_toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
       </div>
     </nav>
@@ -161,7 +170,7 @@
     <!-- footer links -->
     <ul class="footer_links">
       <a href="index-en.html" style="color: #fff">
-          <li>Home</li>
+        <li>Home</li>
       </a>
       <a href="expedicoes-en.html" style="color: #fff">
         <li>Expeditions</li>
@@ -169,8 +178,8 @@
       <a href="sobrenos-en.html" style="color: #fff">
         <li>Oka Porã</li>
       </a>
-      <a href="organizacao-en.html" style="color: #fff">
-        <li style="color: #4169e1">Organizations</li>
+      <a href="organizacao-en.html" style="color: #4169e1">
+        <li>Organizations</li>
       </a>
       <a href="blog-en.html" style="color: #fff">
         <li>Blog</li>
@@ -206,31 +215,26 @@
       <p class="footer_text">falecom@okapora.com.br</p>
       <img src="../assets/img/brasilFooter.png" alt="Placeholder :]" />
     </div>
-    <!-- Section with the instagram youtube icons the flags and the stay tuned to news -->
-    <!-- Really don't know a better name. It's very random -->
 
     <div class="footer_final">
-      <!-- Part of the icons and image -->
+      <!-- Icons part -->
       <ion-icon name="logo-instagram"></ion-icon>
       <ion-icon name="logo-youtube"></ion-icon>
 
-      <!--<img src="./assets/img/brFlag.png" alt="Brazilian flag" width="30px">
-              <div class="flags">
-              <img src="./assets/img/usaFlag.png" alt="USA flag" width="30px">
-              <img src="./assets/img/spainFlag.png" alt="Spain flag" width="30px">
-          </div>-->
-
-      <!-- The email subscription -->
+      <!-- Email subscription -->
       <h3 class="footer_title">Stay Updated on News</h3>
-      <input placeholder="Enter your email" />
-      <button>Send</button>
+      <div class="footer_newsletter">
+        <input type="email" placeholder="Enter your email" />
+        <div class="footer_buttons">
+          <button>Send</button>
+          <a href="index-en.html"><button>Back</button></a>
+        </div>
+      </div>
     </div>
 
-    <!-- The bottom part. The copyright. -->
-
+    <!-- Copyright -->
     <span>© 2025 OkaPorã</span>
   </footer>
-
 
   <!-- ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

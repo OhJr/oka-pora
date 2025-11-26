@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oka Porã - The Oka Porã</title>
+    <title>Oka Porã - About Oka Porã</title>
     <link rel="stylesheet" href="../assets/css/sobreNosStyles.css" />
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+    <!--JS-->
+    <script src="../assets/js/script.js"></script>
   </head>
 
   <body>
@@ -13,19 +15,19 @@
       <nav>
         <div class="navbar_container">
           <!-- Logo -->
-          <a href="index-en.html" class="navbar_logo">
+          <a href="./index-en.html" class="navbar_logo">
             <img src="../assets/img/Logo.png" alt="logo" />
           </a>
 
-          <!-- Links de navegação -->
-          <ul class="navbar_links">
-            <li><a href="index-en.html">Home</a></li>
-            <li><a href="expedicoes-en.html">Expeditions</a></li>
+          <!-- Navigation links -->
+          <ul class="navbar_links" id="mobileMenu">
+            <li><a href="./index-en.html">Home</a></li>
+            <li><a href="./expedicoes-en.html">Expeditions</a></li>
             <li>
-              <a href="sobrenos-en.html" style="color: #4169e1">About Oka Porã</a>
+              <a href="./sobrenos-en.html" style="color: #4169e1">About Oka Porã</a>
             </li>
-            <li><a href="organizacao-en.html">Organization</a></li>
-            <li><a href="blog-en.html">Blog</a></li>
+            <li><a href="./organizacao-en.html">Organization</a></li>
+            <li><a href="./blog-en.html">Blog</a></li>
             <li>
               <a
                 href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
@@ -45,20 +47,27 @@
             </li>
           </ul>
 
-          <div class="profile_section">
-            <a href="login-en.html">Profile</a>
-            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-            <select class="lang-select" onchange="location = this.value;">
-              <option value="../sobrenos.html">BR</option>
-              <option value="./sobrenos-en.html" selected>EN</option>
-            </select>
+          <!-- FIXED: Added navbar_right -->
+          <div class="navbar_right">
+            <div class="profile_section">
+              <a href="./login-en.html">Profile</a>
+              <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+              <select class="lang-select" onchange="location = this.value;">
+                <option value="../sobrenos.html">BR</option>
+                <option value="./sobrenos-en.html" selected>EN</option>
+              </select>
+            </div>
+
+            <button class="navbar_toggle">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
           </div>
         </div>
       </nav>
     </header>
 
     <main>
-      <!-- Div do titulo -->
+      <!-- Title section -->
       <section class="titulo hero">
         <h1 class="titulo">Who We Are - Oka-Porã</h1>
         <p>
@@ -68,7 +77,7 @@
         </p>
       </section>
 
-      <!-- Div do objetivo -->
+      <!-- History section -->
       <section class="objetivo historia">
         <h2 class="subtitulo">Our History</h2>
         <p>
@@ -79,8 +88,7 @@
         </p>
       </section>
 
-      <!-- Div do membros -->
-
+      <!-- Team section -->
       <section class="membros equipe">
         <h2 class="subtitulo">Our Team</h2>
         <ul class="sem_bullets">
@@ -107,7 +115,7 @@
         </ul>
       </section>
 
-      <!-- Div do "oq fazemos" -->
+      <!-- What we do section -->
       <section class="servicos">
         <h2 class="subtitulo">What We Do</h2>
         <p>
@@ -122,7 +130,7 @@
         </ul>
       </section>
 
-      <!-- Div do futuro -->
+      <!-- Future plans section -->
       <section class="plano-futuro">
         <h2 class="subtitulo">Future Plans</h2>
         <p>
@@ -132,7 +140,7 @@
         </p>
       </section>
 
-      <!-- Div do contato -->
+      <!-- Contact section -->
       <section class="contato">
         <h2 class="subtitulo">Contact</h2>
         <p>
@@ -142,6 +150,7 @@
         </p>
       </section>
     </main>
+
     <footer>
       <!-- Logo -->
       <div class="footer_logo">
@@ -151,14 +160,14 @@
 
       <!-- footer links -->
       <ul class="footer_links">
-        <a href="index-en.html" style="color: #fff;">
+        <a href="index-en.html" style="color: #fff">
           <li>Home</li>
         </a>
         <a href="expedicoes-en.html" style="color: #fff">
           <li>Expeditions</li>
         </a>
-        <a href="sobrenos-en.html" style="color: #fff">
-          <li style="color: #4169e1">Oka Porã</li>
+        <a href="sobrenos-en.html" style="color: #4169e1">
+          <li>Oka Porã</li>
         </a>
         <a href="organizacao-en.html" style="color: #fff">
           <li>Organizations</li>
@@ -197,33 +206,29 @@
         <p class="footer_text">falecom@okapora.com.br</p>
         <img src="../assets/img/brasilFooter.png" alt="Placeholder :]" />
       </div>
-      <!-- Section with the instagram youtube icons the flags and the stay tuned to news -->
-      <!-- Really don't know a better name. It's very random -->
 
       <div class="footer_final">
-        <!-- Part of the icons and image -->
+        <!-- Icons part -->
         <ion-icon name="logo-instagram"></ion-icon>
         <ion-icon name="logo-youtube"></ion-icon>
 
-        <!--<img src="./assets/img/brFlag.png" alt="Brazilian flag" width="30px">
-                <div class="flags">
-                <img src="./assets/img/usaFlag.png" alt="USA flag" width="30px">
-                <img src="./assets/img/spainFlag.png" alt="Spain flag" width="30px">
-            </div>-->
-
-        <!-- The email subscription -->
+        <!-- Email subscription -->
         <h3 class="footer_title">Stay Updated on News</h3>
-        <input placeholder="Enter your email" />
-        <button>Send</button>
+        <div class="footer_newsletter">
+          <input type="email" placeholder="Enter your email" />
+          <div class="footer_buttons">
+            <button>Send</button>
+            <a href="index-en.html"><button>Back</button></a>
+          </div>
+        </div>
       </div>
 
-      <!-- The bottom part. The copyright. -->
-
+      <!-- Copyright -->
       <span>© 2025 OkaPorã</span>
     </footer>
 
     <!-- ionicons -->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>

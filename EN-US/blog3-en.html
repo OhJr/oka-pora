@@ -7,6 +7,8 @@
   <title>Oka Porã - Blog</title>
   <link rel="stylesheet" href="../assets/css/blog.css" />
   <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+  <!--JS-->
+  <script src="../assets/js/script.js"></script>
 </head>
 
 <body>
@@ -18,28 +20,32 @@
           <img src="../assets/img/Logo.png" alt="logo" />
         </a>
 
-        <!-- Links de navegação -->
-        <ul class="navbar_links">
+        <!-- Navigation links -->
+        <ul class="navbar_links" id="mobileMenu">
           <li><a href="./index-en.html">Home</a></li>
           <li><a href="./expedicoes-en.html">Expeditions</a></li>
           <li><a href="./sobrenos-en.html">About Oka Porã</a></li>
           <li><a href="./organizacao-en.html">Organization</a></li>
-          <li><a href="./blog3-en.html" style="color: #4169E1;">Blog</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Contacts</a></li>
-          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813" target="_blank">Help Center</a></li>
+          <li><a href="./blog-en.html" style="color: #4169E1;">Blog</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Contacts</a></li>
+          <li><a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0" target="_blank">Help Center</a></li>
           <li>|</li>
         </ul>
 
-        <div class="profile_section">
-          <a href="login-en.html">Profile</a>
-          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-          <select class="lang-select" onchange="location = this.value;">
-            <option value="../blog3.html">BR</option>
-            <option value="./blog3.html" selected>EN</option>
-          </select>
-          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
-                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
+        <!-- FIXED: Added navbar_right -->
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="./login-en.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="../blog3.html">BR</option>
+              <option value="./blog3-en.html" selected>EN</option>
+            </select>
+          </div>
+
+          <button class="navbar_toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
       </div>
     </nav>
@@ -47,49 +53,44 @@
   <main>
     <section class="blog_3">
 
-      <!--Foto-->
+      <!--Photo-->
       <div class="foto_do_blog">
-        <img src="../assets/img/blog_img_3.jpg" alt="foto do blog 3" />
+        <img src="../assets/img/blog_img_3.jpg" alt="blog photo 3" />
       </div>
 
 
       <div class="texto_do_blog">
 
-        <!--Titulo-->
+        <!--Title-->
         <h2 class="titulo">The Culture of Indigenous Masks</h2>
 
-        <!--Texto-->
+        <!--Text-->
         <div class="texto">
 
           <p>
-            Indigenous masks are much more than simple ornaments. They represent spirituality, tradition, and the identity of native peoples. Each mask carries a unique meaning connected to rituals, dances, festivals, and the relationship between indigenous people, nature, and spirits. do que simples enfeites. Elas representam espiritualidade, tradição e
-            identidade dos povos originários. Cada máscara carrega um significado único, ligado a rituais, danças,
-            festas e à relação dos indígenas com a natureza e os espíritos.<br><br>
+            Indigenous masks are much more than simple ornaments. They represent spirituality, tradition, and the identity of native peoples. Each mask carries a unique meaning connected to rituals, dances, festivals, and the relationship between indigenous people, nature, and spirits.<br><br>
           </p>
 
           <p>
             <strong>Origin and Meaning</strong><br>
-            Masks emerged centuries ago as part of religious rituals and sacred ceremonies. In many tribes, they are used to communicate with forest spirits, animals, and ancestors. como parte de rituais religiosos e cerimônias sagradas. Em muitas tribos
-            elas são usadas para se comunicar com espíritos da floresta, animais e antepassados.<br>
-            Cada forma, cor e material representa algo específico:<br>
-            Cores vivas simbolizam a energia da natureza.<br>
-            Formas de animais representam força, sabedoria ou proteção.<br>
-            Desenhos geométricos contam histórias e crenças do povo.<br>
-            Exemplo: Em alguns rituais, o uso da máscara ajuda o indígena a “assumir” o espírito do animal retratado,
-            trazendo poder e equilíbrio à comunidade.<br><br>
+            Masks emerged centuries ago as part of religious rituals and sacred ceremonies. In many tribes, they are used to communicate with forest spirits, animals, and ancestors.<br>
+            Each shape, color and material represents something specific:<br>
+            Bright colors symbolize the energy of nature.<br>
+            Animal shapes represent strength, wisdom or protection.<br>
+            Geometric designs tell stories and beliefs of the people.<br>
+            Example: In some rituals, wearing the mask helps the indigenous person to "assume" the spirit of the depicted animal, bringing power and balance to the community.<br><br>
           </p>
 
           <p>
-            Indigenous masks keep alive the memory and spirituality of native peoples, showing respect for nature, ancestors, and community life. a memória e a espiritualidade dos povos originários. Elas mostram o
-            respeito à natureza, aos antepassados e à vida comunitária.<br>
-            cultura é entender a força simbólica e artística que forma a base da identidade indígena brasileira. <a
-              href="https://www.westwing.com.br/guiar/mascaras-indigenas/" class="ler_mais_blog">Leia mais</a><br><br>
+            Indigenous masks keep alive the memory and spirituality of native peoples, showing respect for nature, ancestors, and community life.<br>
+            Understanding this culture means understanding the symbolic and artistic force that forms the basis of Brazilian indigenous identity. <a
+              href="https://www.westwing.com.br/guiar/mascaras-indigenas/" class="ler_mais_blog">Read more</a><br><br>
           </p>
         </div>
     </section>
 
     
-    <!--Parte de baixo-->
+    <!--Bottom section-->
     <section class="mais_blogs">
       <h2 class="titulo_recomendados">Other Blog Articles</h2>
 
@@ -97,32 +98,30 @@
 
         <!--Blog 1-->
         <div class="card_blog">
-          <img src="../assets/img/blog_img_1.jpg" alt="Artesanato Indígena" />
-          <h3>Turismo de base comunitária</h3>
+          <img src="../assets/img/blog_img_1.jpg" alt="Indigenous Handicraft" />
+          <h3>Community-based Tourism</h3>
           <p>
-            O turismo de base comunitária Shanenawa oferece vivências culturais e sustentáveis, conectando visitantes à espiritualidade.
+            Shanenawa community-based tourism offers cultural and sustainable experiences, connecting visitors to spirituality.
           </p>
           <a href="./blog-en.html" class="btn_blog">Read more</a>
         </div>
 
         <!--Blog 2-->
         <div class="card_blog">
-          <img src="../assets/img/blog_img_2.jpg" alt="Artesanato Indígena" />
-          <h3>Como Fazer Artesanato Indígena</h3>
+          <img src="../assets/img/blog_img_2.jpg" alt="Indigenous Handicraft" />
+          <h3>How to Make Indigenous Handicrafts</h3>
           <p>
-            Aprenda sobre as técnicas, materiais e significados por trás do artesanato indígena, uma arte cheia de
-            história e conexão com a natureza.
+            Learn about the techniques, materials and meanings behind indigenous handicrafts, an art full of history and connection with nature.
           </p>
           <a href="./blog2-en.html" class="btn_blog">Read more</a>
         </div>
 
         <!--Blog 4-->
         <div class="card_blog">
-          <img src="../assets/img/blog_img_4.jpg" alt="Cotidiano das Tribos" />
-          <h3>Cotidiano das Tribos</h3>
+          <img src="../assets/img/blog_img_4.jpg" alt="Tribal Daily Life" />
+          <h3>Tribal Daily Life</h3>
           <p>
-            Veja como é o dia a dia nas aldeias: alimentação, costumes, moradia e a forte relação das tribos indígenas
-            com a natureza e a coletividade.
+            See what daily life is like in the villages: food, customs, housing and the strong relationship indigenous tribes have with nature and community.
           </p>
           <a href="./blog4-en.html" class="btn_blog">Read more</a>
         </div>
@@ -186,31 +185,26 @@
       <p class="footer_text">falecom@okapora.com.br</p>
       <img src="../assets/img/brasilFooter.png" alt="Placeholder :]" />
     </div>
-    <!-- Section with the instagram youtube icons the flags and the stay tuned to news -->
-    <!-- Really don't know a better name. It's very random -->
 
     <div class="footer_final">
-      <!-- Part of the icons and image -->
+      <!-- Icons part -->
       <ion-icon name="logo-instagram"></ion-icon>
       <ion-icon name="logo-youtube"></ion-icon>
 
-      <!--<img src="./assets/img/brFlag.png" alt="Brazilian flag" width="30px">
-              <div class="flags">
-              <img src="./assets/img/usaFlag.png" alt="USA flag" width="30px">
-              <img src="./assets/img/spainFlag.png" alt="Spain flag" width="30px">
-          </div>-->
-
-      <!-- The email subscription -->
+      <!-- Email subscription -->
       <h3 class="footer_title">Stay Updated on News</h3>
-      <input placeholder="Enter your email" />
-      <button>Send</button>
+      <div class="footer_newsletter">
+        <input type="email" placeholder="Enter your email" />
+        <div class="footer_buttons">
+          <button>Send</button>
+          <a href="index-en.html"><button>Back</button></a>
+        </div>
+      </div>
     </div>
 
-    <!-- The bottom part. The copyright. -->
-
+    <!-- Copyright -->
     <span>© 2025 OkaPorã</span>
   </footer>
-
 
   <!-- ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
