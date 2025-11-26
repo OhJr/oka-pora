@@ -24,7 +24,8 @@ a {
 }
 
 header {
-    height: 100px;
+    height: auto;
+    min-height: 70px;
     background-color: #000D46;
     color: #ffffff;
 }
@@ -39,7 +40,15 @@ body {
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    height: 120px;
+    padding: 8px 20px;
+    height: auto;
+    min-height: 70px;
+}
+
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .navbar_links {
@@ -53,7 +62,7 @@ body {
 .navbar_links a {
     color: var(--white);
     font-weight: 600;
-    font-size: 26px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -62,13 +71,13 @@ body {
 }
 
 .navbar_links li {
-    font-size: 26px;
+    font-size: 20px;
 }
 
 .profile_section {
     color: var(--white);
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
     display: flex;
     gap: 0.7rem;
@@ -80,7 +89,7 @@ body {
     margin-right: auto;
     color: #4169E1;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     transition: 0.3s;
     font-family: 'Open Sans', sans-serif;
 }
@@ -100,24 +109,24 @@ body {
     padding: 3px 6px;
     cursor: pointer;
     transition: 0.3s;
-  }
+}
   
-  .language-selector:hover {
+.language-selector:hover {
     background: var(--secondary-color);
-  }
+}
   
-  .lang-icon {
+.lang-icon {
     font-size: 1.3rem;
     align-items: center;
     color: var(--secondary-color);
     transition: color 0.3s;
-  }
+}
   
-  .language-selector:hover .lang-icon {
+.language-selector:hover .lang-icon {
     color: var(--primary-color);
-  }
+}
   
-  .lang-select {
+.lang-select {
     border: none;
     outline: none;
     background: transparent;
@@ -128,22 +137,40 @@ body {
     padding: 2px;
     border-radius: 6px;
     width: 60px;
-  }
+}
 
-  .lang-select option {
+.lang-select option {
     color: var(--text-dark);
-  }
+}
   
-  .language-selector:hover .lang-select {
+.language-selector:hover .lang-select {
     color: var(--primary-color);
-  }
+}
 
 .navbar_logo img {
     display: inline-block;
     margin-left: -130px;
-    margin-top: 10px;
+    margin-top: 3px;
     width: auto;
-    height: 200px;
+    height: 90px;
+}
+
+/* Menu Hamburguer */
+.navbar_toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 5px;
+}
+
+.navbar_toggle ion-icon {
+    font-size: 28px;
+    color: white;
+    display: block;
 }
 
 /* Equipe */
@@ -161,7 +188,7 @@ body {
 }
 
 .titulo-secao p {
-    color: var(--extra-light);
+    color: #cccccc;
     font-size: 1.2rem;
     margin-bottom: 50px;
 }
@@ -186,7 +213,6 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1 1 calc(33.333% - 40px);
-    /*1 1 300px; */
     max-width: 380px;
     animation: fadeUp 0.8s ease forwards;
 }
@@ -297,14 +323,12 @@ body {
     background-image: url('../img/membro-OSVALDO.jpeg');
 }
 
-
 /* ===== ANIMAÇÃO DE ENTRADA ===== */
 @keyframes fadeUp {
     from {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -334,44 +358,46 @@ body {
 /* footer */
 footer {
     background: var(--gradient-vertical);
-    color: rgb(0, 0, 0);
-    padding: 40px 20px 20px;
+    color: white;
+    padding: 50px 40px 30px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     font-family: Montserrat;
+    gap: 40px;
 }
-
 
 .footer_logo {
     flex: 1;
     min-width: 250px;
     text-align: left;
+    padding-right: 20px;
 }
 
 .footer_logo img {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 #footer_logo_text {
     font-size: 16px;
     color: #cccccc;
     margin: 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
-/* Links  */
 .footer_links {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     list-style: none;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
+    gap: 15px 30px;
 }
 
 .footer_links li {
@@ -386,41 +412,41 @@ footer {
     color: #1A47B8;
 }
 
-/* contato */
 .footer_contact {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
     text-align: left;
+    padding-left: 125px;
 }
 
 .footer_title {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color: white;
 }
 
 .footer_contact ion-icon {
     vertical-align: middle;
-    margin-right: 5%;
+    margin-right: 10px;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .footer_text {
     display: inline-block;
     color: #cccccc;
     font-size: 14px;
-    margin: 0 0 15px 0;
-    margin-right: 2%;
+    margin: 0 0 20px 0;
 }
 
 .footer_contact img {
-    margin-top: 10px;
+    margin-top: 15px;
     border-radius: 4px;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
-
 
 .footer_final {
     flex: 1;
@@ -428,12 +454,12 @@ footer {
     text-align: left;
 }
 
-.bandeiras {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+.footer_final ion-icon {
+    font-size: 36px;
+    margin-right: 15px;
+    color: white;
+    margin-bottom: 15px;
 }
-
 
 .footer_final .footer_title {
     margin-top: 0;
@@ -442,16 +468,15 @@ footer {
 }
 
 .footer_final input {
-    padding: 10px 12px;
+    padding: 12px 15px;
     border: none;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.9);
     color: #333;
     font-size: 14px;
-    width: 200px;
-    margin-right: 8px;
-    display: block;
-    margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 12px;
 }
 
 .footer_final input::placeholder {
@@ -459,43 +484,19 @@ footer {
 }
 
 .footer_final button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #1A47B8;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: 600;
     transition: background-color 0.3s;
-    display: block;
 }
 
 .footer_final button:hover {
     background-color: #0C2052;
-}
-
-.footer_contact ion-icon {
-    font-size: 26px !important;
-    margin-right: 12px !important;
-}
-
-.footer_final ion-icon {
-    font-size: 32px !important;
-    margin-right: 4px !important;
-    gap: 8px;
-}
-
-
-ion-icon[name="logo-whatsapp"],
-ion-icon[name="mail-outline"] {
-    font-size: 24px !important;
-}
-
-.footer ion-icon[name="logo-instagram"],
-.footer ion-icon[name="logo-youtube"] {
-    font-size: 36px !important;
-    padding-left: 0;
-    color: black;
 }
 
 footer > span {
@@ -503,68 +504,288 @@ footer > span {
     text-align: center;
     color: #cccccc;
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* respomsividade */
-@media (max-width: 768px) {
-    footer {
+/* ================================================ */
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+/* ================================================ */
+
+/* Mostrar o botão em telas menores */
+@media (max-width: 1024px) {
+    .navbar_toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* TABLETS E NOTEBOOKS (768px - 1024px) */
+@media (max-width: 1024px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar_logo img {
+        margin-left: 0;
+        height: 70px;
+    }
+
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile_section {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        font-size: 18px;
+    }
+
+    .profile_section a {
+        font-size: 18px;
+    }
+
+    .navbar_toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+    }
+
+    .navbar_links {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 13, 70, 0.98);
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         flex-direction: column;
+        gap: 15px;
+        z-index: 1000;
+    }
+
+    .navbar_links.active {
+        display: flex !important;
+    }
+
+    .navbar_links a {
+        font-size: 18px;
+    }
+
+    .equipe {
+        padding: 60px 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 2.2rem;
+    }
+
+    .titulo-secao p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+    }
+
+    .cards-equipe {
+        gap: 30px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 30px);
+        max-width: 350px;
+    }
+}
+
+/* MOBILE (até 768px) */
+@media (max-width: 768px) {
+    .navbar_container {
+        padding: 10px 15px;
+        min-height: 60px;
+    }
+
+    .navbar_logo img {
+        height: 50px;
+        margin-left: 0;
+    }
+
+    .navbar_right {
+        gap: 0.7rem;
+    }
+
+    .profile_section {
+        font-size: 16px;
+        gap: 0.5rem;
+    }
+
+    .profile_section a {
+        font-size: 16px;
+    }
+
+    .lang-select {
+        font-size: 1rem;
+        width: 50px;
+    }
+
+    .navbar_toggle {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+
+    .navbar_links {
+        top: 60px;
+    }
+
+    .equipe {
+        padding: 50px 15px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 1.8rem;
+    }
+
+    .titulo-secao p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .cards-equipe {
+        gap: 25px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 25px 20px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .social a {
+        font-size: 1.2rem;
+        width: 34px;
+        height: 34px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        gap: 25px;
+        padding: 35px 20px 20px;
+    }
+
+    .footer_logo,
+    .footer_contact,
+    .footer_final {
         text-align: center;
-        gap: 20px;
+        min-width: 100%;
+        padding-left: 0;
     }
-    
-    .footer_logo {
-        text-align: center;
-    }
-    
-    .footer_logo img {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
+
     .footer_links {
         grid-template-columns: 1fr;
         text-align: center;
     }
-  
-    .footer_contact {
-        text-align: center;
+
+    .footer_links li {
+        font-size: 20px;
     }
-    
+
     .footer_contact img {
         margin: 10px auto 0;
     }
-    
-    .footer_final {
-        text-align: center;
-    }
-    
+
     .footer_final input {
         width: 100%;
-        margin: 0 0 10px 0;
+        max-width: 100%;
     }
-    
+
     .footer_final button {
         width: 100%;
-        margin: 0 auto;
     }
 }
 
-
+/* MOBILE PEQUENO (até 480px) */
 @media (max-width: 480px) {
-    footer {
-        padding: 30px 15px 15px;
+    .navbar_logo img {
+        height: 45px;
     }
-    
-    .footer_logo,
-    .footer_links,
-    .footer_contact,
-    .footer_final {
-        min-width: 100%;
+
+    .profile_section {
+        font-size: 14px;
     }
-    
-    .footer_final input {
-        width: 100%;
+
+    .profile_section a {
+        font-size: 14px;
+    }
+
+    .navbar_toggle {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+
+    .equipe {
+        padding: 40px 10px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 1.5rem;
+    }
+
+    .titulo-secao p {
+        font-size: 0.9rem;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social {
+        gap: 10px;
+    }
+
+    .social a {
+        font-size: 1.1rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .footer_links li {
+        font-size: 18px;
     }
 }

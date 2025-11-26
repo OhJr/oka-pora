@@ -41,4 +41,39 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Se houver navbar_links sem id="mobileMenu" (para páginas antigas)
+  const navbarLinks = document.querySelector('.navbar_links');
+  if (toggleBtn && navbarLinks && !mobileMenu) {
+    const icon = toggleBtn.querySelector('ion-icon');
+    
+    toggleBtn.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+
+      if (navbarLinks.classList.contains('active')) {
+        icon.setAttribute('name', 'close-outline');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        icon.setAttribute('name', 'menu-outline');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const menuLinks = navbarLinks.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navbarLinks.classList.remove('active');
+        icon.setAttribute('name', 'menu-outline');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navbarLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+        navbarLinks.classList.remove('active');
+        icon.setAttribute('name', 'menu-outline');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 });
