@@ -84,6 +84,7 @@ body {
     padding: 10px 12px;
     width: 100%;
     max-width: 300px;
+    position: relative;
 }
 
 .input-group ion-icon {
@@ -101,7 +102,9 @@ body {
     color: #ffae42;
 }
 
-.input-group input {
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group input[type="text"] {
     background: transparent;
     color: var(--white);
     outline: none;
@@ -113,6 +116,57 @@ body {
 
 .input-group input::placeholder {
     color: rgba(255, 255, 255, 0.7);
+}
+
+/* Toggle password - Botão estilizado com ícone */
+.password-group {
+    padding-right: 45px;
+}
+
+.toggle-password-label {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.password-checkbox {
+    display: none;
+}
+
+.eye-icon {
+    position: absolute;
+    font-size: 20px;
+    color: var(--white);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.toggle-password-label:hover .eye-icon {
+    opacity: 1;
+}
+
+/* Mostra eye-outline quando não está marcado */
+.password-checkbox:not(:checked) ~ .eye-icon.show {
+    display: block;
+}
+
+.password-checkbox:not(:checked) ~ .eye-icon.hide {
+    display: none;
+}
+
+/* Mostra eye-off-outline quando está marcado */
+.password-checkbox:checked ~ .eye-icon.show {
+    display: none;
+}
+
+.password-checkbox:checked ~ .eye-icon.hide {
+    display: block;
 }
 
 .options {
@@ -217,12 +271,20 @@ body {
         padding: 10px 12px;
     }
 
+    .password-group {
+        padding-right: 42px;
+    }
+
     .input-group ion-icon {
         font-size: 20px;
     }
 
     .input-group input {
         font-size: 15px;
+    }
+
+    .eye-icon {
+        font-size: 18px;
     }
 
     .options {
@@ -262,6 +324,10 @@ body {
         padding: 9px 10px;
     }
 
+    .password-group {
+        padding-right: 38px;
+    }
+
     .input-group ion-icon {
         font-size: 18px;
         margin-right: 8px;
@@ -269,6 +335,10 @@ body {
 
     .input-group input {
         font-size: 14px;
+    }
+
+    .eye-icon {
+        font-size: 16px;
     }
 
     .options {
@@ -300,6 +370,10 @@ body {
 
     .input-group {
         max-width: 240px;
+    }
+
+    .password-group {
+        padding-right: 36px;
     }
 
     .options {

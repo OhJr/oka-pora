@@ -75,6 +75,10 @@ header {
     font-size: 20px;
 }
 
+.navbar_links #sla {
+        display: none;
+    }
+
 .profile_section {
     color: var(--white);
     font-weight: 600;
@@ -803,7 +807,7 @@ footer > span {
     }
 
     .footer_contact {
-        padding-left: 0;
+        padding-left: auto;
     }
 }
 
@@ -845,6 +849,10 @@ footer > span {
 
     .navbar_links {
         top: 60px;
+    }
+
+    .navbar_links #sla {
+        display: none;
     }
 
     .hero_section {

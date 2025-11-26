@@ -67,6 +67,10 @@ body {
     font-size: 20px;
 }
 
+.navbar_links #sla {
+        display: none;
+    }
+
 .navbar_right {
     display: flex;
     align-items: center;
@@ -374,6 +378,13 @@ footer {
     margin-top: 20px;
 }
 
+.footer_newsletter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .footer_final input {
     padding: 12px 15px;
     border: none;
@@ -521,7 +532,7 @@ footer > span {
     }
 
     .footer_contact {
-        padding-left: 0;
+        padding-left: auto;
     }
 }
 

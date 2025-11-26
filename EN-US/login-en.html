@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
 <body>
     <section class="login">
         <div class="login-box">
-            <!--LOGIN ICON-->
+            <!--ICONE DE LOGIN-->
             <div class="login-icon">
                 <ion-icon name="person-outline"></ion-icon>
             </div>
@@ -23,20 +23,24 @@
                 <input type="email" placeholder="Email" />
             </div>
 
-            <!--PASSWORD-->
-            <div class="input-group">
+            <!--SENHA-->
+            <div class="input-group password-group">
                 <ion-icon name="lock-closed-outline" class="icon-lock"></ion-icon>
                 <input type="password" id="pwd" placeholder="Password" />
-                <input type="checkbox" onclick="pwd. type = this.checked ? 'text' : 'password'">
+                <label class="toggle-password-label">
+                    <input type="checkbox" onclick="pwd.type = this.checked ? 'text' : 'password'" class="password-checkbox">
+                    <ion-icon name="eye-outline" class="eye-icon show"></ion-icon>
+                    <ion-icon name="eye-off-outline" class="eye-icon hide"></ion-icon>
+                </label>
             </div>
 
-            <!-- LOGIN OPTION -->
+            <!-- OPÇÃO LOGIN -->
             <div class="options">
                 <label><input type="checkbox" /> Remember me</label>
                 <a href="#">Forgot your password?</a>
             </div>
 
-            <!-- BUTTON -->
+            <!-- BOTÃO -->
             <a href="index-en.html"><button class="btn-login">LOGIN</button></a>
         </div>
     </section>

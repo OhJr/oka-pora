@@ -14,9 +14,6 @@
 <body>
   <header>
     <nav>
-
-      
-
       <div class="navbar_container">
         <!-- Logo -->
         <a href="./index.html" class="navbar_logo">
@@ -38,28 +35,27 @@
             <a href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
               target="_blank">Central de ajuda</a>
           </li>
-          <li>|</li>
+          <li id="sla">|</li>
         </ul>
 
-        <div class="profile_section">
-          <a href="login.html">Profile</a>
-          <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
-          <select class="lang-select" onchange="location = this.value;">
-            <option value="index.html" selected>BR</option>
-            <option value="./EN-US/index-en.html">EN</option>
-          </select>
+        <div class="navbar_right">
+          <div class="profile_section">
+            <a href="login.html">Profile</a>
+            <ion-icon name="globe-outline" class="lang-icon"></ion-icon>
+            <select class="lang-select" onchange="location = this.value;">
+              <option value="index.html" selected>BR</option>
+              <option value="./EN-US/index-en.html">EN</option>
+            </select>
+          </div>
 
           <button class="navbar_toggle">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-          <!-- as antigas flagzinhas, agora desativadas.
-                    <img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
-                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
       </div>
     </nav>
   </header>
+
   <!-- Hero Section -->
   <section class="hero_section">
     <div class="section_container">
@@ -158,7 +154,8 @@
       </div>
     </div>
   </section>
-  <!-- Card Section Partiu - COM CONTAINER -->
+
+  <!-- Card Section Partiu 2026 -->
   <section class="section_partiu">
     <h3>PARTIU 2026</h3>
     <p>
@@ -166,7 +163,6 @@
         reservas!</strong>
     </p>
 
-    <!-- ADICIONE ESTE CONTAINER -->
     <div class="cards_container">
       <!-- Card 5 -->
       <div class="card" id="card5">
@@ -200,7 +196,7 @@
         </div>
       </div>
 
-      <!-- Card 7 - CORRIGIR O ID (estava card1) -->
+      <!-- Card 7 -->
       <div class="card" id="card7">
         <div class="card_content">
           <p>
@@ -234,7 +230,6 @@
         </div>
       </div>
     </div>
-    <!-- FIM DO CONTAINER -->
   </section>
 
   <section class="section_blog">
@@ -323,7 +318,7 @@
       <a href="organizacao.html" style="color: #fff">
         <li>Organizações</li>
       </a>
-      <a href="blog.html"  style="color: #fff">
+      <a href="blog.html" style="color: #fff">
         <li>Blog</li>
       </a>
       <a
@@ -343,7 +338,7 @@
       >
         <li>Central de ajuda</li>
       </a>
-      <a href="login.html" style="color: #4169E1">
+      <a href="login.html" style="color: #fff">
         <li>Perfil</li>
       </a>
     </ul>
@@ -357,19 +352,11 @@
       <p class="footer_text">falecom@okapora.com.br</p>
       <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
     </div>
-    <!-- Seçao com o icone do insta youtube as flag e o atente-se as novidaes -->
-    <!-- Real nao sei um nome melhor. É muito random -->
 
     <div class="footer_final">
       <!-- Parte do icones e imagem -->
       <ion-icon name="logo-instagram"></ion-icon>
       <ion-icon name="logo-youtube"></ion-icon>
-
-      <!--<img src="./assets/img/brFlag.png" alt="bandeira do brasilFlag" width="30px">
-              <div class="bandeiras">
-              <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-              <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">
-          </div>-->
 
       <!-- O de inscrever email -->
       <h3 class="footer_title">Atente-se as Novidades</h3>
@@ -377,13 +364,12 @@
         <input type="email" placeholder="Digite seu e-mail" />
         <div class="footer_buttons">
           <button>Enviar</button>
-          <a type="button" onclick="window.location.href='index.html'"><button>Voltar</button></a>
+          <a href="index.html"><button>Voltar</button></a>
         </div>
-            </div>
       </div>
+    </div>
 
     <!-- A parada q fica em baixo. O copyright. -->
-
     <span>© 2025 OkaPorã</span>
   </footer>
 

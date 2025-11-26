@@ -24,12 +24,17 @@
             </div>
 
             <!--SENHA-->
-            <div class="input-group">
+            <div class="input-group password-group">
                 <ion-icon name="lock-closed-outline" class="icon-lock"></ion-icon>
-                <input type="password" placeholder="Senha" />
+                <input type="password" id="pwd" placeholder="Senha" />
+                <label class="toggle-password-label">
+                    <input type="checkbox" onclick="pwd.type = this.checked ? 'text' : 'password'" class="password-checkbox">
+                    <ion-icon name="eye-outline" class="eye-icon show"></ion-icon>
+                    <ion-icon name="eye-off-outline" class="eye-icon hide"></ion-icon>
+                </label>
             </div>
 
-            <!-- OPÇÕAO LOGIN -->
+            <!-- OPÇÃO LOGIN -->
             <div class="options">
                 <label><input type="checkbox" /> Lembre de mim</label>
                 <a href="#">Esqueceu sua senha?</a>

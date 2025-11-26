@@ -33,7 +33,7 @@
           <li><a
               href="https://api.whatsapp.com/send/?phone=5512988291813&text=WhatsApp%20Para%20Contato%20Com%20Os%20Devs&type=phone_number&app_absent=0"
               target="_blank">Central de ajuda</a></li>
-          <li>|</li>
+          <li id="sla">|</li>
         </ul>
 
         <div class="navbar_right">
@@ -47,15 +47,13 @@
           </div>
 
           <button class="navbar_toggle">
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-          <!--<img src="./assets/img/brFlag.png" alt="brasilFlag" width="40px">
-                    <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-                    <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">-->
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
         </div>
       </div>
     </nav>
   </header>
+
   <section class="expedicoes">
     <div class="cards_container">
       <div class="card" id="card1">
@@ -144,7 +142,7 @@
         </div>
       </div>
 
-      <!-- Card 7 - CORRIGIR O ID (estava card1) -->
+      <!-- Card 7 -->
       <div class="card" id="card7">
         <div class="card_content">
           <p>
@@ -174,8 +172,6 @@
         </div>
       </div>
     </div>
-
-
   </section>
 
   <footer>
@@ -209,7 +205,7 @@
       >
         <li>Contato</li>
       </a>
-      <a href="expedicoes.html" style="color: #4169E1">
+      <a href="expedicoes.html" style="color: #fff">
         <li>Preferências</li>
       </a>
       <a
@@ -219,7 +215,7 @@
       >
         <li>Central de ajuda</li>
       </a>
-      <a href="login.html" style="color: #4169E1">
+      <a href="login.html" style="color: #fff">
         <li>Perfil</li>
       </a>
     </ul>
@@ -233,29 +229,24 @@
       <p class="footer_text">falecom@okapora.com.br</p>
       <img src="./assets/img/brasilFooter.png" alt="Placeholder :]" />
     </div>
-    <!-- Seçao com o icone do insta youtube as flag e o atente-se as novidaes -->
-    <!-- Real nao sei um nome melhor. É muito random -->
 
     <div class="footer_final">
       <!-- Parte do icones e imagem -->
       <ion-icon name="logo-instagram"></ion-icon>
       <ion-icon name="logo-youtube"></ion-icon>
 
-      <!--<img src="./assets/img/brFlag.png" alt="bandeira do brasilFlag" width="30px">
-              <div class="bandeiras">
-              <img src="./assets/img/usaFlag.png" alt="usaFlag" width="30px">
-              <img src="./assets/img/spainFlag.png" alt="spainFlag" width="30px">
-          </div>-->
-
       <!-- O de inscrever email -->
       <h3 class="footer_title">Atente-se as Novidades</h3>
-      <input placeholder="Digite seu e-mail" />
-      <button>Enviar</button>
-      <a href="#"><button>Voltar</button></a>
+      <div class="footer_newsletter">
+        <input type="email" placeholder="Digite seu e-mail" />
+        <div class="footer_buttons">
+          <button>Enviar</button>
+          <a href="index.html"><button>Voltar</button></a>
+        </div>
+      </div>
     </div>
 
     <!-- A parada q fica em baixo. O copyright. -->
-
     <span>© 2025 OkaPorã</span>
   </footer>
 

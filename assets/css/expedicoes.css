@@ -105,6 +105,10 @@ header::before {
     font-size: 20px;
 }
 
+.navbar_links #sla {
+        display: none;
+    }
+
 .profile_section{
     color: var(--white);
     font-weight: 600;
