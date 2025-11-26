@@ -63,6 +63,13 @@ header {
     font-size: 20px;
 }
 
+/* CORREÇÃO: Adicionar navbar_right */
+.navbar_right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .profile_section {
     color: var(--white);
     font-weight: 600;
@@ -119,7 +126,7 @@ header {
     height: 90px;
 }
 
-/* Menu Hamburguer */
+/* Menu Hamburguer - CORRIGIDO */
 .navbar_toggle {
     display: none;
     background: rgba(255, 255, 255, 0.1);
@@ -135,6 +142,7 @@ header {
     align-items: center;
     justify-content: center;
     transition: background 0.3s;
+    flex-shrink: 0;
 }
 
 .navbar_toggle:hover {
@@ -425,6 +433,12 @@ footer > span {
         height: 70px;
     }
 
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
     .navbar_toggle {
         display: flex;
         align-items: center;
@@ -493,6 +507,12 @@ footer > span {
     .navbar_logo img {
         height: 50px;
         margin-left: 0;
+    }
+
+    .navbar_right {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
     }
 
     .navbar_toggle {
